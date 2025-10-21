@@ -1,0 +1,59 @@
+title: Página Carrito de Myshop
+templateScript: /cione-module/templates/pages/myshop/carrito-page.ftl
+renderType: freemarker
+visible: true
+dialog: cione-module:pages/myshop/myshop-page-properties
+areas:
+  headerScripts:
+    createAreaNode: false
+    modelClass: info.magnolia.marketingtags.model.ScriptsAreaModel
+    templateScript: /cione-module/templates/pages/areas/scriptsArea.ftl
+    type: noComponent
+  bodyBeginScripts:
+    createAreaNode: false
+    modelClass: info.magnolia.marketingtags.model.ScriptsAreaModel
+    templateScript: /cione-module/templates/pages/areas/scriptsArea.ftl
+    type: noComponent
+  header:
+    availableComponents:      
+      header-component:
+        id: cione-module:components/myshop/header-component     
+      menu-flotante-component:
+        id: cione-module:components/myshop/menu-flotante-comunicacion-cmp  
+    inheritance:
+      enabled: true
+      components: filtered    
+  main:
+    renderType: freemarker
+    availableComponents:
+      listado-productos-carrito-component:
+        id: cione-module:components/myshop/listado-productos-carrito-component
+      direcciones-envio-component:
+        id: cione-module:components/myshop/direcciones-envio-component
+      confirmacion-pedido-component:
+        id: cione-module:components/myshop/confirmacion-pedido-component
+      shoppinglist-listado-component:
+        id: cione-module:components/myshop/shoppinglist/listado-shoppinglist-component
+      shoppinglist-detalle-component:
+        id: cione-module:components/myshop/shoppinglist/detalle-shoppinglist-component
+      nueva-cp-component:
+        id: cione-module:components/myshop/compra-periodica/nueva-cp-component
+      listado-cp-component:
+        id: cione-module:components/myshop/compra-periodica/listado-cp-component
+      cp-detalle-component:
+        id: cione-module:components/myshop/compra-periodica/detalle-cp-component
+
+    autoGeneration:
+      content:
+        breadcrumbs-component:
+          nodeType: mgnl:component
+          templateId: cione-module:components/myshop/breadcrumbs-component
+      generatorClass: info.magnolia.rendering.generator.CopyGenerator
+  footer:
+    type: single
+    availableComponents:      
+      footer-component:
+        id: cione-module:components/myshop/footer-component
+    inheritance:
+      enabled: true
+      components: filtered            

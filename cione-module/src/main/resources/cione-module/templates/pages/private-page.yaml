@@ -1,0 +1,157 @@
+title: Página privada
+templateScript: /cione-module/templates/pages/private-page.ftl
+renderType: freemarker
+visible: true
+dialog: cione-module:pages/private-page-properties
+areas:
+  headerScripts:
+    createAreaNode: false
+    modelClass: info.magnolia.marketingtags.model.ScriptsAreaModel
+    templateScript: /cione-module/templates/pages/areas/scriptsArea.ftl
+    type: noComponent
+  bodyBeginScripts:
+    createAreaNode: false
+    modelClass: info.magnolia.marketingtags.model.ScriptsAreaModel
+    templateScript: /cione-module/templates/pages/areas/scriptsArea.ftl
+    type: noComponent
+  header:
+    availableComponents:      
+      header-component:
+        id: cione-module:components/header-component      
+      banner-section-component:
+        id: cione-module:components/banner-section-component
+      cookies-component:
+        id: cione-module:components/cookies-cmp           
+      menu-flotante-component:
+        id: cione-module:components/comunicacion/menu-flotante-comunicacion-cmp  
+    inheritance:
+      enabled: true
+      components: all    
+  left:
+    availableComponents:      
+      submenu-component:
+        id: cione-module:components/submenu-component
+    inheritance:
+      enabled: true
+      components: all
+    editable: true      
+  main:
+    renderType: freemarker
+    availableComponents:
+      menu-home-component:
+        id: cione-module:components/menu-home-component      
+      pedidos-component:
+        id: cione-module:components/pedidos-facturacion/pedidos-component
+      talleres-component:
+        id: cione-module:components/pedidos-facturacion/talleres-component
+      devoluciones-component:
+        id: cione-module:components/pedidos-facturacion/devoluciones-component
+      abonos-component:
+        id: cione-module:components/pedidos-facturacion/abonos-component       
+      albaranes-component:
+        id: cione-module:components/pedidos-facturacion/albaranes-component
+      albaranes-audio-component:
+        id: cione-module:components/pedidos-facturacion/albaranes-audio-component
+      facturas-component:
+        id: cione-module:components/pedidos-facturacion/facturas-component
+      facturas-otros-documentos-component:
+        id: cione-module:components/pedidos-facturacion/facturas-otros-documentos
+      mis-consumos-component:
+        id: cione-module:components/pedidos-facturacion/mis-consumos
+      mis-consumos-cionelovers:
+        id: cione-module:components/pedidos-facturacion/mis-consumos-cionelovers
+      mis-ahorros-component:
+        id: cione-module:components/pedidos-facturacion/mis-ahorros  
+      deuda-component:
+        id: cione-module:components/pedidos-facturacion/deuda
+      pagos-pendientes-component:
+        id: cione-module:components/pedidos-facturacion/pagos-pendientes
+      informe-abonos-component:
+        id: cione-module:components/pedidos-facturacion/informe-abonos  
+      informe-abonos-blister:
+        id: cione-module:components/pedidos-facturacion/informe-blister
+      envios-component:
+        id: cione-module:components/pedidos-facturacion/envios-component             
+      datos-identificativos-component:
+        id: cione-module:components/datos-identificativos-component            
+      datos-comerciales-component:
+        id: cione-module:components/mis-datos/datos-comerciales-component                                   
+      gestores-cuenta-component:
+        id: cione-module:components/mis-datos/gestores-cuenta-component
+      formas-pago-component:
+        id: cione-module:components/mis-datos/formas-pago-component
+      cuotas-component:
+        id: cione-module:components/mis-datos/cuotas-component   
+      transporte-component:
+        id: cione-module:components/mis-datos/transporte-component
+      looktic-component:
+        id: cione-module:components/mis-datos/looktic-component
+      ruta-luz-component:
+        id: cione-module:components/mis-datos/ruta-luz-component
+      euro-cione-component:
+        id: cione-module:components/mis-datos/euro-cione-component         
+      mis-acuerdos-component:
+        id: cione-module:components/mis-datos/mis-acuerdos  
+      simulate-component:
+        id: cione-module:components/simulate-component
+      quality-survey-admin-component:
+        id: cione-module:components/quality-survey-admin-cmp  
+      redirect-component:
+        id: cione-module:components/redirect-component   
+      catalogos-component:
+        id: cione-module:components/catalogos-promociones/catalogos-component
+      promociones-component:
+        id: cione-module:components/catalogos-promociones/promociones-component
+      rich-text-cmp:
+        id: cione-module:components/rich-text-cmp
+      bloque-noticias-cmp:
+        id: cione-module:components/comunicacion/bloque-noticias-cmp             
+      noticias-cmp:
+        id: cione-module:components/comunicacion/noticias-cmp  
+      magaciones-cmp:
+        id: cione-module:components/comunicacion/magazines-cmp  
+      encuestas-cmp:
+        id: cione-module:components/comunicacion/encuestas-cmp
+      form:
+        id: form:components/form
+      radio-busquedas-cmp:
+        id: cione-module:components/comunicacion/radio-busquedas-cmp                            
+      radio-busquedas-crear-cmp:
+        id: cione-module:components/comunicacion/radio-busqueda-crear-cmp  
+      buzon-sugerencias-cmp:
+        id: cione-module:components/comunicacion/buzon-sugerencias-cmp
+      kpis-cmp:
+        id: cione-module:components/comunicacion/kpis-cmp
+      actualidad-cmp:
+        id: cione-module:components/comunicacion/actualidad-cmp        
+      rsc-documentos-cmp:
+        id: cione-module:components/rsc/rsc-documentos-cmp  
+      rsc-documentos-minimal-cmp:
+        id: cione-module:components/rsc/rsc-documentos-minimal-cmp  
+      contactos-cmp:
+        id: cione-module:components/rsc/contactos-cmp    
+      interacciones-cmp:
+        id: cione-module:components/servicios/interacciones-cmp   
+      pepper-component:
+        id: cione-module:components/pepper-component   
+      title-text-link-component:
+        id: cione-module:components/title-text-link-component
+      auditar-documentos-component:
+        id: cione-module:components/auditar-documentos-component
+      campaigns-component:
+        id: cione-module:components/campaigns-component
+
+      #B2B components
+      register-update-employee-component:
+        id: cione-module:components/b2b/register-update-employee-component
+      list-employee-component:
+        id: cione-module:components/b2b/list-employee-component
+
+  footer:
+    type: single
+    availableComponents:      
+      recovery-pwd-component:
+        id: cione-module:components/footer-component
+    inheritance:
+      enabled: true
+      components: all            

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE module SYSTEM "module.dtd" >
+<module>
+	<name>cione-app</name>
+	<displayName>${project.name}</displayName>
+	<description>${project.description}</description>
+	<class>com.magnolia.cione.CioneAppModule</class>
+	<versionHandler>com.magnolia.cione.setup.CioneAppVersionHandler</versionHandler>
+	<version>${project.version}</version>
+
+	<!-- For more information on module descriptor configuration options -->
+	<!-- https://documentation.magnolia-cms.com/display/DOCS/XML-based+module+descriptor -->
+
+	<components>
+		<id>main</id>
+	
+		<component>
+			<type>com.magnolia.cione.admin.apps.elastic.ElasticSubAppView</type>
+			<implementation>com.magnolia.cione.admin.apps.elastic.ElasticSubAppViewImpl</implementation>
+		</component>
+		<component>
+			<type>com.magnolia.cione.admin.apps.elastic.ElasticDetailSubAppView</type>
+			<implementation>com.magnolia.cione.admin.apps.elastic.ElasticDetailSubAppViewImpl</implementation>
+		</component>
+	</components>
+
+
+	<dependencies>
+		<dependency>
+			<name>core</name>
+			<version>*</version>
+		</dependency>						
+		
+		<!-- Add other dependencies here, e.g the mte (magnolia templating essentials). 
+			<dependency> <name>mte</name> <version>0.7/*</version> </dependency> -->
+	</dependencies>
+	<repositories>
+		<repository>
+			<name>magnolia</name>
+			<workspaces>
+				<workspace>elastic</workspace>
+			</workspaces>
+			<nodeTypeFile>/mgnl-nodetypes/cione-app-nodetype.xml</nodeTypeFile>
+		</repository>
+	</repositories> 	
+
+</module>

@@ -1,0 +1,396 @@
+label: Documentos varios
+icon: icon-items
+appClass: info.magnolia.ui.contentapp.ContentApp
+class: info.magnolia.ui.api.app.registry.ConfiguredAppDescriptor
+subApps:
+  browser:
+    label: rsc-documentos
+    subAppClass: info.magnolia.ui.contentapp.browser.BrowserSubApp
+    class: info.magnolia.ui.contentapp.browser.BrowserSubAppDescriptor
+    contentConnector:
+      includeProperties: false
+      workspace: rsc-documentos
+      rootPath: /
+      defaultOrder: jcrName
+      nodeTypes:
+        - icon: icon-node-content
+          name: rsc-documento
+          strict: true
+        - icon: icon-folder-l
+          name: mgnl:folder
+          strict: true
+    imageProvider:
+       class: info.magnolia.dam.app.ui.imageprovider.DamLinkImageProviderDefinition
+       damLinkPropertyName: imagen
+    workbench:
+      dropConstraintClass: info.magnolia.ui.workbench.tree.drop.AlwaysTrueDropConstraint
+      editable: true
+      contentViews:
+        - name: tree
+          class: info.magnolia.ui.workbench.tree.TreePresenterDefinition
+          columns:
+            - name: jcrName
+              sortable: true
+              label: rsc-documento name
+              propertyName: jcrName
+              class: info.magnolia.ui.workbench.column.definition.PropertyColumnDefinition
+            - name: status
+              label: Status
+              width: 45
+              sortable: true
+              displayInChooseDialog: false
+              formatterClass: info.magnolia.ui.workbench.column.StatusColumnFormatter
+              class: info.magnolia.ui.workbench.column.definition.StatusColumnDefinition
+            - name: moddate
+              label: Modification date
+              width: 160
+              sortable: true
+              displayInChooseDialog: false
+              formatterClass: info.magnolia.ui.workbench.column.DateColumnFormatter
+              propertyName: mgnl:lastModified
+              class: info.magnolia.ui.workbench.column.definition.MetaDataColumnDefinition
+    actions:
+      addFolder:
+        label: Add folder
+        icon: icon-add-folder
+        class: info.magnolia.ui.framework.action.AddFolderActionDefinition
+        availability:
+          writePermissionRequired: true
+          root: true
+          nodeTypes:
+            folder: mgnl:folder
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      editFolder:
+        label: Rename folder
+        dialogName: ui-framework:folder
+        icon: icon-edit
+        class: info.magnolia.ui.framework.action.OpenEditDialogActionDefinition
+        availability:
+          root: true
+          writePermissionRequired: true
+          nodeTypes:
+            folder: mgnl:folder
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      addRsc-documento:
+        subAppId: detail
+        label: Add Documento
+        icon: icon-add-item
+        nodeType: rsc-documento
+        appName: rsc-documentos
+        class: info.magnolia.ui.contentapp.detail.action.CreateItemActionDefinition
+        availability:
+          writePermissionRequired: true
+          root: true
+          nodeTypes:
+            folder: mgnl:folder
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      editRsc-documento:
+        subAppId: detail
+        label: Edit Documento
+        icon: icon-edit
+        appName: rsc-documentos
+        class: info.magnolia.ui.contentapp.detail.action.EditItemActionDefinition
+        availability:
+          writePermissionRequired: true
+          nodeTypes:
+            rsc-documento: rsc-documento
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      renameRsc-documento:
+        label: Rename Documento
+        icon: icon-edit
+        dialogName: ui-framework:folder
+        class: info.magnolia.ui.framework.action.OpenEditDialogActionDefinition
+        availability:
+          writePermissionRequired: true
+          nodeTypes:
+            rsc-documento: rsc-documento
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      delete:
+        label: Delete
+        asynchronous: true
+        command: markAsDeleted
+        icon: icon-delete
+        class: info.magnolia.ui.framework.action.MarkNodeAsDeletedActionDefinition
+        availability:
+          writePermissionRequired: true
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      activate:
+        command: activate
+        icon: icon-publish
+        catalog: versioned
+        class: info.magnolia.ui.framework.action.ActivationActionDefinition
+        availability:
+          writePermissionRequired: true
+      activateRecursive:
+        catalog: versioned
+        command: activate
+        icon: icon-publish-incl-sub
+        recursive: true
+        class: info.magnolia.ui.framework.action.ActivationActionDefinition
+        availability:
+          writePermissionRequired: true
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      deactivate:
+        catalog: versioned
+        command: deactivate
+        icon: icon-unpublish
+        class: info.magnolia.ui.framework.action.ActivationActionDefinition
+        availability:
+          writePermissionRequired: true
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      export:
+        command: export
+        icon: icon-export
+        class: info.magnolia.ui.framework.action.ExportActionDefinition
+        availability:
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      import:
+        dialogName: ui-admincentral:import
+        icon: icon-import
+        class: info.magnolia.ui.framework.action.OpenCreateDialogActionDefinition
+        availability:
+          writePermissionRequired: true
+          root: true
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      confirmDelete:
+        label: Delete Documento
+        successActionName: delete
+        icon: icon-delete
+        class: info.magnolia.ui.framework.action.ConfirmationActionDefinition
+        availability:
+          multiple: true
+          writePermissionRequired: true
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule  
+      duplicateDocumento:
+        label: Duplicate Documento
+        icon: icon-duplicate
+        class: info.magnolia.ui.framework.action.DuplicateNodeActionDefinition
+        availability:
+          writePermissionRequired: true
+          nodeTypes:
+            article: rsc-documento
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule                            
+    actionbar:
+      defaultAction: editRsc-documento
+      sections:
+        - name: root
+          label: rsc-documentos
+          availability:
+            nodes: false
+            root: true
+          groups:
+            - name: addActions
+              items:
+                - name: addRsc-documento
+                - name: addFolder
+            - name: editActions
+              #items:
+            - name: publishingActions
+              items:
+                - name: activate
+                - name: activateRecursive
+                - name: deactivate
+            - name: eximActions
+              items:
+                - name: export
+                - name: import
+        - name: folder
+          label: Folder
+          availability:
+            nodeTypes:
+              folder: mgnl:folder
+          groups:
+            - name: addActions
+              items:
+                - name: addRsc-documento
+                - name: addFolder
+            - name: editActions
+              items:
+                - name: editFolder
+                - name: delete
+            - name: publishingActions
+              items:
+                - name: activate
+                - name: activateRecursive
+                - name: deactivate
+            - name: eximActions
+              items:
+                - name: export
+                - name: import
+        - name: rsc-documento
+          label: Rsc-documento
+          availability:
+            nodeTypes:
+              rsc-documento: rsc-documento
+          groups:
+            - name: addActions
+              items:
+                - name: addRsc-documento
+                - name: addFolder
+            - name: editActions
+              items:
+                - name: editRsc-documento
+                - name: renameRsc-documento
+                - name: duplicateDocumento
+                #- name: delete
+                - name: confirmDelete
+            - name: publishingActions
+              items:
+                - name: activate
+                - name: activateRecursive
+                - name: deactivate
+            - name: eximActions
+              items:
+                - name: export
+                - name: import
+  detail:
+    label: rsc-documento
+    subAppClass: info.magnolia.ui.contentapp.detail.DetailSubApp
+    class: info.magnolia.ui.contentapp.detail.DetailSubAppDescriptor
+    contentConnector:
+      defaultOrder: jcrName
+      includeProperties: false
+      rootPath: /
+      workspace: rsc-documentos
+      nodeTypes:
+        - icon: icon-node-content
+          name: rsc-documento
+          strict: true
+        - icon: icon-folder-l
+          name: mgnl:folder
+          strict: true
+    editor:
+      nodeType:
+        icon: icon-items
+        name: rsc-documento
+      form:
+        description: Define the rsc-documento information
+        label: Edit rsc-documento
+        tabs:
+          - name: rsc-documento
+            label: rsc-documento
+            fields:
+              - label: Nombre Nodo
+                name: jcrName
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition                
+                required: true
+              - label: Título
+                name: titulo
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                i18n: true
+                required: true
+              - label: Texto
+                name: texto
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                i18n: true
+                rows: 5
+                required: false                
+              - name: imagen
+                label: Imagen (225x225)
+                required: true
+                class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+                targetWorkspace: dam
+                appName: assets
+                targetTreeRootPath: /cione
+                identifierToPathConverter:
+                  class: info.magnolia.dam.app.assets.field.translator.AssetCompositeIdKeyTranslator
+                contentPreviewDefinition:
+                  contentPreviewClass: info.magnolia.dam.app.ui.field.DamFilePreviewComponent  
+              - label: Enlace Externo
+                name: externalLink
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                i18n: true
+                required: false
+              - name: internalLink
+                label: Enlace Interno
+                class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+                targetWorkspace: website
+                appName: pages
+                identifierToPathConverter:
+                  class: info.magnolia.ui.form.field.converter.BaseIdentifierToPathConverter
+              - name: especialLink
+                label: Enlace
+                class: info.magnolia.ui.form.field.definition.SwitchableFieldDefinition
+                options:
+                  - name: enlaceAudio
+                    label: Enlace Audio
+                    value: enlaceAudio
+                  - name: enlaceUniversity
+                    label: Enlace University
+                    value: enlaceUniversity
+                fields:
+                  enlaceAudio:
+                    name: enlaceAudio
+                    class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                    label: URL Enlace Audio
+                  enlaceUniversity:
+                    name: enlaceUniversity
+                    class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                    label: URL Enlace University
+              - name: documento
+                class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+                i18n: true                
+                label: Documento (PDF, doc, xlsx, imagen, video)
+                description: Escoge un documento
+                required: false
+                appName: assets
+                targetWorkspace: dam
+                targetTreeRootPath: /cione/rsc/documentos
+                identifierToPathConverter:
+                  class: info.magnolia.ui.form.field.converter.BaseIdentifierToPathConverter
+              - name: roles
+                label: Roles
+                class: info.magnolia.ui.form.field.definition.MultiValueFieldDefinition
+                transformerClass: info.magnolia.ui.form.field.transformer.multi.DelegatingMultiValueSubnodeTransformer          
+                field:
+                  name: linkProperties
+                  class: info.magnolia.ui.form.field.definition.CompositeFieldDefinition
+                  transformerClass: info.magnolia.ui.form.field.transformer.composite.DelegatingCompositeFieldTransformer
+                  layout: vertical
+                  fields:              
+                    - name:  rol
+                      label: · Rol
+                      class: info.magnolia.ui.form.field.definition.LinkFieldDefinition                      
+                      description: Seleccione un rol para el acceso
+                      required: true
+                      appName: security
+                      targetWorkspace: userroles
+                      identifierToPathConverter:
+                        class: info.magnolia.ui.form.field.converter.BaseIdentifierToPathConverter
+                    - name: separator
+                      class: info.magnolia.ui.form.field.definition.StaticFieldDefinition
+                      value: <div style="height:2px;widht:100%;background:#689600">                                             
+                      label: ""
+      actions:
+        - name: commit
+        - name: cancel
+    actions:
+      commit:
+        implementationClass: info.magnolia.ui.form.action.SaveFormAction
+        class: info.magnolia.ui.form.action.SaveFormActionDefinition
+      cancel:
+        class: info.magnolia.ui.form.action.CancelFormActionDefinition

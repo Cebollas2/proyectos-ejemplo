@@ -1,0 +1,5 @@
+title: Componente Pedidos
+#dialog: cione-module:components/register-recovery-pwd-properties
+templateScript: /cione-module/templates/components/pedidos-facturacion/pedidos-component.ftl
+renderType: freemarker
+modelClass: com.magnolia.cione.model.PedidosModel

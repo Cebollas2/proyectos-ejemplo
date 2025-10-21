@@ -1,0 +1,5 @@
+title: Componente Condiciones Comerciales
+dialog: cione-module:components/condiciones-comerciales-cmp-properties
+templateScript: /cione-module/templates/components/condiciones-comerciales-cmp.ftl
+modelClass: com.magnolia.cione.model.CondicionesComercialesModel
+renderType: freemarker

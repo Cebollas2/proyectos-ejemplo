@@ -1,0 +1,10 @@
+form:
+  properties:
+    showMessage:
+      label: Mostrar mensaje
+      $type: checkBoxField
+      buttonLabel: Seleccionar si se desea mostrar un mensaje a los usuarios
+    messageText:
+      label: Texto del mensaje
+      i18n: true
+      $type: textField

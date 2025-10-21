@@ -1,0 +1,5 @@
+title: Compra Periodica - Listado
+renderType: freemarker
+templateScript: /cione-module/templates/components/myshop/compra-periodica/listado-cp-component.ftl
+#modelClass: com.magnolia.cione.model.ListadoShoppingListModel
+dialog: cione-module:components/myshop/compra-periodica/listado-cp-component-properties

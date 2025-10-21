@@ -1,0 +1,10 @@
+form:
+  label: Componente Listado de Alertas de Packs
+  properties:
+    internalLink:
+      $type: linkField
+      label: Detail Link
+      description: cione-module.components.myshop.listado-shoppinglist-component-properties.internalLink.description
+      chooser:
+        workbenchChooser:
+          appName: pages-app

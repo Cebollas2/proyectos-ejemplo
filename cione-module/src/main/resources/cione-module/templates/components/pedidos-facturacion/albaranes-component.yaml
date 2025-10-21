@@ -1,0 +1,4 @@
+title: Componentes Albaranes
+templateScript: /cione-module/templates/components/pedidos-facturacion/albaranes-component.ftl
+renderType: freemarker
+#modelClass: com.magnolia.cione.model.DatosIdentificativosModel

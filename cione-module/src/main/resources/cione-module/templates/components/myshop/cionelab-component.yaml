@@ -1,0 +1,5 @@
+title: CioneLab
+renderType: freemarker
+templateScript: /cione-module/templates/components/myshop/cionelab-component.ftl
+dialog: cione-module:components/myshop/cionelab-component-properties
+modelClass: com.magnolia.cione.model.CioneLabModel

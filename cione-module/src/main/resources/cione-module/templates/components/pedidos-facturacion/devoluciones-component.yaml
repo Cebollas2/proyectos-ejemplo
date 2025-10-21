@@ -1,0 +1,5 @@
+title: Componente Devoluciones
+templateScript: /cione-module/templates/components/pedidos-facturacion/devoluciones-component.ftl
+renderType: freemarker
+#modelClass: com.magnolia.cione.model.DatosIdentificativosModel
+dialog: cione-module:components/pedidos-facturacion/devoluciones-component-properties

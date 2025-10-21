@@ -1,0 +1,5 @@
+title: Componente Promociones
+templateScript: /cione-module/templates/components/catalogos-promociones/promociones-component.ftl
+dialog: cione-module:components/catalogos-promociones/promociones-component-properties
+modelClass: com.magnolia.cione.model.ControlPermisosModel
+renderType: freemarker

@@ -1,0 +1,4 @@
+title: Componente Configuración de Precios
+templateScript: /cione-module/templates/components/myshop/configuracion-precios-component.ftl
+renderType: freemarker
+modelClass: com.magnolia.cione.model.ControlPermisosModel

@@ -1,0 +1,3 @@
+templateScript: /cione-module/templates/pages/areas/main-area.ftl
+renderType: freemarker
+visible: false

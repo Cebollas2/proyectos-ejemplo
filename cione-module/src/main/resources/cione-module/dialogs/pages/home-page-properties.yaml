@@ -1,0 +1,44 @@
+form:  
+  label: Página Home
+  tabs:  
+    - name: tabMain        
+      fields:  
+        - name: title  
+          fieldType: text  
+          i18n: true  
+          label: Título página
+          required: true
+        - name: navigationTitle  
+          fieldType: text
+          i18n: true  
+          label: Título ventana
+        - name: windowTitle  
+          fieldType: text
+          i18n: true  
+          label: cione-module.templates.pages.home-page.tabMain.windowTitle.label
+        - name: hideInNav
+          label: Navegacion          
+          buttonLabel: No mostrar la página en elementos de navegación
+          fieldType: checkbox
+          defaultValue: false
+          i18n: false
+          type: Boolean
+    - name: tabMeta        
+      fields:  
+        - name: keywords  
+          fieldType: text
+          i18n: true  
+          label: keywords
+          rows: 3  
+        - name: description  
+          fieldType: text
+          i18n: true  
+          label: descripción
+          rows: 5  
+actions:
+  commit:
+    label: save changes
+    class: info.magnolia.ui.admincentral.dialog.action.SaveDialogActionDefinition
+  cancel:
+    label: cancel
+    class: info.magnolia.ui.admincentral.dialog.action.CancelDialogActionDefinition

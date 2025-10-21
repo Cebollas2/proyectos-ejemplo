@@ -1,0 +1,40 @@
+form:
+  label: Plantilla Página pública 
+  properties:
+    title:
+      label: Título página
+      $type: textField
+      i18n: true
+    background:
+      label: Imagen de fondo
+      $type: linkField
+      chooser:
+        workbenchChooser:
+          appName: assets
+      i18n: true
+    style:
+      label: style
+      $type: textField
+    highLightText:
+      i18n: true
+      label: Texto de entrada
+      $type: jcrMultiField
+      itemProvider:
+        $type: jcrChildNodeProvider
+      field:
+        $type: compositeField
+        properties:
+          texto:
+            $type: textField
+            label: Texto
+            required: true
+  layout:
+    $type: tabbedLayout
+    tabs:
+      tabMain:
+        label: cione-module.templates.pages.home-page.tabMain.label
+        fields:
+          - name: title
+          - name: background
+          - name: style
+          - name: highLightText

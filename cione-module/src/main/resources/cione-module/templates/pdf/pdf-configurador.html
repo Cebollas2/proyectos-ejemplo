@@ -1,0 +1,602 @@
+<html lang="es">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AUDIOLAB$title</title>
+  <style>
+    @font-face {
+      font-family: 'Lato';
+      src: url('$host/.resources/cione-theme/webresources/fonts/Lato-Regular.ttf') format('truetype');
+      font-weight: 100;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    body {
+      font-family: 'Lato';
+      color: #3e3e3e;
+      margin: 40px 65px;
+      max-width: 1228px;
+      margin: 0 auto;
+      padding-top: 10px;
+      padding-bottom: 40px;
+    }
+
+    header {
+      border-bottom: solid 1px #e5e5e5;
+      padding-bottom: 10px;
+    }
+
+    .b2b-pdf-wrapper {
+      margin-top: 10px;
+      font-size: 12px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: #3e3e3e;
+      display: flex;
+      margin-top: 50px;
+
+    }
+    
+
+    .b2b-pdf-wrapper-column {
+      margin-top: 30px;
+      font-size: 12px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: #3e3e3e;
+      display: flex;
+      flex-direction: column;      
+    }
+
+
+    .b2b-pdf-title {
+      font-size: 15px;
+      font-weight: 900;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .b2b-pdf-col-75 {
+      width: 73%;
+      display: inline-block;
+    }
+
+    .b2b-pdf-col-25 {
+      width: 25%;
+      display: inline-block;
+    }
+
+    .align-right {
+      text-align: right !important;
+    }
+
+    .align-left {
+      text-align: left !important;
+    }
+
+    .max-width-xs {
+      max-width: 200px;
+    }
+
+    .margin-left-auto {
+      margin-left: auto !important;
+    }
+
+    .b2b-pdf-pvp {
+      padding-top: 10px;
+      font-size: 8px;
+      font-weight: 900;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: #333;
+    }
+
+    .b2b-pdf-amount {
+      font-size: 25px;
+      font-weight: 900;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: #333;
+    }
+
+    .b2b-pdf-container {
+
+      padding: 35px 40px 10px;
+
+    }
+
+
+    .b2b-pdf-container-dark {
+
+      padding: 35px 40px 10px;
+      border: solid 1px #f1f1f1;
+      background-color: #f9f9f9;
+    }
+
+    .b2b-pdf-subtitle {
+      font-size: 12px;
+      font-weight: 900;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: #3e3e3e;
+    }
+
+    .b2b-pdf-col-50 {
+      width: 49%;
+      display: inline-block;
+    }
+
+    .b2b-pdf-w-100 {
+      width: 100%;
+    }
+
+    table tr {
+      height: 40px;
+    }
+
+    table tr td {
+      vertical-align: top;
+      padding-right: 10px;
+      font-size: 12px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: normal;
+      max-width: 350px !important;
+    }
+
+    .b2b-pdf-red {
+      color: #cf0000;
+    }
+
+    .b2b-pdf-blue {
+      color: #3fa9f5;
+    }
+
+    .b2b-pdf-fieldset {
+      display: flex;
+      flex-direction: column;
+      border: 0;
+      width: 35px;
+      margin-top: 10px;
+      padding: 0;
+	  display: inline-block;
+    }
+
+    .b2b-pdf-fieldset label {
+      font-size: 10px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: 0px;
+      color: #3a3a3a;
+      text-align: center;      
+    }
+
+	.b2b-pdf-fieldset .b2b-pdf-input {
+	  font-size: 10px;
+      width: 30px;
+      height: 18px;
+      border: 1px solid black;
+      text-align: center;     
+      margin-top: 4px;
+      display: inline-block;
+      padding-top: 5px;
+    }
+   
+
+    .b2b-pdf-inputs-wrapper {
+      display: inline-block;      
+    }
+    
+    .imagen-header{
+    	height: 100%;
+    	width: 200px;
+    }
+        
+  </style>
+</head>
+
+<body>
+<form>
+  <header>
+    <img src="$logocione" class="imagen-header"  />
+  </header>
+
+  <div class="b2b-pdf-wrapper" style="margin-top: 10px;">
+    <span class="b2b-pdf-text">$numSocio - </span>
+    <span class="b2b-pdf-text">$nombreSocio</span>
+  </div>
+
+
+  <section class="b2b-pdf-wrapper">
+	  <table width="100%">
+	  	<tr width="100%">  
+	  		<td width="75%" style="vertical-align:top"> 
+	  			<div class="b2b-pdf-title">$nombreAudifono</div>
+	      		<div class="b2b-pdf-text">$descripcionAudifono</div>
+	  		</td>
+	  		<td width="25%" class=" align-right" style="vertical-align:top">  
+	  			  <div class="b2b-pdf-logo">
+	        		<img src="$logo" alt="" height="35"/>
+	      		  </div>
+			</td>  
+	  	</tr>
+	  </table>
+  </section>
+
+  <section class="b2b-pdf-wrapper-column" >
+    <div class="b2b-pdf-title">Datos básicos</div>
+    <div class="b2b-pdf-container-dark">
+      <table class="b2b-pdf-w-100">
+        <tr>
+          <td width="18%" class="b2b-pdf-subtitle">Lado</td>
+          <td width="32%">$binaural</td>
+          <td width="18%" class="b2b-pdf-subtitle"></td>
+          <td width="32%"></td>
+        </tr>
+        <tr>
+          <td width="18%" class="b2b-pdf-subtitle">Referencia</td>
+          <td width="32%"><div style="width: 300px; overflow: hidden; text-overflow: ellipsis;">$referencia</div></td>
+          <td width="18%" class="b2b-pdf-subtitle"></td>
+          <td width="32%"></td>
+        </tr>
+        <tr>
+          <td width="18%" class="b2b-pdf-subtitle">Información de contacto del gabinete</td>
+          <td width="32%">$contactoGabinete</td>
+          <td width="18%" class="b2b-pdf-subtitle"></td>
+          <td width="32%"></td>
+        </tr>
+        <tr>
+          <td width="18%" class="b2b-pdf-subtitle">Formato</td>
+          <td width="32%">$formato</td>
+          <td width="18%" class="b2b-pdf-subtitle"></td>
+          <td width="32%"></td>
+        </tr>
+      </table>
+
+
+    </div>
+  </section>
+
+  <section class="b2b-pdf-wrapper-column">
+    <div class="b2b-pdf-title">Audiograma</div>
+    <div style="display:block;">
+      <div class="b2b-pdf-col-50" >
+
+        <div class="b2b-pdf-text">
+          <span>Audiograma oído</span><span class="b2b-pdf-red">&nbsp;derecho</span>
+        </div>
+        
+        <div class="b2b-pdf-inputs-wrapper">
+          <fieldset class="b2b-pdf-fieldset">
+	        <label for="1">250Hz</label>
+	        <span class="b2b-pdf-input">$r250Hz</span>
+	      </fieldset>
+          <fieldset class="b2b-pdf-fieldset">
+	        <label for="1">500Hz</label>
+	        <span class="b2b-pdf-input">$r500Hz</span>
+	      </fieldset>
+          <fieldset class="b2b-pdf-fieldset">
+	        <label for="1">1kHz</label>
+	        <span class="b2b-pdf-input">$r1kHz</span>
+	      </fieldset>
+          <fieldset class="b2b-pdf-fieldset">
+	        <label for="1">2kHz</label>
+	        <span class="b2b-pdf-input">$r2kHz</span>
+	      </fieldset>
+          <fieldset class="b2b-pdf-fieldset">
+	        <label for="1">4kHz</label>
+	       <span class="b2b-pdf-input">$r4kHz</span>
+	      </fieldset>
+          <fieldset class="b2b-pdf-fieldset">
+	        <label for="1">8kHz</label>
+	        <span class="b2b-pdf-input">$r8kHz</span>
+	      </fieldset>
+        </div>
+
+      </div>
+      
+      <div class="b2b-pdf-col-50">
+        <div class="b2b-pdf-text">
+          <span>Audiograma oído</span><span class="b2b-pdf-blue">&nbsp;izquierdo</span>
+        </div>
+       
+        <div class="b2b-pdf-inputs-wrapper">
+          <fieldset class="b2b-pdf-fieldset">
+	        <label for="1">250Hz</label>
+	        <span class="b2b-pdf-input">$l250Hz</span>
+	      </fieldset>
+          <fieldset class="b2b-pdf-fieldset">
+	        <label for="1">500Hz</label>
+	        <span class="b2b-pdf-input">$l500Hz</span>
+	      </fieldset>
+          <fieldset class="b2b-pdf-fieldset">
+	        <label for="1">1kHz</label>
+	        <span class="b2b-pdf-input">$l1kHz</span>
+	      </fieldset>
+          <fieldset class="b2b-pdf-fieldset">
+	        <label for="1">2kHz</label>
+	        <span class="b2b-pdf-input">$l2kHz</span>
+	      </fieldset>
+          <fieldset class="b2b-pdf-fieldset">
+	        <label for="1">4kHz</label>
+	       <span class="b2b-pdf-input">$l4kHz</span>
+	      </fieldset>
+          <fieldset class="b2b-pdf-fieldset">
+	        <label for="1">8kHz</label>
+	        <span class="b2b-pdf-input">$l8kHz</span>
+	      </fieldset>
+        </div>
+        
+      </div>
+      
+    </div>
+  </section>
+
+  <section class="b2b-pdf-wrapper-column">
+    <div class="b2b-pdf-title">Nivel de potencia</div>
+    <div class="b2b-pdf-container-dark">
+      <table class="b2b-pdf-w-100">
+        <tr>
+          <td width="18%" class="b2b-pdf-subtitle b2b-pdf-red">DERECHO</td>
+          <td width="32%"></td>
+          <td width="18%" class="b2b-pdf-subtitle b2b-pdf-blue">IZQUIERDO</td>
+          <td width="32%"></td>
+        </tr>
+        <tr>
+          <td width="18%" class="b2b-pdf-subtitle">Potencia</td>
+          <td width="32%"><div style="width: 100px; word-break: break-all;">$potenciaDcha</div></td>
+          <td width="18%" class="b2b-pdf-subtitle">Potencia</td>
+          <td width="32%">$potenciaIzda</td>
+        </tr>
+
+      </table>
+
+
+    </div>
+  </section>
+
+  <section class="b2b-pdf-wrapper-column">
+    <div class="b2b-pdf-title">Características personalizadas</div>
+    <div class="b2b-pdf-container">
+      <table class="b2b-pdf-w-100">
+        <tr>
+          <td width="18%" class="b2b-pdf-subtitle b2b-pdf-red">DERECHO</td>
+          <td width="32%"></td>
+          <td width="18%" class="b2b-pdf-subtitle b2b-pdf-blue">IZQUIERDO</td>
+          <td width="32%"></td>
+        </tr>
+        <tr>
+          <td width="18%" class="b2b-pdf-subtitle">Direccionalidad (Micrófono dual)</td>
+          <td width="32%">$direccionalidadDcha</td>
+          <td width="18%" class="b2b-pdf-subtitle">Direccionalidad (Micrófono dual)</td>
+          <td width="32%">$direccionalidadIzda</td>
+        </tr>
+        <tr>
+          <td width="18%" class="b2b-pdf-subtitle"></td>
+          <td width="32%"></td>
+          <td width="18%" class="b2b-pdf-subtitle"></td>
+          <td width="32%"></td>
+        </tr>
+        <tr>
+          <td width="18%" class="b2b-pdf-subtitle">Conectividad</td>
+          <td width="32%">$conectividadDcha</td>
+          <td width="18%" class="b2b-pdf-subtitle">Conectividad</td>
+          <td width="32%">$conectividadIzda</td>
+        </tr>
+        <tr>
+          <td width="18%" class="b2b-pdf-subtitle">Media concha</td>
+          <td width="32%">$conchaDcha</td>
+          <td width="18%" class="b2b-pdf-subtitle">Media concha</td>
+          <td width="32%">$conchaIzda</td>
+        </tr>
+        <tr>
+          <td width="18%" class="b2b-pdf-subtitle">Tinnitus</td>
+          <td width="32%">$tinnitusDcha</td>
+          <td width="18%" class="b2b-pdf-subtitle">Tinnitus</td>
+          <td width="32%">$tinnitusIzda</td>
+        </tr>
+
+      </table>
+
+
+    </div>
+  </section>
+
+  <section class="b2b-pdf-wrapper-column">
+    <div class="b2b-pdf-title">Características opcionales</div>
+    <div class="b2b-pdf-container-dark">
+      <table class="b2b-pdf-w-100">
+        <tr>
+          <td width="18%" class="b2b-pdf-subtitle b2b-pdf-red">DERECHO</td>
+          <td width="32%"></td>
+          <td width="18%" class="b2b-pdf-subtitle b2b-pdf-blue">IZQUIERDO</td>
+          <td width="32%"></td>
+        </tr>
+        <tr>
+          <td width="18%" class="b2b-pdf-subtitle">Tamaño de la pila</td>
+          <td width="32%">$tamPilaDcha</td>
+          <td width="18%" class="b2b-pdf-subtitle">Tamaño de la pila</td>
+          <td width="32%">$tamPilaIzda</td>
+        </tr>
+        <tr>
+          <td width="18%" class="b2b-pdf-subtitle">Longitud del canal</td>
+          <td width="32%">$longCanalDcha</td>
+          <td width="18%" class="b2b-pdf-subtitle">Longitud del canal</td>
+          <td width="32%">$longCanalIzda</td>
+        </tr>
+        <tr>
+          <td width="18%" class="b2b-pdf-subtitle">Telebobina</td>
+          <td width="32%">$telebobinaDcha</td>
+          <td width="18%" class="b2b-pdf-subtitle">Telebobina</td>
+          <td width="32%">$telebobinaIzda</td>
+        </tr>
+        <tr>
+          <td width="18%" class="b2b-pdf-subtitle">Filtro anticerumen</td>
+          <td width="32%">$anticerumenDcha</td>
+          <td width="18%" class="b2b-pdf-subtitle">Filtro anticerumen</td>
+          <td width="32%">$anticerumenIzda</td>
+        </tr>
+        <tr>
+          <td width="18%" class="b2b-pdf-subtitle">Pulsador</td>
+          <td width="32%">$pulsadorDcha</td>
+          <td width="18%" class="b2b-pdf-subtitle">Pulsador</td>
+          <td width="32%">$pulsadorIzda</td>
+        </tr>
+        <tr>
+          <td width="18%" class="b2b-pdf-subtitle">Control de volumen</td>
+          <td width="32%">$volumenDcha</td>
+          <td width="18%" class="b2b-pdf-subtitle">Control de volumen</td>
+          <td width="32%">$volumenIzda</td>
+        </tr>
+        <tr>
+          <td width="18%" class="b2b-pdf-subtitle">Hilo extractor</td>
+          <td width="32%">$hiloExtractorDcha</td>
+          <td width="18%" class="b2b-pdf-subtitle">Hilo extractor</td>
+          <td width="32%">$hiloExtractorIzda</td>
+        </tr>
+        <tr>
+          <td width="18%" class="b2b-pdf-subtitle">Venting</td>
+          <td width="32%">$ventingDcha</td>
+          <td width="18%" class="b2b-pdf-subtitle">Venting</td>
+          <td width="32%">$ventingIzda</td>
+        </tr>
+        <tr>
+          <td width="18%" class="b2b-pdf-subtitle">Tipo de venting</td>
+          <td width="32%">$tipoVentingDcha</td>
+          <td width="18%" class="b2b-pdf-subtitle">Tipo de venting</td>
+          <td width="32%">$tipoVentingIzda</td>
+        </tr>
+        <tr>
+          <td width="18%" class="b2b-pdf-subtitle">Modificación sobre el venting</td>
+          <td width="32%">$modifVentingDcha</td>
+          <td width="18%" class="b2b-pdf-subtitle">Modificación sobre el venting</td>
+          <td width="32%">$modifVentingIzda</td>
+        </tr>
+      </table>
+
+
+    </div>
+  </section>
+
+
+  <section class="b2b-pdf-wrapper-column">
+    <div class="b2b-pdf-title">Color</div>
+    <div class="b2b-pdf-container">
+      <table class="b2b-pdf-w-100">
+        <tr>
+          <td width="18%" class="b2b-pdf-subtitle b2b-pdf-red">DERECHO</td>
+          <td width="32%"></td>
+          <td width="18%" class="b2b-pdf-subtitle b2b-pdf-blue">IZQUIERDO</td>
+          <td width="32%"></td>
+        </tr>
+        <tr>
+          <td width="18%" class="b2b-pdf-subtitle">Color de la carcasa</td>
+          <td width="32%">$colorCarcasaDcha</td>
+          <td width="18%" class="b2b-pdf-subtitle">Color de la carcasa</td>
+          <td width="32%">$colorCarcasaIzda</td>
+        </tr>
+        <tr>
+          <td width="18%" class="b2b-pdf-subtitle">Color del plato</td>
+          <td width="32%">$colorPlatoDcha</td>
+          <td width="18%" class="b2b-pdf-subtitle">Color del plato</td>
+          <td width="32%">$colorPlatoIzda</td>
+        </tr>
+        
+      </table>
+
+
+    </div>
+  </section>
+
+
+
+  <section class="b2b-pdf-wrapper-column">
+    <div class="b2b-pdf-title">Impresiones</div>
+    <div class="b2b-pdf-container-dark">
+      <table class="b2b-pdf-w-100">
+        <tr>
+          <td width="18%" class="b2b-pdf-subtitle b2b-pdf-red">DERECHO</td>
+          <td width="32%"></td>
+          <td width="18%" class="b2b-pdf-subtitle b2b-pdf-blue">IZQUIERDO</td>
+          <td width="32%"></td>
+        </tr>
+        <tr>
+          <td width="18%" class="b2b-pdf-subtitle">Número de serie</td>
+          <td width="32%">$numSerieDcha</td>
+          <td width="18%" class="b2b-pdf-subtitle">Número de serie</td>
+          <td width="32%">$numSerieIzda</td>
+        </tr>
+        <tr>
+          <td width="18%" class="b2b-pdf-subtitle">Impresión escaneada</td>
+          <td width="32%">$imprEscaneadaDcha</td>
+          <td width="18%" class="b2b-pdf-subtitle">Impresión escaneada</td>
+          <td width="32%">$imprEscaneadaIzda</td>
+        </tr>
+        <tr>        
+          <td width="18%" class="b2b-pdf-subtitle">$envioPorCorreoOrdinario</td>
+          <td width="32%"></td>
+          <td width="18%" class="b2b-pdf-subtitle"></td>
+          <td width="32%"></td>
+        </tr>
+        <tr>
+          <td width="18%" class="b2b-pdf-subtitle">Otocloud ID</td>
+          <td width="32%">$otocloudID</td>
+          <td width="18%" class="b2b-pdf-subtitle"></td>
+          <td width="32%"></td>
+        </tr>
+
+      </table>
+
+
+    </div>
+  </section>
+
+
+  <section class="b2b-pdf-wrapper-column">
+    <div class="b2b-pdf-title">Información adicional</div>
+    <div class="b2b-pdf-container">
+      <table class="b2b-pdf-w-100">
+        <tr>
+          <td width="18%" class="b2b-pdf-subtitle b2b-pdf-red">DERECHO</td>
+          <td width="32%"></td>
+          <td width="18%" class="b2b-pdf-subtitle b2b-pdf-blue">IZQUIERDO</td>
+          <td width="32%"></td>
+        </tr>
+        <tr>
+          <td width="18%" class="b2b-pdf-subtitle">Instrucciones especiales</td>
+          <td width="32%">$instrucEspecialesDcha</td>
+          <td width="18%" class="b2b-pdf-subtitle">Instrucciones especiales</td>
+          <td width="32%">$instrucEspecialesIzda</td>
+        </tr>
+        <tr>
+          <td width="18%" class="b2b-pdf-subtitle">Referencia Taller</td>
+          <td width="32%">$refTaller</td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+</form>
+</body>
+
+</html>

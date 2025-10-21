@@ -1,0 +1,5 @@
+jcrDetail:
+  form:
+    properties:
+      audit:
+        $type: checkBoxField

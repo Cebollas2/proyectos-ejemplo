@@ -1,0 +1,237 @@
+<!DOCTYPE Html>
+<html lang="es">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>$title</title>
+    <style>
+        @font-face {
+            font-family: 'Lato';
+            src: url('$host/.resources/cione-theme/webresources/fonts/Lato-Regular.ttf') format('truetype');
+            font-weight: 100;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        body {
+            font-family: 'Lato';
+            margin: 5px;
+        }
+
+        p {
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+
+        .pdf-header-top {
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            /*border-bottom: solid 1px #e5e5e5;*/
+        }
+
+        .border-header {
+            margin-bottom: 30px;
+            display: flex;
+            align-items: flex-end;
+            border-bottom: solid 1px #e5e5e5;
+            float: none;
+            margin-top: 10px;
+        }
+
+        .pdf-header-title {
+        	float: left;
+            width: 50%;
+            font-size: 15px;
+            font-weight: 900;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #333;
+            text-align: left;
+        }
+
+        .pdf-header-date {
+        	float: right;
+            font-size: 10px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #3e3e3e;
+            text-align: right;
+            width: 50%;
+        }
+
+        .pdf-header-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 25px;
+        }
+        .pdf-header-bottom > *{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            flex-direction: column;
+        }
+
+        .pdf-header-text {
+            font-size: 12px;
+            font-weight: 900;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #000;
+            width: 50%;
+            text-align: left;
+            margin-top: 12px;
+            margin-bottom: 10px;
+        }
+
+        .pdf-header-text-dir {
+            font-size: 12px;
+            font-weight: 900;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #000;
+            width: 50%;
+            text-align: left;
+            margin-top: 10px;
+            margin-bottom: 12px;
+            float: left;
+        }
+
+        .pdf-header-text--bold {
+            font-size: 11px;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #000;
+            width: 50%;
+            text-align: right;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            float: right;
+        } 
+        
+        .pdf-table-body {
+			border-collapse: separate;
+			border-spacing: 0 3px;
+        }
+
+        .pdf-table-body th{
+            font-size: 12px;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #080808;
+            text-align: left;
+            height: 25px;
+            padding-left: 10px;
+            padding-right: 10px;
+ 
+        }
+
+        .pdf-table-body td{
+            font-size: 8px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #3e3e3e;
+            height: 30px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        
+        .pdf-table-body tr {
+            background-color: #fafafa;
+        }
+
+        .pdf-table-body tr:nth-child(even) {
+            background-color: #e5e3e3;
+        }
+
+        .pdf-table-total{
+            background-color: #d8d8d8;
+            font-size: 14px;
+            font-weight: 900;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #333;
+            width: 100%;
+            text-align: left;
+            padding-left: 10px;
+            padding-right: 10px;
+            margin-top: 5px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <div class="pdf-header-top">
+            <p class="pdf-header-title">Presupuesto nº $presupuestoid</p>
+            <p class="pdf-header-date">Fecha presupuesto: $createdat</p>
+        </div>
+        
+        <div class="border-header"></div>
+        
+        <div class="pdf-header-bottom">
+            <div>
+            	<p class="pdf-header-text">$nombrecomercial</p>
+                <p class="pdf-header-text">$nombre</p>
+                <p class="pdf-header-text-dir">$direccion</p>
+                <p class="pdf-header-text--bold">Vigencia hasta: $vigencia</p>
+            </div>
+            <div>
+				 
+			</div>
+        </div>
+
+    </header>
+    
+    <table class="pdf-table-body" width="100%" style="font-size: 10px;" cellspacing="0">
+        <tr style="background: #fff;">
+            <th width="400">Artículo</th>
+            <th width="600">Datos adicionales</th>
+            <th width="20"  style="text-align: center;">Unidades</th>
+            <th width="100"  style="text-align: right;">PVP</th>
+
+        </tr>
+        $listado
+        
+    </table>
+
+    <table class="pdf-table-total">
+        <tr>
+            <th>TOTAL</th>
+            <th style="text-align: right;">$total €</th>
+        </tr>
+    </table>
+
+
+
+
+</body>
+
+</html>

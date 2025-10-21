@@ -1,0 +1,4 @@
+title: Componente B2B Registar/Actualizar Empleado
+templateScript: /cione-module/templates/components/b2b/register-update-employee-component.ftl
+modelClass: com.magnolia.cione.model.RegisterUpdateEmployeeModel
+renderType: freemarker

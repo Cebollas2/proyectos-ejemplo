@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" sv:name="config">
+  <sv:property sv:name="jcr:primaryType" sv:type="Name">
+    <sv:value>mgnl:content</sv:value>
+  </sv:property>
+  <sv:node sv:name="projects">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>mgnl:contentNode</sv:value>
+    </sv:property>
+    <sv:node sv:name="magnoliaIntegration">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>mgnl:contentNode</sv:value>
+      </sv:property>
+      <sv:property sv:name="clientId" sv:type="String">
+        <sv:value>c1l7hC9thKiu9avo1_yVZ8W2</sv:value>
+      </sv:property>
+      <sv:property sv:name="clientSecret" sv:type="String">
+        <sv:value>HVQnc-A7QXkbS9sz8iDeR3nmHS2L21sH</sv:value>
+      </sv:property>
+      <sv:property sv:name="projectKey" sv:type="String">
+        <sv:value>vilex</sv:value>
+      </sv:property>
+    </sv:node>
+  </sv:node>
+</sv:node>
+

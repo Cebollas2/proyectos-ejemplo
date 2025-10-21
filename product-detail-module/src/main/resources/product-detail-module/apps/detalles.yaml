@@ -1,0 +1,34 @@
+!content-type:detalle
+name: detalles
+label: Detalles
+icon: icon-work-item
+subApps:
+  detail:
+    form:
+      properties:
+        id:
+          i18n: true
+        title:
+          i18n: true
+        descripcion:
+          $type: richTextField
+          height: 500
+          colors: 00923E,F8C100,28166F
+          fonts: Lato;Arial/Arial,sans-serif
+          fontSizes: 16/16px;24/24px;48/48px;64/64px;96/96px
+          images: true
+          tables: true
+          source: true
+          i18n: true      
+      actions:
+        - name: commit
+        - name: cancel
+
+  browser:
+    workbench:
+      contentViews:
+        tree:
+          mgnl:lastModified:
+            $type: dateColumn
+            editable: false
+            expandRatio: 1.0

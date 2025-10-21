@@ -1,0 +1,10 @@
+datasource:
+  workspace: detalles
+  autoCreate: true
+
+model:
+  nodeType: mgnl:detalle
+  properties:
+    - name: id
+    - name: title
+    - name: descripcion

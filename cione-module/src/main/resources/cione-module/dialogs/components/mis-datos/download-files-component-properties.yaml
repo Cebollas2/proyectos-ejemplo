@@ -1,0 +1,98 @@
+form:
+  label: Componente Descarga de Documentos
+  properties:
+    docs:
+      $type: jcrMultiField
+      label: Listado de formularios
+      itemProvider:
+        $type: currentItemProvider
+      field:
+        $type: compositeField
+        label: Configuracion formulario
+        properties:
+          title:
+            $type: textField
+            label: Título de la seccion de formularios
+            i18n: true
+          seccionDescargas:
+            $type: jcrMultiField
+            label: Listado de formularios por seccion
+            itemProvider:
+              $type: currentItemProvider
+            field:
+              $type: compositeField
+              label: Configuracion seccion
+              properties:
+                titleDocument:
+                  $type: textField
+                  label: Título formulario
+                  i18n: true
+                documentos:
+                  $type: linkField
+                  i18n: true
+                  label: documento
+                  chooser:
+                    workbenchChooser:
+                      appName: assets
+                permisos:
+                  $type: switchableField
+                  label: Configuracion de permisos
+                  field:
+                    $type: radioButtonGroupField
+                    layout: horizontal
+                    datasource:
+                      $type: optionListDatasource
+                      label: opciones
+                      options:
+                        - name: roles
+                          value: roles
+                          label: Roles
+                        - name: campaing
+                          value: campaing
+                          label: Campañas
+                  itemProvider:
+                    $type: jcrChildNodeProvider
+                  forms:
+                    - name: roles
+                      label: Seleccionar para configuracion por Roles
+                      properties:
+                        roles:
+                          $type: jcrMultiField
+                          label: Roles
+                          itemProvider:
+                            $type: jcrChildNodeProvider
+                          field:
+                            $type: compositeField
+                            label: Configuracion por Roles
+                            properties:
+                              rol:
+                                $type: linkField
+                                label: Seleccione el rol que tendra acceso al banner
+                                chooser:
+                                  workbenchChooser:
+                                    appName: security
+                    - name: campaing
+                      label: Seleccionar para configuracion por Campañas
+                      properties:
+                        campaing:
+                          $type: comboBoxField
+                          label: Campaña
+                          datasource:
+                            $type: optionListDatasource
+                            label: Configuracion por Campañas
+                            options:
+                              - name: es
+                                label: España
+                                value: es 
+                              - name: pt
+                                label: Portugal
+                                value: pt
+                              - name: all
+                                label: Todos
+                                value: all
+                              - name: optofive
+                                label: Optofive (OPTCAN, OPTMAD, Cliente Monturas)
+                                value: optofive
+                              - name: opticapro
+                                label: opticapro (OPTICAPRO)
+                                value: opticapro

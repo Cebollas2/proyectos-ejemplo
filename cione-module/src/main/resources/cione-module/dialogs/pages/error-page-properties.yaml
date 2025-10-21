@@ -1,0 +1,31 @@
+form:
+  label: Página error
+  tabs:    
+    - name: tabMain
+      fields:
+        - name: title
+          label: Título página
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          i18n: true
+        - name: text
+          label: Texto
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          i18n: true
+        - name: code
+          label: Código error
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition          
+        - name:  returnPageLink
+          class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+          label: Página volver
+          description: Escoge la página de vuelta.
+          required: false
+          appName: pages
+          targetWorkspace: website
+          identifierToPathConverter:
+            class: info.magnolia.ui.form.field.converter.BaseIdentifierToPathConverter  
+actions:
+  commit:
+    class: info.magnolia.ui.admincentral.dialog.action.SaveDialogActionDefinition
+  cancel:
+    class: info.magnolia.ui.admincentral.dialog.action.CancelDialogActionDefinition
+    

@@ -1,0 +1,324 @@
+:root {
+    --color-01: #EFF4F8;
+    --color-02: #B4DFEA;
+    --color-03: #3FA9F5;
+    --color-04: #00609C;
+    --color-05: #FEF2C8;
+    --color-06: #F3AE25;
+    --color-07: #F959AB;
+
+    --color-08: #474747;
+
+    --color-white: #ffffff;
+}
+
+body {
+    font-size: 16px;
+    margin: 0;
+}
+
+.container__body {
+    background-color: var(--color-01);
+}
+
+.wrapper__dashboard {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 32px;
+
+    h1 {
+        font-weight: 700;
+        font-size: 32px;
+        color: var(--color-08);
+        margin-bottom: 22px;
+        margin: 0;
+    }
+
+    h2 {
+        font-weight: 500;
+        font-size: 24px;
+        color: var(--color-08);
+        padding-bottom: 16px;
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+    
+    h3 {
+        font-weight: 500;
+        font-size: 20px;
+        color: var(--color-08);
+        padding-bottom: 16px;
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .section__row-status {
+        display: flex;
+        gap: 16px;
+        margin: 16px 0;
+    }
+
+    .container__current-state {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container__next-state {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    .section__graphic-cards {
+        display: flex;
+        gap: 16px;
+        flex: 1;
+    }
+
+    .container__graphic {
+        border: 1px solid;
+        border-radius: 8px;
+        background: var(--color-white);
+        padding: 16px 36px;
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+        box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.06);
+        box-sizing: border-box;
+
+        &.container__graphic--smalll {
+            max-width: 245px;
+            width: 245px;
+            min-width: 245px;
+
+            .title__graphic {
+                padding: 0;
+            }
+
+            canvas {
+                max-height: 100px;
+            }
+        }
+
+        &.container__graphic--big {
+            width: 100%;
+            min-height: 350px;
+        }
+
+        &.container__graphic-orange {
+            border-color: var(--color-06);
+        }
+
+        &.container__graphic-white {
+            border-color: var(--color-white);
+        }
+
+        &.container__graphic-flex1 {
+            flex: 1;
+        }
+
+        .title__graphic {
+            font-weight: 500;
+            font-size: 16px;
+            color: var(--color-08);
+            margin: 0;
+            padding-bottom: 16px;
+        }
+    }
+
+    .container__information {
+        background: linear-gradient(var(--color-04), var(--color-03));
+        color: var(--color-white);
+        padding: 32px 20px;
+        border-radius: 8px;
+        flex: 1;
+        width: 100%;
+
+        .text__number {
+            margin: 0;
+            font-size: 48px;
+            font-weight: 500;
+            padding-bottom: 8px;
+        }
+
+        .text__information {
+            margin: 0;
+            font-size: 26px;
+            font-weight: 500;
+        }
+    }
+
+    .section__big-graphic {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin: 16px 0;
+
+        .container__graphic--big {
+            width: calc(50% - 9px);
+        }
+    }
+
+    .section__row-categories {
+        margin: 16px 0 0;
+
+        .section__graphic-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin: 16px 0;
+
+            .container__graphic {
+                max-width: 24%;
+                min-height: 280px;
+                flex: 1;
+
+                .title__graphic {
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 20px;
+                    height: 20px;
+                    display: flex;
+                    align-items: center;
+                    flex: 8px;
+                    padding: 0;
+
+                    &.title__glasses .icon {
+                        padding-right: 8px;
+                        display: block;
+                        width: 30px;
+                        height: 20px;
+                        content: url("data:image/svg+xml,%3Csvg width='31' height='22' viewBox='0 0 31 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M27.8397 12.5842C25.718 10.7476 22.5957 10.7476 20.4739 12.5842C19.5185 13.3971 18.9667 14.5975 18.9667 15.8627C18.9667 17.128 19.5185 18.3284 20.4739 19.1413C22.5957 20.9779 25.718 20.9779 27.8397 19.1413C28.7934 18.3273 29.344 17.1273 29.344 15.8627C29.344 14.5981 28.7934 13.3982 27.8397 12.5842ZM20.91 15.8627H21.7769C21.7832 15.2948 22.0304 14.7571 22.4553 14.3874C22.9262 13.9706 23.5321 13.7449 24.1568 13.7535V12.8902C23.3197 12.8836 22.5093 13.1888 21.8792 13.7481C21.2759 14.2798 20.9236 15.0465 20.91 15.8573V15.8627ZM3.9061 15.8627H4.77299C4.77928 15.2948 5.02652 14.7571 5.45142 14.3874C5.92228 13.9706 6.52816 13.7449 7.15289 13.7535V12.8902C6.32247 12.8812 5.51702 13.1782 4.88606 13.7262C4.2732 14.2609 3.91627 15.0371 3.9061 15.8573V15.8627ZM10.8358 12.5842C8.71404 10.7476 5.59175 10.7476 3.46996 12.5842C2.51631 13.3982 1.96575 14.5981 1.96575 15.8627C1.96575 17.1273 2.51631 18.3273 3.46996 19.1413C5.59175 20.9779 8.71404 20.9779 10.8358 19.1413C11.7895 18.3273 12.34 17.1273 12.34 15.8627C12.34 14.5981 11.7895 13.3982 10.8358 12.5842ZM27.1182 1.41528C28.1912 2.07686 29.0676 3.02099 29.6543 4.1474C30.0422 5.00274 30.2266 5.93859 30.1927 6.87952V15.8573C30.1782 17.3673 29.5252 18.7982 28.3997 19.7861C25.9501 21.9213 22.3312 21.9213 19.8816 19.7861C18.7556 18.7987 18.1024 17.3675 18.0886 15.8573C18.0894 15.6398 18.1038 15.4226 18.1317 15.207C17.9008 14.8054 17.5798 14.4646 17.1948 14.2125C16.2451 13.6003 15.0323 13.6003 14.0826 14.2125C13.6976 14.4646 13.3766 14.8054 13.1457 15.207C13.1736 15.4226 13.188 15.6398 13.1888 15.8573C13.175 17.3675 12.5218 18.7987 11.3958 19.7861C8.94619 21.9213 5.32728 21.9213 2.87768 19.7861C1.76421 18.7922 1.12331 17.3621 1.11698 15.8573V6.87952C1.08312 5.93859 1.26756 5.00274 1.65542 4.1474C2.24214 3.02099 3.11851 2.07686 4.19147 1.41528L4.67607 2.14203C3.73205 2.71923 2.95695 3.54167 2.43078 4.52444C2.10071 5.26295 1.94404 6.06913 1.9731 6.87952V12.9995C2.23387 12.5976 2.54319 12.2305 2.89383 11.9066C5.34088 9.76445 8.9649 9.76445 11.412 11.9066C12.0749 12.5007 12.5835 13.2514 12.8927 14.0923C13.1105 13.8511 13.3585 13.6398 13.6303 13.4639C14.8654 12.6657 16.4443 12.6657 17.6794 13.4639C17.9502 13.6412 18.1981 13.8523 18.4171 14.0923C18.7262 13.2514 19.2348 12.5007 19.8978 11.9066C22.3448 9.76445 25.9688 9.76445 28.4159 11.9066C28.7665 12.2305 29.0758 12.5976 29.3366 12.9995V6.87952C29.3665 6.0673 29.2098 5.25915 28.8789 4.51897C28.3528 3.53621 27.5777 2.71377 26.6336 2.13656L27.1182 1.41528Z' fill='%23474747' stroke='%23474747' stroke-width='0.8064'/%3E%3C/svg%3E%0A");
+                        /* position: absolute;
+                           top: 36px;
+                           right: 24px; */
+                    }
+
+                    &.title__lens .icon {
+                        padding-right: 8px;
+                        display: block;
+                        width: 22px;
+                        height: 22px;
+
+                        content: url("data:image/svg+xml,%3Csvg width='22' height='23' viewBox='0 0 22 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20.3017 10.2905C20.0398 7.97133 18.9042 5.83894 17.1258 4.32689C15.7163 3.08489 13.9552 2.3119 12.0867 2.11501C12.0126 2.11501 11.8591 2.14676 11.8591 2.28434V6.93035C11.8878 7.22352 11.7375 7.50523 11.478 7.64471C11.1825 7.80806 10.8191 7.78536 10.5464 7.5865C10.3307 7.42665 10.2143 7.16579 10.2394 6.8986C10.2394 5.36404 10.2394 3.82948 10.2394 2.29492C10.2394 2.14676 10.0806 2.10442 10.0012 2.11501C5.68903 2.61928 2.29698 6.03442 1.82316 10.3487C1.81723 10.3982 1.83209 10.4479 1.86419 10.486C1.8963 10.5241 1.94277 10.5472 1.99255 10.5498H6.6982C6.8247 10.5507 6.94943 10.5796 7.06343 10.6345C7.38863 10.826 7.53975 11.2157 7.42866 11.5764C7.34951 11.9266 7.03052 12.1697 6.67173 12.1531H1.99255C1.94201 12.1505 1.8931 12.1714 1.86 12.2097C1.82689 12.2479 1.8133 12.2993 1.82316 12.3489C2.30565 16.6897 5.73755 20.1139 10.0806 20.5879C10.1388 20.5879 10.2552 20.5879 10.2552 20.4027C10.2552 18.8629 10.2552 17.323 10.2552 15.7832C10.2415 15.5077 10.3698 15.2445 10.5953 15.0856C10.8208 14.9267 11.112 14.8944 11.3668 15C11.7072 15.1018 11.9287 15.4294 11.8961 15.7832V20.4292C11.8924 20.4793 11.9135 20.5281 11.9525 20.5597C11.9916 20.5914 12.0437 20.6019 12.092 20.5879C14.6747 20.3071 17.0193 18.9507 18.5497 16.8521C19.5219 15.5548 20.1254 14.019 20.2964 12.4071C20.2964 12.3225 20.2964 12.1478 20.1271 12.1478H15.4796C15.1453 12.1762 14.8357 11.9699 14.7333 11.6504C14.6245 11.3996 14.6515 11.1106 14.805 10.8843C14.9584 10.658 15.2169 10.5258 15.4902 10.5339C17.0411 10.5339 18.5867 10.5339 20.1376 10.5339C20.3388 10.5339 20.3123 10.3593 20.3017 10.2746M11.3986 0.45874L12.1131 0.516948C13.3792 0.634709 14.6142 0.976951 15.7602 1.52764C19.3343 3.22832 21.7007 6.73731 21.9373 10.6874C21.9944 11.7341 21.9017 12.7836 21.6621 13.8041C20.9639 16.841 18.996 19.4326 16.2577 20.9213C15.0599 21.5788 13.7458 21.9975 12.3884 22.1542C10.4457 22.3989 8.47305 22.1099 6.68232 21.3182C5.39365 20.7601 4.22935 19.9506 3.25762 18.9369C1.77149 17.4227 0.767616 15.5021 0.372826 13.4178C0.223196 12.6404 0.157537 11.8492 0.176978 11.0578C0.282571 7.20602 2.41347 3.69584 5.78248 1.82397C7.0302 1.11962 8.40762 0.675018 9.83178 0.516948C10.1123 0.49049 10.3929 0.479907 10.6734 0.45874C10.705 0.463697 10.7371 0.463697 10.7687 0.45874H11.3986Z' fill='%23474747'/%3E%3C/svg%3E%0A");
+                    }
+
+                    &.title__contact .icon {
+                        padding-right: 8px;
+                        display: block;
+                        width: 26px;
+                        height: 13px;
+                        content: url("data:image/svg+xml,%3Csvg width='29' height='15' viewBox='0 0 29 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M27.3605 2.45548C27.3605 3.28309 21.6053 3.95222 14.4998 3.95222C7.39437 3.95222 1.63916 3.28309 1.63916 2.45548M27.3605 2.45548C27.3605 1.62787 21.6053 0.95874 14.4998 0.95874C7.39437 0.95874 1.63916 1.62787 1.63916 2.45548M27.3605 2.45548C26.6356 8.86504 21.1128 13.9187 14.4998 13.9187C7.88689 13.9187 2.3641 8.86504 1.63916 2.45548M14.4998 11.4653C17.4057 11.4781 20.1903 10.2314 22.2085 8.01396' stroke='%23474747' stroke-width='1.40544' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+                    }
+
+                    &.title__audio .icon {
+                        padding-right: 8px;
+                        display: block;
+                        width: 18px;
+                        height: 20px;
+                        content: url("data:image/svg+xml,%3Csvg width='19' height='21' viewBox='0 0 19 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17.9919 8.13637C17.8944 8.64835 17.4012 8.98443 16.8899 8.88728C16.3786 8.79014 16.0425 8.29651 16.139 7.78433C16.2355 7.27215 16.728 6.93509 17.2395 7.03122C17.7508 7.13011 18.0867 7.62355 17.9919 8.13637ZM18.9148 8.31219C19.0767 7.46095 18.6378 6.60891 17.8514 6.24756C18.0526 4.439 17.3167 2.65295 15.9007 1.51269C14.4847 0.372431 12.585 0.0361915 10.8645 0.62131L11.1604 1.15379C11.2423 1.24371 11.3131 1.34323 11.3711 1.45018C12.7602 1.05737 14.2533 1.37626 15.3616 2.30241C16.4699 3.22856 17.0506 4.64271 16.9135 6.08179C15.9444 6.16401 15.1978 6.97252 15.1914 7.94651C15.185 8.9205 15.9211 9.73874 16.8889 9.83367C17.8568 9.9286 18.7374 9.26891 18.9198 8.31219' fill='%23474747'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M10.6937 1.78929L10.3102 1.20379C10.3102 1.20379 10.1638 0.578263 8.47836 1.38395C6.9897 2.09956 2.85173 3.58081 1.67595 9.4458C0.939188 13.1189 3.03845 20.0548 10.3556 19.9797C12.3438 19.9797 11.1781 17.2975 10.8249 16.3867C10.4716 15.4759 8.1453 11.4625 8.16549 8.05962C8.16549 3.96114 10.3102 3.61584 10.8198 3.10541C11.3295 2.59498 10.6937 1.78929 10.6937 1.78929Z' stroke='%23474747' stroke-width='1.6128'/%3E%3C/svg%3E%0A");
+                    }
+                }
+
+                .text__prox-rappel {
+                    background-color: #FFDAD2B2;
+                    margin: 0;
+                    font-size: 12px;
+                    font-weight: 500;
+                    color: var(--color-08);
+                    padding: 8px 20px;
+                    margin-top: 16px;
+                }
+            }
+        }
+    }
+
+    .container__outside-canvas {
+        width: 100%;
+        height: 100%;
+
+        #monthlySpend {
+            width: 100%;
+            height: 100%;
+            min-height: 400px;
+        }
+
+        #mySavings {
+            height: 320px;
+        }
+
+        .text__graphic-value {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--color-08);
+        }
+
+        &.container__outside-canvas--small {
+            max-height: 120px;
+            position: relative;
+        }
+    }
+}
+
+@media (max-width: 1440px) {
+    .wrapper__dashboard {
+        .container__current-state {
+            width: 100%;
+        }
+
+        .section__graphic-cards {
+            .container__graphic {
+                &.container__graphic--smalll {
+                    width: 100%;
+                    max-width: 100%;
+                }
+            }
+        }
+
+        .section__row-status {
+            flex-wrap: wrap;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .wrapper__dashboard {
+
+        .section__graphic-cards {
+            flex-wrap: wrap;
+        }
+
+        .section__row-status {
+            flex-wrap: wrap;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .wrapper__dashboard {
+        .container__current-state {
+            width: 100%;
+        }
+
+        .section__big-graphic {
+            .container__graphic--big {
+                width: 100%;
+            }
+        }
+
+        .section__row-categories {
+            .section__graphic-cards {
+                .container__graphic {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

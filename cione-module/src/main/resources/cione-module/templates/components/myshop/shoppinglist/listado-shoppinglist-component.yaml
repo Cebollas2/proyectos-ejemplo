@@ -1,0 +1,5 @@
+title: Shopping List - Listado
+renderType: freemarker
+templateScript: /cione-module/templates/components/myshop/shoppinglist/listado-shoppinglist-component.ftl
+modelClass: com.magnolia.cione.model.ListadoShoppingListModel
+dialog: cione-module:components/myshop/shoppinglist/listado-shoppinglist-component-properties

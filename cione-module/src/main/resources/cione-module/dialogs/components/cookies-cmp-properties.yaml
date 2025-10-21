@@ -1,0 +1,26 @@
+form:
+  tabs:
+    - name: tabMain
+      fields:
+        - name: cookiesText
+          class: info.magnolia.ui.form.field.definition.RichTextFieldDefinition
+          i18n: true       
+          label: texto   
+          required: true
+          tables: true
+          colors: 00609c,3fa9f5
+          fonts: Lato;Arial/Arial,sans-serif
+          fontSizes: 16/16px;24/24px;48/48px
+          alignment: true
+          images: true
+          source: true
+        - name: acceptLabel
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          i18n: true
+          required: true
+          defaultValue: Aceptar
+actions:      
+  commit:      
+    class: info.magnolia.ui.admincentral.dialog.action.SaveDialogActionDefinition      
+  cancel:      
+    class: info.magnolia.ui.admincentral.dialog.action.CancelDialogActionDefinition  

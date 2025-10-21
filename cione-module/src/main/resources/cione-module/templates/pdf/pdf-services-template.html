@@ -1,0 +1,179 @@
+<!DOCTYPE Html>
+<html lang="es">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>$title</title>
+    <style>
+    
+    	
+        @font-face {
+            font-family: 'Arial CE';
+            src: url('$host/.resources/cione-theme/webresources/fonts/ArialMT.ttf') format('truetype');
+            font-weight: 100;
+            font-style: normal;
+            
+        }
+
+        body{
+            font-family: 'Arial CE';
+        }
+        
+        .table-header {
+            font-size: 11px;
+            width: 100%;
+            margin-bottom: 50px;
+        }
+
+        .header-cotainer td{
+            height: 0;
+        }
+
+
+     
+
+        .table-header .title-container {
+            width: 100%;
+            text-align: center;
+     
+        }
+
+        h1 {
+            border: 1px solid;
+            font-size: 12px;
+            border: 1px solid;
+            font-size: 12px;
+            width: 200px;
+            height: 25px;
+            text-align: center;
+            margin: 0 auto;
+            line-height: 26px;
+        }
+
+        .table-header .info-container {
+            text-align: right;
+            font-size: 10px;
+        }
+        
+        .table-header .info-container-left {
+            text-align: center;
+            font-size: 10px;
+        }
+
+
+
+        .table-body-head th{
+            font-weight: bold;
+            border: 1px solid black;
+            font-size: 9px;
+            text-align: left;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        .table-body td{
+        	font-weight: normal;
+            text-align: left;
+            height: 40px;
+            padding-left: 5px;
+            padding-right: 5px;
+            font-size: 8px;
+        }
+
+        .table-body-head tr{
+            margin-bottom: 5px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <table  class="table-header" width="100%">
+        	
+            <tr>
+                <td>
+                	<div class="info-container-left">
+                        <img src="$myCioneLogo" alt="" style="width: 100px;" />
+                        <table style="width: 100%; text-align: left; padding-top: 10px;">
+	                        <tr>
+	                            <td style="font-size: 10px;">CIF: $CIF</td>
+	                            <td style="font-size: 10px;">Tlf: $telefono</td>
+	                        </tr>
+	                        <tr>
+	                            <td style="font-size: 10px;"> $direccion</td>
+	                            <td style="font-size: 10px;">Fax: $fax</td>
+	                        </tr>
+	                    </table>
+                    </div>
+                    
+                    
+                </td>
+                
+                <td>
+                    <div class="title-container">
+                        <h1>DETALLE ENVIOS</h1>
+                        <table style="width: 100%; text-align: left; padding-left: 30px; padding-top: 40px;">
+	                        <tr>
+	                            <td style="font-size: 10px;">Tracking de Envio : $trackingPedido</td>
+	                        </tr>
+	                        <tr>
+	                            <td style="font-size: 10px;">Agencia : $agencia</td>
+	                        </tr>
+	                        <tr>
+	                            <td style="font-size: 10px;">Tipo de envío : $tipoEnvio</td>
+	                        </tr>
+	                    </table>
+                    </div>
+                </td>
+                
+                <td>
+                    <div class="info-container">
+                        <div>$nombreSocio</div>
+                        <div>$dirSocio</div>
+                        <div>$provincia</div>
+                        <div>$ciudad</div>
+                        <div>$tlfSocio</div>
+                        <div>$email</div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+        
+    </header>
+    <table width="100%" style="font-size: 10px;">
+        <tr class="table-body-head">
+            <th width="225">ARTICULO</th>
+            <th>UNIDADES</th>
+            <th>IMPORTE BRUTO</th>
+            <th>DESCUENTO</th>
+            <th>IMPORTE VENTA</th>
+            <th>REFERENCIA WEB</th>
+            <th>REFERENCIA TALLER</th>
+            <th>ALBARAN</th>
+			<th width="60">FECHA</th>
+        </tr>
+        $listaEnvios
+<!--         <tr> -->
+<!--             <td width="225">CIONE Premium Silicona Miope/Hipermétr. 6M +0075</td> -->
+<!--             <td>1</td> -->
+<!--             <td>15,95</td> -->
+<!--             <td>0,00</td> -->
+<!--             <td>NOELIA</td> -->
+<!--             <td></td> -->
+<!--             <td>AV123224324324</td> -->
+<!--             <td>26-10-2021</td> -->
+<!--         </tr> -->
+    </table>
+
+
+
+
+
+</body>
+
+</html>

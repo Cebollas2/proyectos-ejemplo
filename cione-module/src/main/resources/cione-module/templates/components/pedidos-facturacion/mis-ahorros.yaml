@@ -1,0 +1,3 @@
+title: Componente Ahorros
+templateScript: /cione-module/templates/components/pedidos-facturacion/mis-ahorros.ftl
+renderType: freemarker

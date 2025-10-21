@@ -1,0 +1,75 @@
+form:
+  label: cione-module.components.banner-info-component-properties.label
+  properties:
+    imagesList:
+      $type: jcrMultiField
+      label: info
+      itemProvider:
+        $type: currentItemProvider
+      field:
+        $type: compositeField
+        properties:
+          titulo:
+            $type: textField
+            i18n: true
+            label: titulo
+          letrapequeña:
+            $type: richTextField
+            label: text editor
+            height: 500
+            tables: true
+            source: true
+            i18n: true
+          permisos:
+            $type: switchableField
+            field:
+              $type: radioButtonGroupField
+              layout: horizontal
+              datasource:
+                $type: optionListDatasource
+                options:
+                  - name: roles
+                    value: roles
+                  - name: campaing
+                    value: campaing
+            itemProvider:
+              $type: jcrChildNodeProvider
+            forms:
+              - name: roles
+                properties:
+                  roles:
+                    $type: jcrMultiField
+                    label: Roles
+                    itemProvider:
+                      $type: jcrChildNodeProvider
+                    field:
+                      $type: compositeField
+                      properties:
+                        rol:
+                          $type: linkField
+                          label: Seleccione el rol que tendra acceso
+                          chooser:
+                            workbenchChooser:
+                              appName: security
+              - name: campaing
+                properties:
+                  campaing:
+                    $type: comboBoxField
+                    datasource:
+                      $type: optionListDatasource
+                      options:
+                        - name: es
+                          label: España
+                          value: es 
+                        - name: pt
+                          label: Portugal
+                          value: pt
+                        - name: all
+                          label: Todos
+                          value: all
+                        - name: optofive
+                          label: Optofive (OPTCAN, OPTMAD, Cliente Monturas)
+                          value: optofive
+                        - name: opticapro
+                          label: opticapro (OPTICAPRO)
+                          value: opticapro

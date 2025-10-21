@@ -1,0 +1,368 @@
+label: Catálogos
+icon: icon-folder-l
+appClass: info.magnolia.ui.contentapp.ContentApp
+class: info.magnolia.ui.api.app.registry.ConfiguredAppDescriptor
+subApps:
+  browser:
+    label: Catalogos
+    subAppClass: info.magnolia.ui.contentapp.browser.BrowserSubApp
+    class: info.magnolia.ui.contentapp.browser.BrowserSubAppDescriptor
+    contentConnector:
+      includeProperties: false
+      workspace: catalogos
+      rootPath: /
+      defaultOrder: jcrName
+      nodeTypes:
+        - icon: icon-node-content
+          strict: true
+          name: catalogo
+        - icon: icon-folder-l
+          strict: true
+          name: mgnl:folder
+    imageProvider:
+       class: info.magnolia.dam.app.ui.imageprovider.DamLinkImageProviderDefinition
+       damLinkPropertyName: imagen
+    workbench:
+      dropConstraintClass: info.magnolia.ui.workbench.tree.drop.AlwaysTrueDropConstraint
+      editable: true
+      contentViews:
+        - name: tree
+          class: info.magnolia.ui.workbench.tree.TreePresenterDefinition
+          columns:
+            - name: jcrName
+              label: Nombre nodo
+              sortable: true
+              propertyName: jcrName
+              class: info.magnolia.ui.workbench.column.definition.PropertyColumnDefinition
+            - name: description
+              label: Descripción
+              sortable: true
+              propertyName: description
+              class: info.magnolia.ui.workbench.column.definition.PropertyColumnDefinition              
+            - name: status
+              label: Status
+              width: 45
+              sortable: true
+              displayInChooseDialog: false
+              formatterClass: info.magnolia.ui.workbench.column.StatusColumnFormatter
+              class: info.magnolia.ui.workbench.column.definition.StatusColumnDefinition
+            - name: moddate
+              label: Modification date
+              width: 160
+              sortable: true
+              displayInChooseDialog: false
+              formatterClass: info.magnolia.ui.workbench.column.DateColumnFormatter
+              propertyName: mgnl:lastModified
+              class: info.magnolia.ui.workbench.column.definition.MetaDataColumnDefinition
+    actions:
+      addFolder:
+        label: Add folder
+        icon: icon-add-folder
+        class: info.magnolia.ui.framework.action.AddFolderActionDefinition
+        availability:
+          writePermissionRequired: true
+          root: true
+          nodeTypes:
+            folder: mgnl:folder
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      editFolder:
+        label: Rename folder
+        dialogName: ui-framework:folder
+        icon: icon-edit
+        class: info.magnolia.ui.framework.action.OpenEditDialogActionDefinition
+        availability:
+          root: true
+          writePermissionRequired: true
+          nodeTypes:
+            folder: mgnl:folder
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      addCatalogo:
+        subAppId: detail
+        label: Add Catalogo
+        icon: icon-add-item
+        nodeType: catalogo
+        appName: catalogos
+        class: info.magnolia.ui.contentapp.detail.action.CreateItemActionDefinition
+        availability:
+          writePermissionRequired: true
+          root: true
+          nodeTypes:
+            folder: mgnl:folder
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      editCatalogo:
+        subAppId: detail
+        label: Edit Catalogo
+        icon: icon-edit
+        appName: catalogos
+        class: info.magnolia.ui.contentapp.detail.action.EditItemActionDefinition
+        availability:
+          writePermissionRequired: true
+          nodeTypes:
+            catalogo: catalogo
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      renameCatalogo:
+        label: Rename Catalogo
+        icon: icon-edit
+        dialogName: ui-framework:folder
+        class: info.magnolia.ui.framework.action.OpenEditDialogActionDefinition
+        availability:
+          writePermissionRequired: true
+          nodeTypes:
+            catalogo: catalogo
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      delete:
+        label: Delete
+        asynchronous: true
+        command: markAsDeleted
+        icon: icon-delete
+        class: info.magnolia.ui.framework.action.MarkNodeAsDeletedActionDefinition
+        availability:
+          writePermissionRequired: true
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      activate:
+        command: activate
+        icon: icon-publish
+        catalog: versioned
+        class: info.magnolia.ui.framework.action.ActivationActionDefinition
+        availability:
+          writePermissionRequired: true
+      activateRecursive:
+        catalog: versioned
+        command: activate
+        icon: icon-publish-incl-sub
+        recursive: true
+        class: info.magnolia.ui.framework.action.ActivationActionDefinition
+        availability:
+          writePermissionRequired: true
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      deactivate:
+        catalog: versioned
+        command: deactivate
+        icon: icon-unpublish
+        class: info.magnolia.ui.framework.action.ActivationActionDefinition
+        availability:
+          writePermissionRequired: true
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      export:
+        command: export
+        icon: icon-export
+        class: info.magnolia.ui.framework.action.ExportActionDefinition
+        availability:
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      import:
+        dialogName: ui-admincentral:import
+        icon: icon-import
+        class: info.magnolia.ui.framework.action.OpenCreateDialogActionDefinition
+        availability:
+          writePermissionRequired: true
+          root: true
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      confirmDelete:
+        label: Delete Catalogo
+        successActionName: delete
+        icon: icon-delete
+        class: info.magnolia.ui.framework.action.ConfirmationActionDefinition
+        availability:
+          multiple: true
+          writePermissionRequired: true
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule  
+      duplicateCatalogo:
+        label: Duplicate Catalogo
+        icon: icon-duplicate
+        class: info.magnolia.ui.framework.action.DuplicateNodeActionDefinition
+        availability:
+          writePermissionRequired: true
+          nodeTypes:
+            article: catalogo
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule              
+    actionbar:
+      defaultAction: editCatalogo
+      sections:
+        - name: root
+          label: Catalogos
+          availability:
+            nodes: false
+            root: true
+          groups:
+            - name: addActions
+              items:
+                - name: addCatalogo
+                - name: addFolder
+            - name: editActions
+              #items:
+            - name: publishingActions
+              items:
+                - name: activate
+                - name: activateRecursive
+                - name: deactivate
+            - name: eximActions
+              items:
+                - name: export
+                - name: import
+        - name: folder
+          label: Folder
+          availability:
+            nodeTypes:
+              folder: mgnl:folder
+          groups:
+            - name: addActions
+              items:
+                - name: addCatalogo
+                - name: addFolder
+            - name: editActions
+              items:
+                - name: editFolder
+                - name: delete
+            - name: publishingActions
+              items:
+                - name: activate
+                - name: activateRecursive
+                - name: deactivate
+            - name: eximActions
+              items:
+                - name: export
+                - name: import
+        - name: catalogo
+          label: Catalogo
+          availability:
+            nodeTypes:
+              catalogo: catalogo
+          groups:
+            - name: addActions
+              items:
+                - name: addCatalogo
+                - name: addFolder
+            - name: editActions
+              items:
+                - name: editCatalogo
+                - name: renameCatalogo
+                - name: duplicateCatalogo
+                - name: confirmDelete
+                #- name: delete
+            - name: publishingActions
+              items:
+                - name: activate
+                - name: activateRecursive
+                - name: deactivate
+            - name: eximActions
+              items:
+                - name: export
+                - name: import
+  detail:
+    label: Catalogo
+    subAppClass: info.magnolia.ui.contentapp.detail.DetailSubApp
+    class: info.magnolia.ui.contentapp.detail.DetailSubAppDescriptor
+    contentConnector:
+      defaultOrder: jcrName
+      includeProperties: false
+      rootPath: /
+      workspace: catalogos
+      nodeTypes:
+        - icon: icon-node-content
+          name: catalogo
+          strict: true
+        - icon: icon-folder-l
+          name: mgnl:folder
+          strict: true
+    editor:
+      nodeType:
+        icon: icon-items
+        name: catalogo
+      form:
+        description: Define the catalogo information
+        label: Edit catalogo
+        tabs:
+          - name: catalogo
+            label: Catalogo
+            fields:
+            - label: Nombre Nodo
+              name: jcrName
+              class: info.magnolia.ui.form.field.definition.TextFieldDefinition                
+              required: true
+            - name: title
+              label: Título
+              class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+              i18n: true
+              required: true
+            - name: description
+              label: Descripción
+              class: info.magnolia.ui.form.field.definition.TextFieldDefinition           
+            - name: imagen
+              label: Imagen (320x440)
+              class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+              targetWorkspace: dam
+              appName: assets
+              targetTreeRootPath: /cione/catalogos-promociones/catalogos
+              identifierToPathConverter:
+                class: info.magnolia.dam.app.assets.field.translator.AssetCompositeIdKeyTranslator
+              contentPreviewDefinition:
+                contentPreviewClass: info.magnolia.dam.app.ui.field.DamFilePreviewComponent
+            - name: documento
+              class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+              label: Documento
+              description:  Escoge un documento
+              required: false
+              appName: assets
+              targetWorkspace: dam
+              targetTreeRootPath: /cione/catalogos-promociones/catalogos
+              identifierToPathConverter:
+                class: info.magnolia.ui.form.field.converter.BaseIdentifierToPathConverter
+            - name: externalLink
+              label: enlace
+              class: info.magnolia.ui.form.field.definition.TextFieldDefinition  
+            - name: roles
+              label: Roles
+              class: info.magnolia.ui.form.field.definition.MultiValueFieldDefinition
+              transformerClass: info.magnolia.ui.form.field.transformer.multi.DelegatingMultiValueSubnodeTransformer          
+              field:
+                name: linkProperties
+                class: info.magnolia.ui.form.field.definition.CompositeFieldDefinition
+                transformerClass: info.magnolia.ui.form.field.transformer.composite.DelegatingCompositeFieldTransformer
+                layout: vertical
+                fields:              
+                  - name:  rol
+                    label: · Rol
+                    class: info.magnolia.ui.form.field.definition.LinkFieldDefinition                      
+                    description: Seleccione un rol para el acceso
+                    required: true
+                    appName: security
+                    targetWorkspace: userroles
+                    identifierToPathConverter:
+                      class: info.magnolia.ui.form.field.converter.BaseIdentifierToPathConverter
+                  - name: separator
+                    class: info.magnolia.ui.form.field.definition.StaticFieldDefinition
+                    value: <div style="height:2px;widht:100%;background:#689600">                                             
+                    label: ""     
+      actions:
+        - name: commit
+        - name: cancel
+    actions:
+      commit:
+        implementationClass: info.magnolia.ui.form.action.SaveFormAction
+        class: info.magnolia.ui.form.action.SaveFormActionDefinition
+      cancel:
+        class: info.magnolia.ui.form.action.CancelFormActionDefinition

@@ -1,0 +1,2 @@
+
+[@cms.component content=component /]

@@ -1,0 +1,115 @@
+form:
+  properties:
+    category:
+      label: cione-module.components.myshop.filtro-productos-component-properties.category
+      description: cione-module.components.myshop.filtro-productos-component-properties.category.description
+      $type: categoryChooserField
+      selectProduct: false
+    internalLink:
+      $type: linkField
+      description: cione-module.components.myshop.filtro-productos-component-properties.internalLink.description
+      chooser:
+        workbenchChooser:
+          appName: pages-app
+    maxprice:
+      label: cione-module.components.myshop.filtro-productos-component-properties.max
+      $type: textField
+      type: java.lang.Integer
+      converterClass: com.vaadin.data.converter.StringToIntegerConverter
+      conversionErrorMessage: cione-module.components.myshop.filtro-productos-component-properties.conversionErrorMessage
+      required: true
+      requiredErrorMessage: cione-module.components.myshop.filtro-productos-component-properties.requiredErrorMessage
+    filterSelect:
+      label: Opciones de Filtros
+      $type: comboBoxField
+      defaultValue: monturas
+      datasource:
+        $type: optionListDatasource
+        options:
+          - name: generico
+            label: Generico
+            value: generico
+          - name: monturas
+            label: Monturas
+            value: monturas
+          - name: soluciones
+            label: Soluciones
+            value: soluciones
+          - name: accesorios
+            label: Accesorios
+            value: accesorios
+          - name: marketing
+            label: Marketing
+            value: marketing
+          - name: contactologia
+            label: Lentes de contacto
+            value: contactologia
+          - name: audiologiaamedida
+            label: Audiologia audifonos a medida
+            value: audiologiaamedida
+          - name: audiologiastock
+            label: Audiologia audifonos de stock
+            value: audiologiastock
+          - name: audiologiacompleta
+            label: Audiologia Completa
+            value: audiologiacompleta
+          - name: tapones
+            label: Tapones
+            value: tapones
+          - name: baterias
+            label: Baterias
+            value: baterias
+          - name: complementos
+            label: Complementos
+            value: complementos
+          - name: accesoriosinalambricos
+            label: Accesorios Inalambricos
+            value: accesoriosinalambricos
+    listadoFiltros:
+      $type: jcrMultiField
+      label: listado Filtros
+      itemProvider:
+        $type: currentItemProvider
+      field:
+        $type: compositeField
+        label: Filtro
+        properties:
+          name:
+            $type: textField
+            i18n: true
+            label: Nombre del Filtro que se muestra en el listado de Filtros
+          filtro:
+            $type: textField
+            label: Nombre del Filtro en Commercetools
+          tipo:
+            $type: comboBoxField
+            label: Seleccione el tipo
+            datasource:
+              $type: optionListDatasource
+              options:
+                - name: textoName
+                  label: Texto
+                  value: texto
+                - name: booleanName
+                  label: Booleano
+                  value: boolean
+                - name: localizedName
+                  label: Localized
+                  value: localized
+                - name: numberName
+                  label: Number
+                  value: number
+                - name: moneyName
+                  label: Money
+                  value: money
+                - name: dateName
+                  label: Date
+                  value: date
+                - name: listName
+                  label: List (enum)
+                  value: list
+    showpvo:
+       label: Mostrar Filtro PVO          
+       buttonLabel: Si ha seleccionado filtros genéricos, marcar si quiere mostrar el filtro PVO
+       $type: checkBoxField
+       defaultValue: false

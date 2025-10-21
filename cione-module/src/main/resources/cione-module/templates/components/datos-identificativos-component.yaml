@@ -1,0 +1,5 @@
+title: Componentes Datos Identificativos
+#dialog: cione-module:components/register-recovery-pwd-properties
+templateScript: /cione-module/templates/components/datos-identificativos-component.ftl
+renderType: freemarker
+modelClass: com.magnolia.cione.model.DatosIdentificativosModel

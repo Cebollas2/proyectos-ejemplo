@@ -1,0 +1,40 @@
+form:
+  properties:
+    internalLink:
+      i18n: true
+      $type: linkField
+      chooser:
+        workbenchChooser:
+          appName: pages-app
+    categoriaRepuestos:
+      $type: categoryChooserField
+    infoconfig:
+      $type: textField
+      rows: 5
+      i18n: true
+    internalLinkPacks:
+      i18n: true
+      label: Enlace pagina de seleccion con el listado de productos del Pack
+      $type: linkField
+      chooser:
+        workbenchChooser:
+          appName: pages-app
+    internalLinkPacksNofilters:
+      i18n: true
+      label: Enlace pagina de seleccion con el listado (sin filtros) de productos del Pack
+      $type: linkField
+      chooser:
+        workbenchChooser:
+          appName: pages-app
+    internalLinkCioneLab:
+      i18n: true
+      label: Enlace pagina de CioneLab para seleccionar lentes
+      $type: linkField
+      chooser:
+        workbenchChooser:
+          appName: pages-app
+footerLayout:
+  $type: defaultEditorActionLayout
+  primaryActions:
+    commit: commit
+    cancel: cancel

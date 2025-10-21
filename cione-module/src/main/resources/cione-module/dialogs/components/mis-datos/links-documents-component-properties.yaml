@@ -1,0 +1,40 @@
+form:
+  tabs:    
+    - name: docs
+      label: Listado de formularios
+      fields:                   
+        - name: formularios
+          label: Formularios documentos
+          class: info.magnolia.ui.form.field.definition.MultiValueFieldDefinition
+          required: false
+          transformerClass: info.magnolia.ui.form.field.transformer.multi.DelegatingMultiValueSubnodeTransformer          
+          field:
+            name: linkProperties
+            class: info.magnolia.ui.form.field.definition.CompositeFieldDefinition
+            transformerClass: info.magnolia.ui.form.field.transformer.composite.DelegatingCompositeFieldTransformer
+            layout: vertical
+            fields:
+              - name: text
+                label: Texto
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                i18n: false
+                required: true
+              - name: mailto
+                label: Mail (to)
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                i18n: true
+                required: false
+              - name: subject
+                label: Asunto
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                i18n: true
+                required: false
+              - name: endLinkProperties
+                label: <Fin documento>
+                class: info.magnolia.ui.form.field.definition.StaticFieldDefinition
+                value: --------------------------- 
+actions:
+  commit:
+    class: info.magnolia.ui.admincentral.dialog.action.SaveDialogActionDefinition
+  cancel:
+    class: info.magnolia.ui.admincentral.dialog.action.CancelDialogActionDefinition

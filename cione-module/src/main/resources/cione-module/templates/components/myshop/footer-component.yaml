@@ -1,0 +1,5 @@
+title: Componente footer
+renderType: freemarker    
+templateScript: /cione-module/templates/components/myshop/footer-component.ftl    
+dialog: cione-module:components/myshop/footer-component-properties
+modelClass: com.magnolia.cione.model.ControlPermisosModel

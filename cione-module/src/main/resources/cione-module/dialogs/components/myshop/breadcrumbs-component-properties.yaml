@@ -1,0 +1,9 @@
+form:
+  properties:
+    myshopHome:
+      label: Home de MyShop
+      $type: linkField
+      required: true
+      chooser:
+        workbenchChooser:
+          appName: pages

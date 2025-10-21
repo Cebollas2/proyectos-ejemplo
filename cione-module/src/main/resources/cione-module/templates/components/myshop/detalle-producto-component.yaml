@@ -1,0 +1,12 @@
+title: Componente Detalle de Producto
+templateScript: /cione-module/templates/components/myshop/detalle-producto-component.ftl
+dialog: cione-module:components/myshop/detalle-producto-component-properties
+modelClass: com.magnolia.cione.model.MyShopDetailModel
+renderType: freemarker
+
+areas:
+  configurador:    
+    renderType: freemarker
+    availableComponents:
+      configurador-audio-component:
+        id: cione-module:components/myshop/configurador-audio-component

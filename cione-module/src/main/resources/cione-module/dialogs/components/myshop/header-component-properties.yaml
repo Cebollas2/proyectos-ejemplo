@@ -1,0 +1,150 @@
+form:
+  properties:
+    imagesList:
+      $type: jcrMultiField
+      label: image.images.label
+      itemProvider:
+        $type: jcrChildNodeProvider
+      field:
+        $type: compositeField
+        properties:
+          permisos:
+            $type: switchableField
+            required: true
+            label: permisos
+            field:
+              $type: radioButtonGroupField
+              layout: horizontal
+              datasource:
+                $type: optionListDatasource
+                options:
+                  - name: roles
+                    value: roles
+                    label: roles
+                  - name: campaing
+                    value: campaing
+                    label: campana
+            itemProvider:
+              $type: jcrChildNodeProvider
+            forms:
+              - name: roles
+                properties:
+                  roles:
+                    $type: jcrMultiField
+                    label: .
+                    itemProvider:
+                      $type: jcrChildNodeProvider
+                    field:
+                      $type: compositeField
+                      properties:
+                        rol:
+                          $type: linkField
+                          label: Seleccione el rol que tendra acceso al banner
+                          chooser:
+                            workbenchChooser:
+                              appName: security
+              - name: campaing
+                properties:
+                  campaing:
+                    $type: comboBoxField
+                    label: .
+                    datasource:
+                      $type: optionListDatasource
+                      options:
+                        - name: es
+                          label: España
+                          value: es 
+                        - name: pt
+                          label: Portugal
+                          value: pt
+                        - name: all
+                          label: Todos
+                          value: all
+                        - name: optofive
+                          label: Optofive (OPTCAN, OPTMAD, Cliente Monturas)
+                          value: optofive
+                        - name: opticapro
+                          label: opticapro (OPTICAPRO)
+                          value: opticapro
+          logo:
+            label: Logo
+            $type: linkField
+            chooser:
+              workbenchChooser:
+                appName: assets
+          logoAlt:
+            label: Texto alternativo logo
+            $type: textField
+          logoLink:
+            label: Logo link
+            $type: linkField
+            chooser:
+              workbenchChooser:
+                appName: pages  
+    editProfileLink:
+      label: Editar Perfil Link
+      $type: linkField
+      chooser:
+        workbenchChooser:
+          appName: pages     
+    modifyPricesLink:
+      label: Modificar Precios Link
+      $type: linkField
+      chooser:
+        workbenchChooser:
+          appName: pages
+    carritoLink:
+      label: Carrito Link
+      $type: linkField
+      chooser:
+        workbenchChooser:
+          appName: pages
+    inheritable:
+      $type: checkBoxField
+      label: Heredar en Myshop
+      buttonLabel: Mostrar en páginas de Myshop
+      defaultValue: false
+    hashidDoofinder:
+      label: HashId Doofinder
+      $type: textField
+    linksList:
+      i18n: true
+      $type: jcrMultiField
+      itemProvider:
+        $type: jcrChildNodeProvider
+      field:
+        $type: compositeField
+        properties:
+          linkText:
+            $type: textField
+            required: true
+          internalLink:
+            $type: linkField
+            required: true
+            chooser:
+              workbenchChooser:
+                appName: pages-app
+    alertsLink:
+      label: Pagina Listado de Alertas de Packs
+      $type: linkField
+      chooser:
+        workbenchChooser:
+          appName: pages
+
+  layout:
+    $type: tabbedLayout
+    tabs:
+      firstTab:
+        label: Main
+        fields:
+          - name: imagesList
+          - name: editProfileLink
+          - name: modifyPricesLink
+          - name: carritoLink
+          - name: inheritable
+          - name: hashidDoofinder
+          - name: alertsLink
+      secondTab:
+        label: Links List
+        fields:
+          - name: linksList

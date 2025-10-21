@@ -1,0 +1,4 @@
+title: Componente Gestores cuenta
+templateScript: /cione-module/templates/components/mis-datos/gestores-cuenta-component.ftl
+renderType: freemarker
+modelClass: com.magnolia.cione.model.MisDatosModel

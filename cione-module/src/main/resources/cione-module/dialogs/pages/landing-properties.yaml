@@ -1,0 +1,43 @@
+form:
+  label: Plantilla página landing
+  properties:
+    title:
+      label: Título página
+      $type: textField
+      i18n: true
+    logo:
+      $type: linkField
+      label: Logo Cabecera
+      chooser:
+        workbenchChooser:
+          appName: assets
+    image:
+      $type: linkField
+      label: Imagen del fondo
+      chooser:
+        workbenchChooser:
+          appName: assets
+    text:
+      $type: jcrMultiValueField
+      label: Parrafo
+      field:
+        $type: textField
+    textoinfo:
+      label: text editor
+      $type: richTextField
+      height: 500
+      tables: true
+      source: true
+      i18n: true
+
+  layout:
+    $type: tabbedLayout
+    tabs:
+      mainTab:
+        label: General
+        fields:
+          - name: title
+          - name: image
+          - name: logo
+          - name: text
+          - name: textoinfo

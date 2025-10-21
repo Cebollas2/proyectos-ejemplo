@@ -1,0 +1,5 @@
+title: Compra Periodica - Detalle
+renderType: freemarker
+templateScript: /cione-module/templates/components/myshop/compra-periodica/detalle-cp-component.ftl
+modelClass: com.magnolia.cione.model.DetallePeriodicPurchaseModel
+dialog: cione-module:components/myshop/compra-periodica/listado-cp-component-properties

@@ -1,0 +1,14 @@
+label: Elastic
+name: elastic
+appClass: info.magnolia.ui.framework.app.BaseApp
+icon: icon-search
+class: info.magnolia.ui.api.app.AppDescriptor
+theme: elastic-theme
+subApps:
+  main:
+    label: Elastic
+    subAppClass: com.magnolia.cione.admin.apps.elastic.ElasticSubApp
+    class: info.magnolia.ui.api.app.registry.ConfiguredSubAppDescriptor
+    closable: false
+    contentConnector:
+      workspace: elastic

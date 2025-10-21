@@ -1,0 +1,5 @@
+title: Componente Configurador Audiologia Avanzada
+templateScript: /cione-module/templates/components/myshop/configurador-audio-component.ftl
+modelClass: com.magnolia.cione.model.MyShopDetailModel
+renderType: freemarker
+dialog: cione-module:components/myshop/configurador-audio-component-properties

@@ -1,0 +1,4 @@
+title: Componente redirección
+templateScript: /cione-module/templates/components/redirect-component.ftl
+#dialog: cione-module:components/redirect-component-properties
+renderType: freemarker

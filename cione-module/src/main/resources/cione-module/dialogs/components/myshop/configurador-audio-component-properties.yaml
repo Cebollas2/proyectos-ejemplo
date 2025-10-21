@@ -1,0 +1,11 @@
+form:
+  properties:
+    textoSeleccionLado:
+      label: Texto Selección lado
+      $type: textField
+      i18n: true
+    textoAudiograma:
+      label: Texto Audiograma
+      $type: textField
+      i18n: true
+      

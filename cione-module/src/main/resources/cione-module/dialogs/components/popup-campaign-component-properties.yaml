@@ -1,0 +1,213 @@
+form:
+  label: cione-module.components.popup-campaing-component-properties.label
+  properties:
+    listCampaings:
+      $type: jcrMultiField
+      label: Listado de Campañas
+      i18n: true
+      itemProvider:
+        $type: currentItemProvider
+      field:
+        $type: compositeField
+        properties:
+          campaignId:
+            $type: textField
+            label: ID Campaña
+            i18n: true
+            required: true
+          permisos:
+            $type: switchableField
+            field:
+              $type: radioButtonGroupField
+              layout: horizontal
+              datasource:
+                $type: optionListDatasource
+                options:
+                  - name: roles
+                    value: roles
+                  - name: campaing
+                    value: campaing
+            itemProvider:
+              $type: jcrChildNodeProvider
+            forms:
+              - name: roles
+                properties:
+                  roles:
+                    $type: jcrMultiField
+                    label: .
+                    itemProvider:
+                      $type: jcrChildNodeProvider
+                    field:
+                      $type: compositeField
+                      properties:
+                        rol:
+                          $type: linkField
+                          label: Seleccione el rol que tendra acceso al banner
+                          chooser:
+                            workbenchChooser:
+                              appName: security
+              - name: campaing
+                properties:
+                  campaing:
+                    $type: comboBoxField
+                    datasource:
+                      $type: optionListDatasource
+                      options:
+                        - name: es
+                          label: España
+                          value: es 
+                        - name: pt
+                          label: Portugal
+                          value: pt
+                        - name: all
+                          label: Todos
+                          value: all
+                        - name: optofive
+                          label: Optofive (OPTCAN, OPTMAD, Cliente Monturas)
+                          value: optofive
+                        - name: opticapro
+                          label: opticapro (OPTICAPRO)
+                          value: opticapro
+          title:
+            $type: textField
+            label: Título
+            i18n: true
+          titleTextColor:
+            label: Color letra del titulo de la cabecera blanca
+            $type: comboBoxField
+            layout: horizontal
+            datasource:
+              $type: optionListDatasource
+              options:
+                - name: blanco
+                  label: Blanco
+                  value: ffffff                    
+                  selected: true
+                - name: negro
+                  label: Negro
+                  value: 000000 
+                - name: azuloscuro
+                  label: Azul oscuro
+                  value: 00609c   
+                - name: azulclaro
+                  label: Azul claro
+                  value: 22bae8   
+                - name: gris
+                  label: Gris
+                  value: 666666
+                - name: marron
+                  label: Marrón
+                  value: 3d092a
+          backgroundColor: 
+            $type: checkBoxField
+            label: Background
+            description: Marcar para mostrar el texto del editor de texto enriquecido
+          text:
+            $type: richTextField
+            i18n: true
+            label: Texto que saldrá dentro del banner
+            colors: ffffff,000000,00609c,22bae8,666666,3d092a
+            fontSizes: 10/10px;12/12px;16/16px;24/24px;48/48px
+            fonts: Lato,sans-serif; Arial/Arial,sans-serif; Times New Roman/Times New Roman,serif
+          enlacebanner:
+            $type: textField
+            label: Enlace Banner a Cione University
+            description: Si se completa este campo no se tendrán en cuenta el resto de botones
+          fechaInicio:
+            $type: dateField
+            type: java.util.Date
+            time: true
+            label: Fecha Inicio
+          fechaFin:
+            $type: dateField
+            type: java.util.Date
+            time: true
+            label: Fecha Fin
+          logo:
+            $type: linkField
+            label: Logo
+            description: Seleccione una imagen de la applicación de Assets
+            chooser:
+              workbenchChooser:
+                appName: assets
+          backgroundImage:
+            $type: linkField
+            label: Imagen
+            description: Seleccione una imagen de la applicación de Assets
+            chooser:
+              workbenchChooser:
+                appName: assets
+          secondaryButtons:
+            label: Botones secundarios
+            $type: jcrMultiField
+            itemProvider:
+              $type: jcrChildNodeProvider
+            field:
+              $type: compositeField
+              properties:
+                buttonTitle:
+                  $type: textField
+                  label: Título
+                  i18n: true
+                enlace:
+                  $type: textField
+                  label: Enlace Externo a Cione University
+                  i18n: true
+                buttonId:
+                  $type: textField
+                  label: ID
+                  i18n: false
+                  required: true
+                backgroundColor:
+                  $type: textField
+                  label: Color de fondo (Defecto '#FFFFFF')
+                  defaultValue: #FFFFFF
+                textColor:
+                  $type: textField
+                  label: Color del texto (Defecto '#00609c')
+                  defaultValue: #00609c
+                backgroundHoverColor:
+                  $type: textField
+                  label: Color de fondo hover (Defecto '#00609c')
+                  defaultValue: #00609c
+                textHoverColor:
+                  $type: textField
+                  label: Color del texto hover (Defecto '#FFFFFF')
+                  defaultValue: #FFFFFF
+          primaryButtons:
+            label: Botones primarios
+            $type: jcrMultiField
+            itemProvider:
+              $type: jcrChildNodeProvider
+            field:
+              $type: compositeField
+              properties:
+                buttonTitle:
+                  $type: textField
+                  label: Título
+                  i18n: true
+                enlace:
+                  $type: textField
+                  label: Enlace Externo a Cione University
+                  i18n: true
+                buttonId:
+                  $type: textField
+                  label: ID
+                  i18n: false
+                  required: true
+                backgroundColor:
+                  $type: textField
+                  label: Color de fondo (Defecto '#00609c')
+                  defaultValue: #00609c
+                textColor:
+                  $type: textField
+                  label: Color del texto (Defecto '#FFFFFF')
+                  defaultValue: #FFFFFF
+                backgroundHoverColor:
+                  $type: textField
+                  label: Color de fondo hover (Defecto '#FFFFFF')
+                  defaultValue: #FFFFFF
+                textHoverColor:
+                  $type: textField
+                  label: Color del texto hover (Defecto '#00609c')
+                  defaultValue: #00609c

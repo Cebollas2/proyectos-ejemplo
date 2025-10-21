@@ -1,0 +1,5 @@
+title: Carrito - Confirmación pedido
+templateScript: /cione-module/templates/components/myshop/confirmacion-pedido-component.ftl
+renderType: freemarker
+modelClass: com.magnolia.cione.model.CarritoModel
+dialog: cione-module:components/myshop/confirmacion-pedido-component-properties

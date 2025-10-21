@@ -1,0 +1,44 @@
+form:
+  label: Recursive Page Link List
+  tabs:
+    - name: tabMain
+      label: Target Page
+      fields:       
+        - name: targetNode
+          class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+          label: Page
+          description: Choose a page to link to.
+          required: true
+          appName: pages
+          targetWorkspace: website
+          identifierToPathConverter:
+            class: info.magnolia.ui.form.field.converter.BaseIdentifierToPathConverter             
+        - name: maxLevels
+          class: info.magnolia.ui.form.field.definition.SelectFieldDefinition
+          label: Maximum Levels
+          description: Maximum of level of pages shown in this recursion.
+          type: Long
+          options:
+            - name: 1
+              value: 1
+              label: 1
+            - name: 2
+              value: 2
+              label: 2
+            - name: 3
+              value: 3
+              label: 3
+            - name: 4
+              value: 4
+              label: 4
+            - name: 5
+              value: 5
+              label: 5
+ 
+actions:
+  commit:
+    label: save changes
+    class: info.magnolia.ui.admincentral.dialog.action.SaveDialogActionDefinition
+  cancel:
+    label: cancel
+    class: info.magnolia.ui.admincentral.dialog.action.CancelDialogActionDefinition

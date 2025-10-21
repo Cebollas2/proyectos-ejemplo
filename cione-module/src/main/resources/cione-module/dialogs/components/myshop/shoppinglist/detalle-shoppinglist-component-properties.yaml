@@ -1,0 +1,18 @@
+form:
+  properties:
+    internalLink:
+      $type: linkField
+      required: true
+      label: cione-module.components.myshop.listado-shoppinglist-component-properties.internalLink.label
+      description: cione-module.components.myshop.listado-shoppinglist-component-properties.internalLink.description
+      chooser:
+        workbenchChooser:
+          appName: pages-app
+    internalLinkFeedback:
+      $type: linkField
+      required: true
+      label: cione-module.components.myshop.nueva-cp-component-properties.internalLink.label
+      description: cione-module.components.myshop.nueva-cp-component-properties.internalLink.description
+      chooser:
+        workbenchChooser:
+          appName: pages-app

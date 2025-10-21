@@ -1,0 +1,4 @@
+templateScript: /cione-module/templates/components/login-component-pur-cione.ftl
+renderType: freemarker
+dialog: cione-module:components/login-component-pur-cione-properties
+modelClass: com.magnolia.cione.model.ControlPermisosModel

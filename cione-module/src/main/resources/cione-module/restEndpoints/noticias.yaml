@@ -1,0 +1,12 @@
+class: info.magnolia.rest.delivery.jcr.v2.JcrDeliveryEndpointDefinition
+workspace: noticias
+rootPath: /
+endpointPath: /private/noticias
+depth: 6
+includeSystemProperties: true
+nodeTypes: 
+  - mgnl:folder
+childNodeTypes:
+  - mgnl:folder
+  - noticia
+  - mgnl:contentNode

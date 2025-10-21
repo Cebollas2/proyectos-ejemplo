@@ -1,0 +1,5 @@
+title: Configurador de Lentes
+templateScript: /cione-module/templates/components/myshop/configurador-lentes-component.ftl
+#dialog: cione-module:components/myshop/configurador-lentes-component-properties
+modelClass: com.magnolia.cione.model.ConfiguradorLentesModel
+renderType: freemarker

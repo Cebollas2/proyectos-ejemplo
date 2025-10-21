@@ -1,0 +1,2 @@
+templateScript: /cione-module/templates/components/login-component.ftl
+renderType: freemarker

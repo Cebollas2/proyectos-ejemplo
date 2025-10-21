@@ -1,0 +1,328 @@
+label: Panel de Socios
+icon: icon-work-item
+appClass: info.magnolia.ui.contentapp.ContentApp
+class: info.magnolia.ui.api.app.registry.ConfiguredAppDescriptor
+subApps:
+  browser:
+    label: Encuestas
+    subAppClass: info.magnolia.ui.contentapp.browser.BrowserSubApp
+    class: info.magnolia.ui.contentapp.browser.BrowserSubAppDescriptor
+    contentConnector:
+      includeProperties: false
+      workspace: encuestas
+      rootPath: /
+      defaultOrder: tema
+      nodeTypes:
+        - icon: icon-node-content
+          name: encuesta
+          strict: true
+    imageProvider:
+      originalImageNodeName: photo
+      imageProviderClass: info.magnolia.ui.imageprovider.DefaultImageProvider
+      class: info.magnolia.ui.imageprovider.definition.ConfiguredImageProviderDefinition
+    workbench:
+      dropConstraintClass: info.magnolia.ui.workbench.tree.drop.AlwaysTrueDropConstraint
+      editable: true
+      contentViews:
+        - name: tree
+          class: info.magnolia.ui.workbench.tree.TreePresenterDefinition
+          columns:
+            - name: tema
+              sortable: true
+              label: Encuesta name
+              propertyName: tema
+              class: info.magnolia.ui.workbench.column.definition.PropertyColumnDefinition
+            - name: descripcionRoles
+              sortable: true
+              label: Descripción roles
+              propertyName: descripcionRoles
+              class: info.magnolia.ui.workbench.column.definition.PropertyColumnDefinition  
+            - name: status
+              label: Status
+              width: 45
+              sortable: true
+              displayInChooseDialog: false
+              formatterClass: info.magnolia.ui.workbench.column.StatusColumnFormatter
+              class: info.magnolia.ui.workbench.column.definition.StatusColumnDefinition
+            - name: moddate
+              label: Modification date
+              width: 160
+              sortable: true
+              displayInChooseDialog: false
+              formatterClass: info.magnolia.ui.workbench.column.DateColumnFormatter
+              propertyName: mgnl:lastModified
+              class: info.magnolia.ui.workbench.column.definition.MetaDataColumnDefinition
+    actions:
+      addEncuesta:
+        subAppId: detail
+        label: Add Encuesta
+        icon: icon-add-item
+        nodeType: encuesta
+        appName: encuestas
+        class: info.magnolia.ui.contentapp.detail.action.CreateItemActionDefinition
+        availability:
+          writePermissionRequired: true
+          root: true
+          nodeTypes:
+            folder: mgnl:folder
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      editEncuesta:
+        subAppId: detail
+        label: Edit Encuesta
+        icon: icon-edit
+        appName: encuestas
+        class: info.magnolia.ui.contentapp.detail.action.EditItemActionDefinition
+        availability:
+          writePermissionRequired: true
+          nodeTypes:
+            encuesta: encuesta
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      renameEncuesta:
+        label: Rename Encuesta
+        icon: icon-edit
+        dialogName: ui-framework:folder
+        class: info.magnolia.ui.framework.action.OpenEditDialogActionDefinition
+        availability:
+          writePermissionRequired: true
+          nodeTypes:
+            encuesta: encuesta
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      delete:
+        label: Delete
+        asynchronous: true
+        command: markAsDeleted
+        icon: icon-delete
+        class: info.magnolia.ui.framework.action.MarkNodeAsDeletedActionDefinition
+        availability:
+          writePermissionRequired: true
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      activate:
+        command: activate
+        icon: icon-publish
+        catalog: versioned
+        class: info.magnolia.ui.framework.action.ActivationActionDefinition
+        availability:
+          writePermissionRequired: true
+      activateRecursive:
+        catalog: versioned
+        command: activate
+        icon: icon-publish-incl-sub
+        recursive: true
+        class: info.magnolia.ui.framework.action.ActivationActionDefinition
+        availability:
+          writePermissionRequired: true
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      deactivate:
+        catalog: versioned
+        command: deactivate
+        icon: icon-unpublish
+        class: info.magnolia.ui.framework.action.ActivationActionDefinition
+        availability:
+          writePermissionRequired: true
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      export:
+        command: export
+        icon: icon-export
+        class: info.magnolia.ui.framework.action.ExportActionDefinition
+        availability:
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      import:
+        dialogName: ui-admincentral:import
+        icon: icon-import
+        class: info.magnolia.ui.framework.action.OpenCreateDialogActionDefinition
+        availability:
+          writePermissionRequired: true
+          root: true
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      confirmDelete:
+        label: Delete Encuesta
+        successActionName: delete
+        icon: icon-delete
+        class: info.magnolia.ui.framework.action.ConfirmationActionDefinition
+        availability:
+          multiple: true
+          writePermissionRequired: true
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule  
+      duplicateEncuesta:
+        label: Duplicate Encuesta
+        icon: icon-duplicate
+        class: info.magnolia.ui.framework.action.DuplicateNodeActionDefinition
+        availability:
+          writePermissionRequired: true
+          nodeTypes:
+            article: encuesta
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule              
+    actionbar:
+      defaultAction: editEncuesta
+      sections:
+        - name: root
+          label: Encuestas
+          availability:
+            nodes: false
+            root: true
+          groups:
+            - name: addActions
+              items:
+                - name: addEncuesta
+            - name: editActions
+              #items:
+            - name: publishingActions
+              items:
+                - name: activate
+                - name: activateRecursive
+                - name: deactivate
+            - name: eximActions
+              items:
+                - name: export
+                - name: import
+        - name: encuesta
+          label: Encuesta
+          availability:
+            nodeTypes:
+              encuesta: encuesta
+          groups:
+            - name: addActions
+              items:
+                - name: addEncuesta
+            - name: editActions
+              items:
+                - name: editEncuesta
+                - name: renameEncuesta
+                - name: duplicateEncuesta
+                - name: confirmDelete
+                #- name: delete
+            - name: publishingActions
+              items:
+                - name: activate
+                - name: activateRecursive
+                - name: deactivate
+            - name: eximActions
+              items:
+                - name: export
+                - name: import
+  detail:
+    label: Encuesta
+    subAppClass: info.magnolia.ui.contentapp.detail.DetailSubApp
+    class: info.magnolia.ui.contentapp.detail.DetailSubAppDescriptor
+    contentConnector:
+      defaultOrder: jcrName
+      includeProperties: false
+      rootPath: /
+      workspace: encuestas
+      nodeTypes:
+        - icon: icon-node-content
+          name: encuesta
+          strict: true
+    editor:
+      nodeType:
+        icon: icon-items
+        name: encuesta
+      form:
+        description: Define the encuesta information
+        label: Edit encuesta
+        tabs:
+          - name: encuesta
+            label: Encuesta
+            fields:
+              - label: Tema
+                name: tema
+                i18n: true
+                maxLength: 50
+                required: true
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          - name: roles
+            label: Roles
+            fields:
+              - name: descripcionRoles
+                label: Descripción               
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+              - name: roles
+                label: Roles
+                class: info.magnolia.ui.form.field.definition.MultiValueFieldDefinition
+                transformerClass: info.magnolia.ui.form.field.transformer.multi.DelegatingMultiValueSubnodeTransformer          
+                field:
+                  name: linkProperties
+                  class: info.magnolia.ui.form.field.definition.CompositeFieldDefinition
+                  transformerClass: info.magnolia.ui.form.field.transformer.composite.DelegatingCompositeFieldTransformer
+                  layout: vertical
+                  fields:              
+                    - name:  rol
+                      label: Rol
+                      class: info.magnolia.ui.form.field.definition.LinkFieldDefinition                      
+                      description: Seleccione un rol para el acceso
+                      required: true
+                      appName: security
+                      targetWorkspace: userroles
+                      identifierToPathConverter:
+                        class: info.magnolia.ui.form.field.converter.BaseIdentifierToPathConverter
+                    - name: separator
+                      class: info.magnolia.ui.form.field.definition.StaticFieldDefinition
+                      value: <div style="height:2px;widht:100%;background:#689600">                                             
+                      label: ""
+          - name: encuestas
+            label: Encuestas
+            fields:
+              - name: encuestas
+                label: Encuestas
+                class: info.magnolia.ui.form.field.definition.MultiValueFieldDefinition
+                transformerClass: info.magnolia.ui.form.field.transformer.multi.DelegatingMultiValueSubnodeTransformer          
+                field:
+                  name: linkProperties
+                  class: info.magnolia.ui.form.field.definition.CompositeFieldDefinition
+                  transformerClass: info.magnolia.ui.form.field.transformer.composite.DelegatingCompositeFieldTransformer
+                  layout: vertical
+                  fields:            
+                    - name: titulo
+                      label: Título
+                      class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                      i18n: true
+                      required: true 
+                      maxLength: 50                                                                          
+                    - name: enlace
+                      label: enlace
+                      required: true
+                      class: info.magnolia.ui.form.field.definition.TextFieldDefinition  
+                      validators:
+                      - name: url
+                        class: info.magnolia.ui.form.validator.definition.RegexpValidatorDefinition
+                        pattern: https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)
+                        errorMessage: Introduzca una url correcta como http://www.cione.es
+                    - name: fecha
+                      label: Fecha publicación
+                      dateFormat: dd-MM-yyyy
+                      required: true
+                      class: info.magnolia.ui.form.field.definition.DateFieldDefinition                      
+                    - name: separator
+                      class: info.magnolia.ui.form.field.definition.StaticFieldDefinition
+                      value: <div style="height:2px;widht:100%;background:#689600">                                             
+                      label: ""       
+              
+      actions:
+        - name: commit
+        - name: cancel
+    actions:
+      commit:
+        implementationClass: info.magnolia.ui.form.action.SaveFormAction
+        class: info.magnolia.ui.form.action.SaveFormActionDefinition
+      cancel:
+        class: info.magnolia.ui.form.action.CancelFormActionDefinition

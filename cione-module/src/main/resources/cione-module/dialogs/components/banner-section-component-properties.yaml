@@ -1,0 +1,25 @@
+form:
+  label: Banner sección
+  tabs:
+    - name: tabMain
+      fields:
+        - name: title
+          label: Título página
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          i18n: true
+                            
+        - name: imageLink
+          label: Imagen
+          class: info.magnolia.ui.form.field.definition.LinkFieldDefinition          
+          description: Seleccione una imagen de la applicación de Assets
+          appName: assets
+          targetWorkspace: dam
+          identifierToPathConverter:
+            class: info.magnolia.dam.app.assets.field.translator.AssetCompositeIdKeyTranslator
+          contentPreviewDefinition:
+            contentPreviewClass: info.magnolia.dam.app.ui.field.DamFilePreviewComponent
+actions:
+  commit:
+    class: info.magnolia.ui.admincentral.dialog.action.SaveDialogActionDefinition
+  cancel:
+    class: info.magnolia.ui.admincentral.dialog.action.CancelDialogActionDefinition

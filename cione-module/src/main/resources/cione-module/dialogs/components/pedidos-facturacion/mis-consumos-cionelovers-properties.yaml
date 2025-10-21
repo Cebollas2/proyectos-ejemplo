@@ -1,0 +1,53 @@
+form:
+  properties:
+    title:
+      label: Titulo
+      required: true
+      i18n: true
+      $type: textField
+    datestart:
+      label: Fecha Inicio
+      required: true
+      $type: dateField
+      type: java.util.Date
+      time: true
+    dateend:
+      label: Fecha Fin
+      required: true
+      $type: dateField
+      type: java.util.Date
+      time: true
+    btnPdf:
+      $type: switchableField
+      required: true
+      label: Boton pdf
+      field:
+        $type: radioButtonGroupField
+        layout: horizontal
+        datasource:
+          $type: optionListDatasource
+          options:
+            - name: linkPdf
+              value: linkPdf
+              label: Link PDF
+            - name: linkUrl
+              value: linkUrl
+              label: Link URL
+      itemProvider:
+        $type: jcrChildNodeProvider
+      forms:
+        - name: linkPdf
+          properties:
+            linkPdf:
+              $type: linkField
+              i18n: true
+              label: PDF
+              chooser:
+                workbenchChooser:
+                  appName: assets
+        - name: linkUrl
+          properties:
+            linkUrl:
+              $type: textField
+              label: url
+              i18n: true

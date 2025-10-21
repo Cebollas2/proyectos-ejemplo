@@ -1,0 +1,4 @@
+title: Componente Texto enriquecido
+dialog: cione-module:components/rich-text-cmp-properties
+templateScript: /cione-module/templates/components/rich-text-cmp.ftl
+renderType: freemarker

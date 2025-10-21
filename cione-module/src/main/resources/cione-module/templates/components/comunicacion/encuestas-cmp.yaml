@@ -1,0 +1,5 @@
+title: Componente Encuestas
+templateScript: /cione-module/templates/components/comunicacion/encuestas-cmp.ftl
+#dialog: cione-module:components/comunicacion/encuestas-cmp-properties
+modelClass: com.magnolia.cione.model.ControlPermisosModel
+renderType: freemarker

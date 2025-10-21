@@ -1,0 +1,5 @@
+title: Componente Formulario Solicitud de Respuestos
+templateScript: /cione-module/templates/components/myshop/repuestos-form-component.ftl
+dialog: cione-module:components/myshop/repuestos-form-component-properties
+renderType: freemarker
+modelClass: com.magnolia.cione.model.CategoriesModel

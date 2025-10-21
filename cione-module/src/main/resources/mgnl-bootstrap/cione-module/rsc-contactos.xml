@@ -1,0 +1,1221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" sv:name="jcr:root">
+  <sv:property sv:name="jcr:primaryType" sv:type="Name">
+    <sv:value>rep:root</sv:value>
+  </sv:property>
+  <sv:node sv:name="presidente">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>mgnl:folder</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+      <sv:value>mgnl:hasVersion</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>52fac8b4-d08b-46c7-8fce-62e131d1f18a</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:activationStatus" sv:type="Boolean">
+      <sv:value>true</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:created" sv:type="Date">
+      <sv:value>2019-08-13T11:52:34.381+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:createdBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
+      <sv:value>2019-09-11T13:44:14.672+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastActivatedBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastActivatedVersion" sv:type="String">
+      <sv:value>1.0</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastActivatedVersionCreated" sv:type="Date">
+      <sv:value>2019-09-11T13:44:13.891+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+      <sv:value>2019-08-13T14:15:23.817+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:node sv:name="jgm">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>rsc-contacto</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:value>mgnl:hasVersion</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>5a979143-da67-480b-9a8f-f568fc4626a5</sv:value>
+      </sv:property>
+      <sv:property sv:name="cargo" sv:type="String">
+        <sv:value>Presidente</sv:value>
+      </sv:property>
+      <sv:property sv:name="cargo_pt" sv:type="String">
+        <sv:value>Presidente</sv:value>
+      </sv:property>
+      <sv:property sv:name="email" sv:type="String">
+        <sv:value>javier.miro@cione.es</sv:value>
+      </sv:property>
+      <sv:property sv:name="email_pt" sv:type="String">
+        <sv:value>javier.miro@cione.es</sv:value>
+      </sv:property>
+      <sv:property sv:name="foto" sv:type="String">
+        <sv:value>jcr:2d71c447-168c-4e5a-b328-b8c356ca9d26</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:activationStatus" sv:type="Boolean">
+        <sv:value>true</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:created" sv:type="Date">
+        <sv:value>2019-08-13T12:38:36.655+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:createdBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
+        <sv:value>2019-09-11T13:44:14.939+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedVersion" sv:type="String">
+        <sv:value>1.0</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedVersionCreated" sv:type="Date">
+        <sv:value>2019-09-11T13:44:14.164+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+        <sv:value>2019-09-11T13:20:00.035+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="nombre" sv:type="String">
+        <sv:value>D. Javier González-Miró</sv:value>
+      </sv:property>
+      <sv:property sv:name="tamano" sv:type="String">
+        <sv:value>medium</sv:value>
+      </sv:property>
+    </sv:node>
+  </sv:node>
+  <sv:node sv:name="consejeros">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>mgnl:folder</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+      <sv:value>mgnl:hasVersion</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>422a6628-34d7-4581-aee1-c191ec63e36c</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:activationStatus" sv:type="Boolean">
+      <sv:value>true</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:created" sv:type="Date">
+      <sv:value>2019-08-13T12:31:36.290+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:createdBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
+      <sv:value>2019-09-11T13:44:20.378+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastActivatedBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastActivatedVersion" sv:type="String">
+      <sv:value>1.0</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastActivatedVersionCreated" sv:type="Date">
+      <sv:value>2019-09-11T13:44:17.592+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+      <sv:value>2019-08-14T10:01:36.959+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:node sv:name="sergio-mayor">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>rsc-contacto</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:value>mgnl:hasVersion</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>61759ec4-049d-4c72-afaf-98341ff47e83</sv:value>
+      </sv:property>
+      <sv:property sv:name="cargo" sv:type="String">
+        <sv:value>VICEPRESIDENTE</sv:value>
+      </sv:property>
+      <sv:property sv:name="cargo_pt" sv:type="String">
+        <sv:value>VICE-PRESIDENTE</sv:value>
+      </sv:property>
+      <sv:property sv:name="email" sv:type="String">
+        <sv:value>sergio.mayor@cione.es</sv:value>
+      </sv:property>
+      <sv:property sv:name="email_pt" sv:type="String">
+        <sv:value>sergio.mayor@cione.es</sv:value>
+      </sv:property>
+      <sv:property sv:name="foto" sv:type="String">
+        <sv:value>jcr:ca89f598-b2a0-4e65-ad11-ed997923c355</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:activationStatus" sv:type="Boolean">
+        <sv:value>true</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:created" sv:type="Date">
+        <sv:value>2019-08-14T10:01:36.959+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:createdBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
+        <sv:value>2019-09-11T13:44:22.125+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedVersion" sv:type="String">
+        <sv:value>1.0</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedVersionCreated" sv:type="Date">
+        <sv:value>2019-09-11T13:44:17.899+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+        <sv:value>2019-09-11T13:20:32.353+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="nombre" sv:type="String">
+        <sv:value>D. Sergio Mayor</sv:value>
+      </sv:property>
+      <sv:property sv:name="tamano" sv:type="String">
+        <sv:value>small</sv:value>
+      </sv:property>
+    </sv:node>
+    <sv:node sv:name="miguel-hernandez">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>rsc-contacto</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:value>mgnl:hasVersion</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>d56bb690-8ef6-4cea-b310-fd8b3c1e407a</sv:value>
+      </sv:property>
+      <sv:property sv:name="cargo" sv:type="String">
+        <sv:value>SECRETARIO</sv:value>
+      </sv:property>
+      <sv:property sv:name="cargo_pt" sv:type="String">
+        <sv:value>SECRETÁRIO</sv:value>
+      </sv:property>
+      <sv:property sv:name="email" sv:type="String">
+        <sv:value>miguel.hernandez@cione.es</sv:value>
+      </sv:property>
+      <sv:property sv:name="email_pt" sv:type="String">
+        <sv:value>miguel.hernandez@cione.es</sv:value>
+      </sv:property>
+      <sv:property sv:name="foto" sv:type="String">
+        <sv:value>jcr:1de490f5-4b90-4d0d-99ec-5e6b08f27715</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:activationStatus" sv:type="Boolean">
+        <sv:value>true</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:created" sv:type="Date">
+        <sv:value>2019-08-14T10:05:31.498+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:createdBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
+        <sv:value>2019-09-11T13:44:21.925+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedVersion" sv:type="String">
+        <sv:value>1.0</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedVersionCreated" sv:type="Date">
+        <sv:value>2019-09-11T13:44:18.152+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+        <sv:value>2019-09-11T13:21:32.648+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="nombre" sv:type="String">
+        <sv:value>D. Miguel Hernández</sv:value>
+      </sv:property>
+      <sv:property sv:name="tamano" sv:type="String">
+        <sv:value>small</sv:value>
+      </sv:property>
+    </sv:node>
+    <sv:node sv:name="miguel-moragues">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>rsc-contacto</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:value>mgnl:hasVersion</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>2bbd32a2-7298-41ae-bbe1-f9cb1fc39e61</sv:value>
+      </sv:property>
+      <sv:property sv:name="cargo" sv:type="String">
+        <sv:value>TESORERO</sv:value>
+      </sv:property>
+      <sv:property sv:name="cargo_pt" sv:type="String">
+        <sv:value>TESOUREIRO</sv:value>
+      </sv:property>
+      <sv:property sv:name="email" sv:type="String">
+        <sv:value>miguel.moragues@cione.es</sv:value>
+      </sv:property>
+      <sv:property sv:name="email_pt" sv:type="String">
+        <sv:value>miguel.moragues@cione.es</sv:value>
+      </sv:property>
+      <sv:property sv:name="foto" sv:type="String">
+        <sv:value>jcr:d9005395-f81a-4fd7-b7da-d3f1a2dc0d8e</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:activationStatus" sv:type="Boolean">
+        <sv:value>true</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:created" sv:type="Date">
+        <sv:value>2019-08-14T10:09:39.310+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:createdBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
+        <sv:value>2019-09-11T13:44:21.720+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedVersion" sv:type="String">
+        <sv:value>1.0</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedVersionCreated" sv:type="Date">
+        <sv:value>2019-09-11T13:44:18.439+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+        <sv:value>2019-09-11T13:22:17.225+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="nombre" sv:type="String">
+        <sv:value>D. Miguel Moragues</sv:value>
+      </sv:property>
+      <sv:property sv:name="tamano" sv:type="String">
+        <sv:value>small</sv:value>
+      </sv:property>
+    </sv:node>
+    <sv:node sv:name="eva-marin">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>rsc-contacto</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:value>mgnl:hasVersion</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>dba17bd5-f8f9-45a1-9407-eed9531e093b</sv:value>
+      </sv:property>
+      <sv:property sv:name="cargo" sv:type="String">
+        <sv:value>VOCAL</sv:value>
+      </sv:property>
+      <sv:property sv:name="cargo_pt" sv:type="String">
+        <sv:value>VOGAL</sv:value>
+      </sv:property>
+      <sv:property sv:name="email" sv:type="String">
+        <sv:value>eva.marin@cione.es</sv:value>
+      </sv:property>
+      <sv:property sv:name="email_pt" sv:type="String">
+        <sv:value>eva.marin@cione.es</sv:value>
+      </sv:property>
+      <sv:property sv:name="foto" sv:type="String">
+        <sv:value>jcr:ba3f0460-cd76-4842-83dd-8d4a094bf990</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:activationStatus" sv:type="Boolean">
+        <sv:value>true</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:created" sv:type="Date">
+        <sv:value>2019-08-14T13:29:11.494+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:createdBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
+        <sv:value>2019-09-11T13:44:21.513+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedVersion" sv:type="String">
+        <sv:value>1.0</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedVersionCreated" sv:type="Date">
+        <sv:value>2019-09-11T13:44:18.698+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+        <sv:value>2019-09-11T13:26:24.776+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="nombre" sv:type="String">
+        <sv:value>Dña. Eva Marín</sv:value>
+      </sv:property>
+      <sv:property sv:name="tamano" sv:type="String">
+        <sv:value>small</sv:value>
+      </sv:property>
+    </sv:node>
+    <sv:node sv:name="antonio-villena">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>rsc-contacto</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:value>mgnl:hasVersion</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>3ed82a73-4067-4252-80a0-35a81666f33b</sv:value>
+      </sv:property>
+      <sv:property sv:name="cargo" sv:type="String">
+        <sv:value>VOCAL</sv:value>
+      </sv:property>
+      <sv:property sv:name="cargo_pt" sv:type="String">
+        <sv:value>VOGAL</sv:value>
+      </sv:property>
+      <sv:property sv:name="email" sv:type="String">
+        <sv:value>antonio.villena@cione.es</sv:value>
+      </sv:property>
+      <sv:property sv:name="email_pt" sv:type="String">
+        <sv:value>antonio.villena@cione.es</sv:value>
+      </sv:property>
+      <sv:property sv:name="foto" sv:type="String">
+        <sv:value>jcr:a0a88d26-663e-4143-bbb4-fb0d648c5fec</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:activationStatus" sv:type="Boolean">
+        <sv:value>true</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:created" sv:type="Date">
+        <sv:value>2019-08-14T13:38:48.308+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:createdBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
+        <sv:value>2019-09-11T13:44:21.283+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedVersion" sv:type="String">
+        <sv:value>1.0</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedVersionCreated" sv:type="Date">
+        <sv:value>2019-09-11T13:44:18.975+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+        <sv:value>2019-09-11T13:26:41.302+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="nombre" sv:type="String">
+        <sv:value>D. Antonio Villena</sv:value>
+      </sv:property>
+      <sv:property sv:name="tamano" sv:type="String">
+        <sv:value>small</sv:value>
+      </sv:property>
+    </sv:node>
+    <sv:node sv:name="emilia-barriada">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>rsc-contacto</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:value>mgnl:hasVersion</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>ac9bee2c-5eab-4bb6-a0f7-24d2b70367ee</sv:value>
+      </sv:property>
+      <sv:property sv:name="cargo" sv:type="String">
+        <sv:value>VOCAL</sv:value>
+      </sv:property>
+      <sv:property sv:name="cargo_pt" sv:type="String">
+        <sv:value>VOGAL</sv:value>
+      </sv:property>
+      <sv:property sv:name="email" sv:type="String">
+        <sv:value>emilia.barriada@cione.es</sv:value>
+      </sv:property>
+      <sv:property sv:name="email_pt" sv:type="String">
+        <sv:value>emilia.barriada@cione.es</sv:value>
+      </sv:property>
+      <sv:property sv:name="foto" sv:type="String">
+        <sv:value>jcr:366b54ea-d55d-4010-a203-d655ab80d3fb</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:activationStatus" sv:type="Boolean">
+        <sv:value>true</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:created" sv:type="Date">
+        <sv:value>2019-08-14T13:39:31.701+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:createdBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
+        <sv:value>2019-09-11T13:44:21.066+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedVersion" sv:type="String">
+        <sv:value>1.0</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedVersionCreated" sv:type="Date">
+        <sv:value>2019-09-11T13:44:19.276+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+        <sv:value>2019-09-11T13:27:30.720+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="nombre" sv:type="String">
+        <sv:value>Dña. Emilia Barriada</sv:value>
+      </sv:property>
+      <sv:property sv:name="tamano" sv:type="String">
+        <sv:value>small</sv:value>
+      </sv:property>
+    </sv:node>
+    <sv:node sv:name="begona-martinez">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>rsc-contacto</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:value>mgnl:hasVersion</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>7c152cc6-fe97-4f52-9a12-ec80de60ef44</sv:value>
+      </sv:property>
+      <sv:property sv:name="cargo" sv:type="String">
+        <sv:value>VOCAL</sv:value>
+      </sv:property>
+      <sv:property sv:name="cargo_pt" sv:type="String">
+        <sv:value>VOGAL</sv:value>
+      </sv:property>
+      <sv:property sv:name="email" sv:type="String">
+        <sv:value>begona.martinez@cione.es</sv:value>
+      </sv:property>
+      <sv:property sv:name="email_pt" sv:type="String">
+        <sv:value>begona.martinez@cione.es</sv:value>
+      </sv:property>
+      <sv:property sv:name="foto" sv:type="String">
+        <sv:value>jcr:1c23c467-0578-4dc1-a2e4-9807a6d34a38</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:activationStatus" sv:type="Boolean">
+        <sv:value>true</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:created" sv:type="Date">
+        <sv:value>2019-08-14T13:41:54.010+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:createdBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
+        <sv:value>2019-09-11T13:44:20.849+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedVersion" sv:type="String">
+        <sv:value>1.0</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedVersionCreated" sv:type="Date">
+        <sv:value>2019-09-11T13:44:19.546+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+        <sv:value>2019-09-11T13:27:47.208+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="nombre" sv:type="String">
+        <sv:value>Dña. Begoña Martínez</sv:value>
+      </sv:property>
+      <sv:property sv:name="tamano" sv:type="String">
+        <sv:value>small</sv:value>
+      </sv:property>
+    </sv:node>
+    <sv:node sv:name="francisco-martin">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>rsc-contacto</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:value>mgnl:hasVersion</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>c7262f55-efbc-4f3c-a083-9d82bd39107d</sv:value>
+      </sv:property>
+      <sv:property sv:name="cargo" sv:type="String">
+        <sv:value>VOCAL</sv:value>
+      </sv:property>
+      <sv:property sv:name="cargo_pt" sv:type="String">
+        <sv:value>VOGAL</sv:value>
+      </sv:property>
+      <sv:property sv:name="email" sv:type="String">
+        <sv:value>francisco.martin@cione.es</sv:value>
+      </sv:property>
+      <sv:property sv:name="email_pt" sv:type="String">
+        <sv:value>francisco.martin@cione.es</sv:value>
+      </sv:property>
+      <sv:property sv:name="foto" sv:type="String">
+        <sv:value>jcr:5ee225dd-e558-4840-84f1-ec18551936bc</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:activationStatus" sv:type="Boolean">
+        <sv:value>true</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:created" sv:type="Date">
+        <sv:value>2019-08-14T13:43:01.228+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:createdBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
+        <sv:value>2019-09-11T13:44:20.640+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedVersion" sv:type="String">
+        <sv:value>1.0</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedVersionCreated" sv:type="Date">
+        <sv:value>2019-09-11T13:44:19.828+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+        <sv:value>2019-09-11T13:28:07.598+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="nombre" sv:type="String">
+        <sv:value>D. Francisco Martín</sv:value>
+      </sv:property>
+      <sv:property sv:name="tamano" sv:type="String">
+        <sv:value>small</sv:value>
+      </sv:property>
+    </sv:node>
+  </sv:node>
+  <sv:node sv:name="organigrama">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>mgnl:folder</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+      <sv:value>mgnl:hasVersion</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>810c12d5-9253-4a71-8c62-0a66aa53f144</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:activationStatus" sv:type="Boolean">
+      <sv:value>true</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:created" sv:type="Date">
+      <sv:value>2019-08-13T12:31:53.903+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:createdBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
+      <sv:value>2019-09-11T13:44:33.473+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastActivatedBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastActivatedVersion" sv:type="String">
+      <sv:value>1.0</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastActivatedVersionCreated" sv:type="Date">
+      <sv:value>2019-09-11T13:44:30.805+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+      <sv:value>2019-08-14T13:53:26.247+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:node sv:name="miguel-angel">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>rsc-contacto</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:value>mgnl:hasVersion</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>576aa85d-37f7-4edb-8a78-f3a253cd9b57</sv:value>
+      </sv:property>
+      <sv:property sv:name="cargo" sv:type="String">
+        <sv:value>DIRECTOR GENERAL</sv:value>
+      </sv:property>
+      <sv:property sv:name="cargo_pt" sv:type="String">
+        <sv:value>DIRETOR GERAL</sv:value>
+      </sv:property>
+      <sv:property sv:name="email" sv:type="String">
+        <sv:value>miguelangel.garcia@cione.es</sv:value>
+      </sv:property>
+      <sv:property sv:name="email_pt" sv:type="String">
+        <sv:value>miguelangel.garcia@cione.es</sv:value>
+      </sv:property>
+      <sv:property sv:name="foto" sv:type="String">
+        <sv:value>jcr:ae298954-bd5a-4fed-b55b-4a4ea6e2984f</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:activationStatus" sv:type="Boolean">
+        <sv:value>true</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:created" sv:type="Date">
+        <sv:value>2019-08-14T13:48:36.045+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:createdBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
+        <sv:value>2019-09-11T13:44:35.283+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedVersion" sv:type="String">
+        <sv:value>1.0</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedVersionCreated" sv:type="Date">
+        <sv:value>2019-09-11T13:44:31.058+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+        <sv:value>2019-09-11T13:19:04.223+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="nombre" sv:type="String">
+        <sv:value>Miguel Ángel García</sv:value>
+      </sv:property>
+      <sv:property sv:name="tamano" sv:type="String">
+        <sv:value>large</sv:value>
+      </sv:property>
+    </sv:node>
+    <sv:node sv:name="felicidad-hernandez">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>rsc-contacto</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:value>mgnl:hasVersion</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>ccfd7422-e388-4c21-a86c-69b5936125c3</sv:value>
+      </sv:property>
+      <sv:property sv:name="cargo" sv:type="String">
+        <sv:value>DIRECTORA DE COMUNICACIÓN Y RSE</sv:value>
+      </sv:property>
+      <sv:property sv:name="cargo_pt" sv:type="String">
+        <sv:value>DIRETORA DE COMUNICAÇÃO E RSE</sv:value>
+      </sv:property>
+      <sv:property sv:name="email" sv:type="String">
+        <sv:value>felicidad.hernandez@cione.es</sv:value>
+      </sv:property>
+      <sv:property sv:name="email_pt" sv:type="String">
+        <sv:value>felicidad.hernandez@cione.es</sv:value>
+      </sv:property>
+      <sv:property sv:name="foto" sv:type="String">
+        <sv:value>jcr:e5ae58dd-9815-4b63-9bc2-e130749bebce</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:activationStatus" sv:type="Boolean">
+        <sv:value>true</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:created" sv:type="Date">
+        <sv:value>2019-08-14T13:53:26.247+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:createdBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
+        <sv:value>2019-09-11T13:44:35.085+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedVersion" sv:type="String">
+        <sv:value>1.0</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedVersionCreated" sv:type="Date">
+        <sv:value>2019-09-11T13:44:31.325+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+        <sv:value>2019-09-11T13:31:52.820+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="nombre" sv:type="String">
+        <sv:value>Felicidad Hernández</sv:value>
+      </sv:property>
+      <sv:property sv:name="tamano" sv:type="String">
+        <sv:value>small</sv:value>
+      </sv:property>
+    </sv:node>
+    <sv:node sv:name="jose-luis">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>rsc-contacto</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:value>mgnl:hasVersion</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>693e84ad-2db6-4ce6-abdc-18eaeeffbdaa</sv:value>
+      </sv:property>
+      <sv:property sv:name="cargo" sv:type="String">
+        <sv:value>DIRECTOR OFICINA DIGITAL</sv:value>
+      </sv:property>
+      <sv:property sv:name="cargo_pt" sv:type="String">
+        <sv:value>DIRETOR DE ESCRITÓRIO DIGITAL</sv:value>
+      </sv:property>
+      <sv:property sv:name="email" sv:type="String">
+        <sv:value>joseluis.pablos@cione.es</sv:value>
+      </sv:property>
+      <sv:property sv:name="email_pt" sv:type="String">
+        <sv:value>joseluis.pablos@cione.es</sv:value>
+      </sv:property>
+      <sv:property sv:name="foto" sv:type="String">
+        <sv:value>jcr:8a50be86-f049-45a3-817b-ffb8c7af7462</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:activationStatus" sv:type="Boolean">
+        <sv:value>true</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:created" sv:type="Date">
+        <sv:value>2019-08-14T13:53:48.371+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:createdBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
+        <sv:value>2019-09-11T13:44:34.880+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedVersion" sv:type="String">
+        <sv:value>1.0</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedVersionCreated" sv:type="Date">
+        <sv:value>2019-09-11T13:44:31.580+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+        <sv:value>2019-09-11T13:33:39.782+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="nombre" sv:type="String">
+        <sv:value>José Luis Pablos</sv:value>
+      </sv:property>
+      <sv:property sv:name="tamano" sv:type="String">
+        <sv:value>small</sv:value>
+      </sv:property>
+    </sv:node>
+    <sv:node sv:name="eva-laguens">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>rsc-contacto</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:value>mgnl:hasVersion</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>58582610-69b9-4079-9bf8-15b4145d9bc8</sv:value>
+      </sv:property>
+      <sv:property sv:name="cargo" sv:type="String">
+        <sv:value>DIRECTORA DE DESARROLLO DE NEGOCIO</sv:value>
+      </sv:property>
+      <sv:property sv:name="cargo_pt" sv:type="String">
+        <sv:value>DIRETORA DE DESENVOLVIMIENTO DE NEGÓCIO</sv:value>
+      </sv:property>
+      <sv:property sv:name="email" sv:type="String">
+        <sv:value>eva.laguens@cione.es</sv:value>
+      </sv:property>
+      <sv:property sv:name="email_pt" sv:type="String">
+        <sv:value>eva.laguens@cione.es</sv:value>
+      </sv:property>
+      <sv:property sv:name="foto" sv:type="String">
+        <sv:value>jcr:bf4d3597-0b8a-4086-946c-c0b719f9c339</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:activationStatus" sv:type="Boolean">
+        <sv:value>true</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:created" sv:type="Date">
+        <sv:value>2019-08-14T13:54:30.214+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:createdBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
+        <sv:value>2019-09-11T13:44:34.640+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedVersion" sv:type="String">
+        <sv:value>1.0</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedVersionCreated" sv:type="Date">
+        <sv:value>2019-09-11T13:44:31.869+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+        <sv:value>2019-09-11T13:34:31.482+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="nombre" sv:type="String">
+        <sv:value>Eva Laguens</sv:value>
+      </sv:property>
+      <sv:property sv:name="tamano" sv:type="String">
+        <sv:value>small</sv:value>
+      </sv:property>
+    </sv:node>
+    <sv:node sv:name="patricia-hernandez">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>rsc-contacto</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:value>mgnl:hasVersion</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>af9ca138-167a-4491-a69f-54206d5a6c74</sv:value>
+      </sv:property>
+      <sv:property sv:name="cargo" sv:type="String">
+        <sv:value>DIRECTORA DE PRODUCTO</sv:value>
+      </sv:property>
+      <sv:property sv:name="cargo_pt" sv:type="String">
+        <sv:value>DIRETORA DE PRODUCTO</sv:value>
+      </sv:property>
+      <sv:property sv:name="email" sv:type="String">
+        <sv:value>patricia.hernandez@cione.es</sv:value>
+      </sv:property>
+      <sv:property sv:name="email_pt" sv:type="String">
+        <sv:value>patricia.hernandez@cione.es</sv:value>
+      </sv:property>
+      <sv:property sv:name="foto" sv:type="String">
+        <sv:value>jcr:0c0cb523-9009-4ccb-88bb-329518b4a864</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:activationStatus" sv:type="Boolean">
+        <sv:value>true</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:created" sv:type="Date">
+        <sv:value>2019-08-14T13:55:31.277+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:createdBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
+        <sv:value>2019-09-11T13:44:34.395+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedVersion" sv:type="String">
+        <sv:value>1.0</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedVersionCreated" sv:type="Date">
+        <sv:value>2019-09-11T13:44:32.135+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+        <sv:value>2019-09-11T13:35:13.218+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="nombre" sv:type="String">
+        <sv:value>Patricia Hernández</sv:value>
+      </sv:property>
+      <sv:property sv:name="tamano" sv:type="String">
+        <sv:value>small</sv:value>
+      </sv:property>
+    </sv:node>
+    <sv:node sv:name="ja-santos">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>rsc-contacto</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:value>mgnl:hasVersion</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>2674bb05-11f1-435c-9336-abbcf342ecd4</sv:value>
+      </sv:property>
+      <sv:property sv:name="cargo" sv:type="String">
+        <sv:value>DIRECTOR DE OPERACIONES</sv:value>
+      </sv:property>
+      <sv:property sv:name="cargo_pt" sv:type="String">
+        <sv:value>DIRETOR DE OPERAÇÕES</sv:value>
+      </sv:property>
+      <sv:property sv:name="email" sv:type="String">
+        <sv:value>joseantonio.desantos@cione.es</sv:value>
+      </sv:property>
+      <sv:property sv:name="email_pt" sv:type="String">
+        <sv:value>joseantonio.desantos@cione.es</sv:value>
+      </sv:property>
+      <sv:property sv:name="foto" sv:type="String">
+        <sv:value>jcr:6c645fae-be4f-47e5-9a32-f72df35d3b2e</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:activationStatus" sv:type="Boolean">
+        <sv:value>true</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:created" sv:type="Date">
+        <sv:value>2019-08-14T13:56:18.477+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:createdBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
+        <sv:value>2019-09-11T13:44:34.116+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedVersion" sv:type="String">
+        <sv:value>1.0</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedVersionCreated" sv:type="Date">
+        <sv:value>2019-09-11T13:44:32.389+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+        <sv:value>2019-09-11T13:36:38.442+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="nombre" sv:type="String">
+        <sv:value>Jose Antonio de Santos</sv:value>
+      </sv:property>
+      <sv:property sv:name="tamano" sv:type="String">
+        <sv:value>small</sv:value>
+      </sv:property>
+    </sv:node>
+    <sv:node sv:name="florencio-dopacio">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>rsc-contacto</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:value>mgnl:hasVersion</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>49e2565e-7c68-4c13-a75c-55d5e12dd974</sv:value>
+      </sv:property>
+      <sv:property sv:name="cargo" sv:type="String">
+        <sv:value>DIRECTOR FINANCIERO Y RECURSOS</sv:value>
+      </sv:property>
+      <sv:property sv:name="cargo_pt" sv:type="String">
+        <sv:value>DIRETOR FINANCEIRO E DE RECURSOS</sv:value>
+      </sv:property>
+      <sv:property sv:name="email" sv:type="String">
+        <sv:value>florencio.dopacio@cione.es</sv:value>
+      </sv:property>
+      <sv:property sv:name="email_pt" sv:type="String">
+        <sv:value>florencio.dopacio@cione.es</sv:value>
+      </sv:property>
+      <sv:property sv:name="foto" sv:type="String">
+        <sv:value>jcr:1360e7ff-1608-46e3-81ef-690348a1498b</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:activationStatus" sv:type="Boolean">
+        <sv:value>true</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:created" sv:type="Date">
+        <sv:value>2019-08-14T13:57:30.593+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:createdBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
+        <sv:value>2019-09-11T13:44:33.903+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedVersion" sv:type="String">
+        <sv:value>1.0</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedVersionCreated" sv:type="Date">
+        <sv:value>2019-09-11T13:44:32.644+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+        <sv:value>2019-09-11T13:38:06.011+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="nombre" sv:type="String">
+        <sv:value>Florencio Dopacio</sv:value>
+      </sv:property>
+      <sv:property sv:name="tamano" sv:type="String">
+        <sv:value>small</sv:value>
+      </sv:property>
+    </sv:node>
+    <sv:node sv:name="Juan-ara">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>rsc-contacto</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:value>mgnl:hasVersion</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>e55315f3-0095-4e52-801e-3a0c69f2a008</sv:value>
+      </sv:property>
+      <sv:property sv:name="cargo" sv:type="String">
+        <sv:value>DIRECTOR DE TECNOLOGÍA</sv:value>
+      </sv:property>
+      <sv:property sv:name="cargo_pt" sv:type="String">
+        <sv:value>DIRETOR DE TECNOLOGIA</sv:value>
+      </sv:property>
+      <sv:property sv:name="email" sv:type="String">
+        <sv:value>juan.ara@cione.es</sv:value>
+      </sv:property>
+      <sv:property sv:name="email_pt" sv:type="String">
+        <sv:value>juan.ara@cione.es</sv:value>
+      </sv:property>
+      <sv:property sv:name="foto" sv:type="String">
+        <sv:value>jcr:47ae7b0c-558b-4d2f-92b3-b57e290bb465</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:activationStatus" sv:type="Boolean">
+        <sv:value>true</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:created" sv:type="Date">
+        <sv:value>2019-08-14T13:58:20.142+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:createdBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
+        <sv:value>2019-09-11T13:44:33.683+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedVersion" sv:type="String">
+        <sv:value>1.0</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedVersionCreated" sv:type="Date">
+        <sv:value>2019-09-11T13:44:32.902+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+        <sv:value>2019-09-11T13:38:44.757+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="nombre" sv:type="String">
+        <sv:value>Juan Ara</sv:value>
+      </sv:property>
+      <sv:property sv:name="tamano" sv:type="String">
+        <sv:value>small</sv:value>
+      </sv:property>
+    </sv:node>
+  </sv:node>
+  <sv:node sv:name="ruta-luz">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>mgnl:folder</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+      <sv:value>mgnl:hasVersion</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>7ff2b422-63da-484c-8ce5-35df639d4723</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:activationStatus" sv:type="Boolean">
+      <sv:value>true</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:created" sv:type="Date">
+      <sv:value>2019-08-13T12:32:03.708+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:createdBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
+      <sv:value>2019-09-11T13:44:25.973+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastActivatedBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastActivatedVersion" sv:type="String">
+      <sv:value>1.0</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastActivatedVersionCreated" sv:type="Date">
+      <sv:value>2019-09-11T13:44:25.372+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+      <sv:value>2019-08-14T14:01:14.241+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:node sv:name="marta-casillas">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>rsc-contacto</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:value>mgnl:hasVersion</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>52784176-ffc0-497c-845f-f99051b0e3ca</sv:value>
+      </sv:property>
+      <sv:property sv:name="cargo" sv:type="String">
+        <sv:value>GESTORA DE LA FUNDACIÓN CIONE RUTA DE LA LUZ</sv:value>
+      </sv:property>
+      <sv:property sv:name="cargo_pt" sv:type="String">
+        <sv:value>GESTORA DA FUNDAÇÃO CIONE RUTA DE LA LUZ</sv:value>
+      </sv:property>
+      <sv:property sv:name="email" sv:type="String">
+        <sv:value>marta.casillas@cione.es</sv:value>
+      </sv:property>
+      <sv:property sv:name="email_pt" sv:type="String">
+        <sv:value>marta.casillas@cione.es</sv:value>
+      </sv:property>
+      <sv:property sv:name="foto" sv:type="String">
+        <sv:value>jcr:153eadd8-59b9-432f-9fbf-cdc7284be21e</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:activationStatus" sv:type="Boolean">
+        <sv:value>true</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:created" sv:type="Date">
+        <sv:value>2019-08-14T14:01:14.241+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:createdBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
+        <sv:value>2019-09-11T13:44:26.180+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedVersion" sv:type="String">
+        <sv:value>1.0</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedVersionCreated" sv:type="Date">
+        <sv:value>2019-09-11T13:44:25.634+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+        <sv:value>2019-09-11T13:39:59.140+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="nombre" sv:type="String">
+        <sv:value>Marta Casillas</sv:value>
+      </sv:property>
+      <sv:property sv:name="tamano" sv:type="String">
+        <sv:value>small</sv:value>
+      </sv:property>
+    </sv:node>
+  </sv:node>
+</sv:node>
+

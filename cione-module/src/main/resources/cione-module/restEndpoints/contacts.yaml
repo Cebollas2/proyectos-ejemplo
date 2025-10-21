@@ -1,0 +1,5 @@
+class: info.magnolia.rest.delivery.jcr.v2.JcrDeliveryEndpointDefinition
+workspace: contacts
+rootPath: /
+endpointPath: contacts
+includeSystemProperties: true

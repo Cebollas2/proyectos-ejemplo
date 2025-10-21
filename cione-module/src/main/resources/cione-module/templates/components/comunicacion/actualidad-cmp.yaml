@@ -1,0 +1,5 @@
+title: Componente Actualidad
+templateScript: /cione-module/templates/components/comunicacion/actualidad-cmp.ftl
+dialog: cione-module:components/comunicacion/actualidad-cmp-properties
+modelClass: com.magnolia.cione.model.ComunicacionModel
+renderType: freemarker

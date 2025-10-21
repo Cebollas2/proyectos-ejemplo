@@ -1,0 +1,19 @@
+form:
+  label: Componente Magazines
+  tabs:
+    - name: tabMain
+      label: Propiedades      
+      fields:
+        - name: title
+          label: titulo
+          i18n: true
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+        - name: text
+          label: texto
+          i18n: true
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition            
+actions:
+  commit:
+    class: info.magnolia.ui.admincentral.dialog.action.SaveDialogActionDefinition
+  cancel:
+    class: info.magnolia.ui.admincentral.dialog.action.CancelDialogActionDefinition

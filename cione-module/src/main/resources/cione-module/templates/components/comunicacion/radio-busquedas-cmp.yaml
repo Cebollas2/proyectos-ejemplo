@@ -1,0 +1,5 @@
+title: Componente Radio Búsqueda
+templateScript: /cione-module/templates/components/comunicacion/radio-busquedas-cmp.ftl
+dialog: cione-module:components/comunicacion/radio-busquedas-cmp-properties
+#modelClass: com.magnolia.cione.model.ControlPermisosModel
+renderType: freemarker

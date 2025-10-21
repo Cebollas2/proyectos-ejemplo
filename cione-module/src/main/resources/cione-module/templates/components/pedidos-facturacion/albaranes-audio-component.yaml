@@ -1,0 +1,4 @@
+title: Componentes Albaranes Audio
+templateScript: /cione-module/templates/components/pedidos-facturacion/albaranes-audio-component.ftl
+renderType: freemarker
+modelClass: com.magnolia.cione.model.AlbaranesModel

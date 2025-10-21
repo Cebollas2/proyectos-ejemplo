@@ -1,0 +1,85 @@
+form:
+  properties:
+    imagesList:
+      $type: jcrMultiField
+      label: image.images.label
+      itemProvider:
+        $type: currentItemProvider
+      field:
+        $type: compositeField
+        properties:
+          permisos:
+            $type: switchableField
+            required: true
+            label: permisos
+            field:
+              $type: radioButtonGroupField
+              layout: horizontal
+              datasource:
+                $type: optionListDatasource
+                options:
+                  - name: roles
+                    value: roles
+                    label: roles
+                  - name: campaing
+                    value: campaing
+                    label: campana
+            itemProvider:
+              $type: jcrChildNodeProvider
+            forms:
+              - name: roles
+                properties:
+                  roles:
+                    $type: jcrMultiField
+                    label: .
+                    itemProvider:
+                      $type: jcrChildNodeProvider
+                    field:
+                      $type: compositeField
+                      properties:
+                        rol:
+                          $type: linkField
+                          label: Seleccione el rol que tendra acceso al banner
+                          chooser:
+                            workbenchChooser:
+                              appName: security
+              - name: campaing
+                properties:
+                  campaing:
+                    $type: comboBoxField
+                    label: .
+                    datasource:
+                      $type: optionListDatasource
+                      options:
+                        - name: es
+                          label: España
+                          value: es 
+                        - name: pt
+                          label: Portugal
+                          value: pt
+                        - name: all
+                          label: Todos
+                          value: all
+                        - name: optofive
+                          label: Optofive (OPTCAN, OPTMAD, Cliente Monturas)
+                          value: optofive
+                        - name: opticapro
+                          label: opticapro (OPTICAPRO)
+                          value: opticapro
+          title:
+            $type: textField
+            label: Texto
+            i18n: true
+          phone:
+            label: Teléfono
+            i18n: true
+            $type: textField
+          mail:
+            label: mail
+            i18n: true
+            $type: textField
+          inheritable:
+            $type: checkBoxField
+            label: Heredar en MyCione
+            buttonLabel: Mostrar en subpáginas
+            defaultValue: false

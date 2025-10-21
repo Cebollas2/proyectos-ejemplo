@@ -1,0 +1,5 @@
+title: Componente Mis consumos Cione Lovers
+templateScript: /cione-module/templates/components/pedidos-facturacion/mis-consumos-cionelovers.ftl
+renderType: freemarker
+modelClass: com.magnolia.cione.model.MisConsumosCioneLoversModel
+dialog: cione-module:components/pedidos-facturacion/mis-consumos-cionelovers-properties

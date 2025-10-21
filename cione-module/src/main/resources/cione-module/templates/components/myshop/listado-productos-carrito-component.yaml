@@ -1,0 +1,5 @@
+title: Carrito - Listado Productos
+templateScript: /cione-module/templates/components/myshop/listado-productos-carrito-component.ftl
+renderType: freemarker
+modelClass: com.magnolia.cione.model.CarritoModel
+dialog: cione-module:components/myshop/listado-productos-carrito-component-properties

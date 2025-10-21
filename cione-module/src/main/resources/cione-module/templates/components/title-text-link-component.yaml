@@ -1,0 +1,5 @@
+title: Componente Titulo Texto Link
+templateScript: /cione-module/templates/components/title-text-link-component.ftl
+renderType: freemarker
+dialog: cione-module:components/title-text-link-properties
+modelClass: com.magnolia.cione.model.SubmenuModel

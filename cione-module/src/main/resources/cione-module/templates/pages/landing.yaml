@@ -1,0 +1,4 @@
+title: Página landing
+templateScript: /cione-module/templates/pages/landing.ftl
+renderType: freemarker
+dialog: cione-module:pages/landing-properties

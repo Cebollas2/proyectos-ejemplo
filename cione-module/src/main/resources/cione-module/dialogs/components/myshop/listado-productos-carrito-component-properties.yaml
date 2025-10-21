@@ -1,0 +1,30 @@
+form:
+  properties:
+    formularioDireccionesLink:
+      label: Link al formulario de direcciones
+      $type: linkField
+      required: true
+      chooser:
+        workbenchChooser:
+          appName: pages
+    detalleShoppingListLink:
+      label: Link detalle presupuesto
+      $type: linkField
+      required: true
+      chooser:
+        workbenchChooser:
+          appName: pages
+    newPeriodicPurchaseLink:
+      label: Link nueva compra periodica
+      $type: linkField
+      required: true
+      chooser:
+        workbenchChooser:
+          appName: pages
+    detailPeriodicPurchaseLink:
+      label: Link nueva detalle compra periodica
+      $type: linkField
+      required: true
+      chooser:
+        workbenchChooser:
+          appName: pages

@@ -1,0 +1,31 @@
+title: Página dummy
+templateScript: /cione-module/templates/pages/dummy-page.ftl
+renderType: freemarker
+visible: true
+dialog: cione-module:pages/dummy-page-properties
+areas:
+  main:
+    renderType: freemarker
+    availableComponents:
+      dummy-component:
+        id: cione-module:components/dummy-component
+      login:
+        id: public-user-registration:components/login
+      registration:
+        id: public-user-registration:components/registration
+      userUpdate:
+        id: public-user-registration:components/userUpdate
+      forgottenPassword:
+        id: public-user-registration:components/forgottenPassword
+      passwordChange:
+        id: public-user-registration:components/passwordChange
+      enableUser:
+        id: public-user-registration:components/enableUser
+      pwdChange:
+        id: cione-module:components/passwordChange
+      rich-text-cmp:
+        id: cione-module:components/rich-text-cmp   
+      html:
+        id: mtk:components/html   
+      redirect-component:
+        id: cione-module:components/redirect-component  

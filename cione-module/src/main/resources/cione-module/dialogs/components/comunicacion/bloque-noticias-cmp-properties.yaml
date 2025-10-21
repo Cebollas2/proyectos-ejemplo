@@ -1,0 +1,20 @@
+form:
+  label: Componente Bloque noticias
+  tabs:
+    - name: tabMain
+      label: Propiedades      
+      fields:
+       - name:  detailPageLink
+         class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+         label: Página detalle
+         description: Selecciona la página de talle
+         required: false
+         appName: pages
+         targetWorkspace: website
+         identifierToPathConverter:
+          class: info.magnolia.ui.form.field.converter.BaseIdentifierToPathConverter     
+actions:
+  commit:
+    class: info.magnolia.ui.admincentral.dialog.action.SaveDialogActionDefinition
+  cancel:
+    class: info.magnolia.ui.admincentral.dialog.action.CancelDialogActionDefinition

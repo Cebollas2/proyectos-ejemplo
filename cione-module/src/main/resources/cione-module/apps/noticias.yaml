@@ -1,0 +1,428 @@
+label: Noticias
+icon: icon-news
+appClass: info.magnolia.ui.contentapp.ContentApp
+class: info.magnolia.ui.api.app.registry.ConfiguredAppDescriptor
+subApps:
+  browser:
+    label: Noticias
+    subAppClass: info.magnolia.ui.contentapp.browser.BrowserSubApp
+    class: info.magnolia.ui.contentapp.browser.BrowserSubAppDescriptor
+    contentConnector:
+      includeProperties: false
+      workspace: noticias
+      rootPath: /
+      defaultOrder: jcrName
+      nodeTypes:
+        - icon: icon-node-content
+          strict: true
+          name: noticia
+        - icon: icon-folder-l
+          name: mgnl:folder
+          strict: true
+    imageProvider:
+       class: info.magnolia.dam.app.ui.imageprovider.DamLinkImageProviderDefinition
+       damLinkPropertyName: imagenDesktop
+    workbench:
+      dropConstraintClass: info.magnolia.ui.workbench.tree.drop.AlwaysTrueDropConstraint
+      editable: true
+      contentViews:
+        - name: tree
+          class: info.magnolia.ui.workbench.tree.TreePresenterDefinition
+          columns:
+            - name: jcrName
+              sortable: true
+              label: Bloque noticia
+              propertyName: jcrName
+              class: info.magnolia.ui.workbench.column.definition.PropertyColumnDefinition
+            - name: descripcionRoles
+              sortable: true
+              label: Descripción roles
+              propertyName: descripcionRoles
+              class: info.magnolia.ui.workbench.column.definition.PropertyColumnDefinition  
+            - name: status
+              label: Status
+              width: 45
+              sortable: true
+              displayInChooseDialog: false
+              formatterClass: info.magnolia.ui.workbench.column.StatusColumnFormatter
+              class: info.magnolia.ui.workbench.column.definition.StatusColumnDefinition
+            - name: moddate
+              label: Modification date
+              width: 160
+              sortable: true
+              displayInChooseDialog: false
+              formatterClass: info.magnolia.ui.workbench.column.DateColumnFormatter
+              propertyName: mgnl:lastModified
+              class: info.magnolia.ui.workbench.column.definition.MetaDataColumnDefinition
+    actions:
+      addFolder:
+        label: Add folder
+        icon: icon-add-folder
+        class: info.magnolia.ui.framework.action.AddFolderActionDefinition
+        availability:
+          writePermissionRequired: true
+          root: true
+          nodeTypes:
+            folder: mgnl:folder
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      editFolder:
+        label: Rename folder
+        dialogName: ui-framework:folder
+        icon: icon-edit
+        class: info.magnolia.ui.framework.action.OpenEditDialogActionDefinition
+        availability:
+          root: true
+          writePermissionRequired: true
+          nodeTypes:
+            folder: mgnl:folder
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      addNoticia:
+        subAppId: detail
+        label: Add Noticia
+        icon: icon-add-item
+        nodeType: noticia
+        appName: noticias
+        class: info.magnolia.ui.contentapp.detail.action.CreateItemActionDefinition
+        availability:
+          writePermissionRequired: true
+          root: true
+          nodeTypes:
+            folder: mgnl:folder
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      editNoticia:
+        subAppId: detail
+        label: Edit Noticia
+        icon: icon-edit
+        appName: noticias
+        class: info.magnolia.ui.contentapp.detail.action.EditItemActionDefinition
+        availability:
+          writePermissionRequired: true
+          nodeTypes:
+            noticia: noticia
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      renameNoticia:
+        label: Rename Noticia
+        icon: icon-edit
+        dialogName: ui-framework:folder
+        class: info.magnolia.ui.framework.action.OpenEditDialogActionDefinition
+        availability:
+          writePermissionRequired: true
+          nodeTypes:
+            noticia: noticia
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      delete:
+        label: Delete
+        asynchronous: true
+        command: markAsDeleted
+        icon: icon-delete
+        class: info.magnolia.ui.framework.action.MarkNodeAsDeletedActionDefinition
+        availability:
+          writePermissionRequired: true
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      activate:
+        command: activate
+        icon: icon-publish
+        catalog: versioned
+        class: info.magnolia.ui.framework.action.ActivationActionDefinition
+        availability:
+          writePermissionRequired: true
+      activateRecursive:
+        catalog: versioned
+        command: activate
+        icon: icon-publish-incl-sub
+        recursive: true
+        class: info.magnolia.ui.framework.action.ActivationActionDefinition
+        availability:
+          writePermissionRequired: true
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      deactivate:
+        catalog: versioned
+        command: deactivate
+        icon: icon-unpublish
+        class: info.magnolia.ui.framework.action.ActivationActionDefinition
+        availability:
+          writePermissionRequired: true
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      export:
+        command: export
+        icon: icon-export
+        class: info.magnolia.ui.framework.action.ExportActionDefinition
+        availability:
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      import:
+        dialogName: ui-admincentral:import
+        icon: icon-import
+        class: info.magnolia.ui.framework.action.OpenCreateDialogActionDefinition
+        availability:
+          writePermissionRequired: true
+          root: true
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      confirmDelete:
+        label: Delete Noticia
+        successActionName: delete
+        icon: icon-delete
+        class: info.magnolia.ui.framework.action.ConfirmationActionDefinition
+        availability:
+          multiple: true
+          writePermissionRequired: true
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule  
+      duplicateNoticia:
+        label: Duplicate Noticia
+        icon: icon-duplicate
+        class: info.magnolia.ui.framework.action.DuplicateNodeActionDefinition
+        availability:
+          writePermissionRequired: true
+          nodeTypes:
+            article: noticia
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule                    
+    actionbar:
+      defaultAction: editNoticia
+      sections:
+        - name: root
+          label: Noticias
+          availability:
+            nodes: false
+            root: true
+          groups:
+            - name: addActions
+              items:
+                - name: addNoticia
+                - name: addFolder
+            - name: editActions
+              #items:
+            - name: publishingActions
+              items:
+                - name: activate
+                - name: activateRecursive
+                - name: deactivate
+            - name: eximActions
+              items:
+                - name: export
+                - name: import
+        - name: folder
+          label: Folder
+          availability:
+            nodeTypes:
+              folder: mgnl:folder
+          groups:
+            - name: addActions
+              items:
+                - name: addNoticia
+                - name: addFolder
+            - name: editActions
+              items:
+                - name: editFolder
+                - name: delete
+            - name: publishingActions
+              items:
+                - name: activate
+                - name: activateRecursive
+                - name: deactivate
+            - name: eximActions
+              items:
+                - name: export
+                - name: import
+        - name: noticia
+          label: Noticia
+          availability:
+            nodeTypes:
+              noticia: noticia
+          groups:
+            - name: addActions
+              items:
+                - name: addNoticia
+                - name: addFolder
+            - name: editActions
+              items:
+                - name: editNoticia
+                - name: renameNoticia
+                - name: duplicateNoticia
+                #- name: delete
+                - name: confirmDelete
+            - name: publishingActions
+              items:
+                - name: activate
+                - name: activateRecursive
+                - name: deactivate
+            - name: eximActions
+              items:
+                - name: export
+                - name: import
+  detail:
+    label: Noticia
+    subAppClass: info.magnolia.ui.contentapp.detail.DetailSubApp
+    class: info.magnolia.ui.contentapp.detail.DetailSubAppDescriptor
+    contentConnector:
+      defaultOrder: jcrName
+      includeProperties: false
+      rootPath: /
+      workspace: noticias
+      nodeTypes:
+        - icon: icon-node-content
+          name: noticia
+          strict: true
+        - icon: icon-folder-l
+          name: mgnl:folder
+          strict: true
+    editor:
+      nodeType:
+        icon: icon-items
+        name: noticia
+      form:
+        description: Define the noticia information
+        label: Edit noticia
+        tabs:
+          - name: bloque
+            label: Bloque
+            fields:
+              - label: Año
+                name: year
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                i18n: true
+                required: true
+              - label: Nombre
+                name: nombreBloque
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                i18n: true
+              - name: color
+                label: Color letra
+                class: info.magnolia.ui.form.field.definition.SelectFieldDefinition
+                sortOptions: false
+                options:
+                  - name: blanco
+                    label: Blanco
+                    value: ffffff                    
+                    selected: true  
+                  - name: negro
+                    label: Negro
+                    value: 000000 
+                  - name: azuloscuro
+                    label: Azul oscuro
+                    value: 00609c   
+                  - name: azulclaro
+                    label: Azul claro
+                    value: 22bae8   
+                  - name: gris
+                    label: Gris
+                    value: 666666
+                  - name: marron
+                    label: Marrón
+                    value: 3d092a                                                                                                      
+              - name: imagenDesktop
+                label: Imagen Desktop (650x212)
+                required: true
+                class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+                targetWorkspace: dam
+                appName: assets
+                targetTreeRootPath: /cione/comunicacion/noticias
+                identifierToPathConverter:
+                  class: info.magnolia.dam.app.assets.field.translator.AssetCompositeIdKeyTranslator
+                contentPreviewDefinition:
+                  contentPreviewClass: info.magnolia.dam.app.ui.field.DamFilePreviewComponent
+              - name: imagenMovil
+                label: Imagen Móvil (317x103)
+                class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+                targetWorkspace: dam
+                appName: assets
+                targetTreeRootPath: /cione/comunicacion/noticias
+                identifierToPathConverter:
+                  class: info.magnolia.dam.app.assets.field.translator.AssetCompositeIdKeyTranslator
+                contentPreviewDefinition:
+                  contentPreviewClass: info.magnolia.dam.app.ui.field.DamFilePreviewComponent                  
+          - name: roles
+            label: Roles
+            fields:
+              - name: descripcionRoles
+                label: Descripción               
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+              - name: roles
+                label: Roles
+                class: info.magnolia.ui.form.field.definition.MultiValueFieldDefinition
+                transformerClass: info.magnolia.ui.form.field.transformer.multi.DelegatingMultiValueSubnodeTransformer          
+                field:
+                  name: linkProperties
+                  class: info.magnolia.ui.form.field.definition.CompositeFieldDefinition
+                  transformerClass: info.magnolia.ui.form.field.transformer.composite.DelegatingCompositeFieldTransformer
+                  layout: vertical
+                  fields:              
+                    - name:  rol
+                      label: Rol
+                      class: info.magnolia.ui.form.field.definition.LinkFieldDefinition                      
+                      description: Seleccione un rol para el acceso
+                      required: true
+                      appName: security
+                      targetWorkspace: userroles
+                      identifierToPathConverter:
+                        class: info.magnolia.ui.form.field.converter.BaseIdentifierToPathConverter
+                    - name: separator
+                      class: info.magnolia.ui.form.field.definition.StaticFieldDefinition
+                      value: <div style="height:2px;widht:100%;background:#689600">                                             
+                      label: ""
+          - name: noticias
+            label: Noticias
+            fields:
+              - name: noticias
+                label: Noticias
+                class: info.magnolia.ui.form.field.definition.MultiValueFieldDefinition
+                transformerClass: info.magnolia.ui.form.field.transformer.multi.DelegatingMultiValueSubnodeTransformer          
+                field:
+                  name: linkProperties
+                  class: info.magnolia.ui.form.field.definition.CompositeFieldDefinition
+                  transformerClass: info.magnolia.ui.form.field.transformer.composite.DelegatingCompositeFieldTransformer
+                  layout: vertical
+                  fields:            
+                    - name: asunto
+                      label: asunto
+                      class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                      i18n: true
+                      required: true                                                                           
+                    - name: enlace
+                      label: enlace
+                      required: true
+                      class: info.magnolia.ui.form.field.definition.TextFieldDefinition  
+                    - name: fecha
+                      label: Fecha
+                      dateFormat: dd-MM-yyyy
+                      required: true
+                      class: info.magnolia.ui.form.field.definition.DateFieldDefinition  
+                    - name: notificar
+                      class: info.magnolia.ui.form.field.definition.CheckboxFieldDefinition
+                      label: Notificar
+                      buttonLabel: Seleccionar si es necesario notificar a los usuarios que no hayan leido esta noticia   
+                    - name: separator
+                      class: info.magnolia.ui.form.field.definition.StaticFieldDefinition
+                      value: <div style="height:2px;widht:100%;background:#689600">                                             
+                      label: ""                              
+      actions:
+        - name: commit
+        - name: cancel
+    actions:
+      commit:
+        implementationClass: info.magnolia.ui.form.action.SaveFormAction
+        class: info.magnolia.ui.form.action.SaveFormActionDefinition
+      cancel:
+        class: info.magnolia.ui.form.action.CancelFormActionDefinition

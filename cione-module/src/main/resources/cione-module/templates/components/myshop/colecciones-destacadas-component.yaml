@@ -1,0 +1,5 @@
+title: Home Monturas - Componente colecciones destacadas
+renderType: freemarker
+templateScript: /cione-module/templates/components/myshop/colecciones-destacadas-component.ftl
+dialog: cione-module:components/myshop/colecciones-destacadas-component-properties
+modelClass: com.magnolia.cione.model.CategoriesModel

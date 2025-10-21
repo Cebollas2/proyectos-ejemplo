@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" sv:name="rest-endpoints">
+  <sv:property sv:name="jcr:primaryType" sv:type="Name">
+    <sv:value>mgnl:content</sv:value>
+  </sv:property>
+  <sv:node sv:name="cioneAuthEndpoint">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>mgnl:contentNode</sv:value>
+    </sv:property>
+    <sv:property sv:name="class" sv:type="String">
+      <sv:value>info.magnolia.rest.EndpointDefinition</sv:value>
+    </sv:property>
+    <sv:property sv:name="implementationClass" sv:type="String">
+      <sv:value>com.magnolia.cione.controller.AuthEndpoint</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="myDataEndpoint">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>mgnl:contentNode</sv:value>
+    </sv:property>
+    <sv:property sv:name="class" sv:type="String">
+      <sv:value>info.magnolia.rest.EndpointDefinition</sv:value>
+    </sv:property>
+    <sv:property sv:name="implementationClass" sv:type="String">
+      <sv:value>com.magnolia.cione.controller.secure.MyDataEndpoint</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="PedidoEndpoint">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>mgnl:contentNode</sv:value>
+    </sv:property>
+    <sv:property sv:name="class" sv:type="String">
+      <sv:value>info.magnolia.rest.EndpointDefinition</sv:value>
+    </sv:property>
+    <sv:property sv:name="implementationClass" sv:type="String">
+      <sv:value>com.magnolia.cione.controller.secure.PedidoEndpoint</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="TallerEndpoint">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>mgnl:contentNode</sv:value>
+    </sv:property>
+    <sv:property sv:name="class" sv:type="String">
+      <sv:value>info.magnolia.rest.EndpointDefinition</sv:value>
+    </sv:property>
+    <sv:property sv:name="implementationClass" sv:type="String">
+      <sv:value>com.magnolia.cione.controller.secure.TallerEndpoint</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="AbonoEndpoint">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>mgnl:contentNode</sv:value>
+    </sv:property>
+    <sv:property sv:name="class" sv:type="String">
+      <sv:value>info.magnolia.rest.EndpointDefinition</sv:value>
+    </sv:property>
+    <sv:property sv:name="implementationClass" sv:type="String">
+      <sv:value>com.magnolia.cione.controller.secure.AbonoEndpoint</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="InteraccionEndpoint">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>mgnl:contentNode</sv:value>
+    </sv:property>
+    <sv:property sv:name="class" sv:type="String">
+      <sv:value>info.magnolia.rest.EndpointDefinition</sv:value>
+    </sv:property>
+    <sv:property sv:name="implementationClass" sv:type="String">
+      <sv:value>com.magnolia.cione.controller.secure.InteraccionEndpoint</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="QualitySurveyEndpoint">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>mgnl:contentNode</sv:value>
+    </sv:property>
+    <sv:property sv:name="class" sv:type="String">
+      <sv:value>info.magnolia.rest.EndpointDefinition</sv:value>
+    </sv:property>
+    <sv:property sv:name="implementationClass" sv:type="String">
+      <sv:value>com.magnolia.cione.controller.secure.QualitySurveyEndpoint</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="EnvioEndpoint">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>mgnl:contentNode</sv:value>
+    </sv:property>
+    <sv:property sv:name="class" sv:type="String">
+      <sv:value>info.magnolia.rest.EndpointDefinition</sv:value>
+    </sv:property>
+    <sv:property sv:name="implementationClass" sv:type="String">
+      <sv:value>com.magnolia.cione.controller.secure.EnvioEndpoint</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="DeudasEndpoint">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>mgnl:contentNode</sv:value>
+    </sv:property>
+    <sv:property sv:name="class" sv:type="String">
+      <sv:value>info.magnolia.rest.EndpointDefinition</sv:value>
+    </sv:property>
+    <sv:property sv:name="implementationClass" sv:type="String">
+      <sv:value>com.magnolia.cione.controller.secure.DeudasEndpoint</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="PagosPendientesEndpoint">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>mgnl:contentNode</sv:value>
+    </sv:property>
+    <sv:property sv:name="class" sv:type="String">
+      <sv:value>info.magnolia.rest.EndpointDefinition</sv:value>
+    </sv:property>
+    <sv:property sv:name="implementationClass" sv:type="String">
+      <sv:value>com.magnolia.cione.controller.secure.PagosPendientesEndpoint</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="ExportEndpoint">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>mgnl:contentNode</sv:value>
+    </sv:property>
+    <sv:property sv:name="class" sv:type="String">
+      <sv:value>info.magnolia.rest.EndpointDefinition</sv:value>
+    </sv:property>
+    <sv:property sv:name="implementationClass" sv:type="String">
+      <sv:value>com.magnolia.cione.controller.secure.ExportEndpoint</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="MisConsumosEndpoint">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>mgnl:contentNode</sv:value>
+    </sv:property>
+    <sv:property sv:name="class" sv:type="String">
+      <sv:value>info.magnolia.rest.EndpointDefinition</sv:value>
+    </sv:property>
+    <sv:property sv:name="implementationClass" sv:type="String">
+      <sv:value>com.magnolia.cione.controller.secure.MisConsumosEndpoint</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="MisAhorrosEndpoint">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>mgnl:contentNode</sv:value>
+    </sv:property>
+    <sv:property sv:name="class" sv:type="String">
+      <sv:value>info.magnolia.rest.EndpointDefinition</sv:value>
+    </sv:property>
+    <sv:property sv:name="implementationClass" sv:type="String">
+      <sv:value>com.magnolia.cione.controller.secure.MisAhorrosEndpoint</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="AlbaranEndpoint">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>mgnl:contentNode</sv:value>
+    </sv:property>
+    <sv:property sv:name="class" sv:type="String">
+      <sv:value>info.magnolia.rest.EndpointDefinition</sv:value>
+    </sv:property>
+    <sv:property sv:name="implementationClass" sv:type="String">
+      <sv:value>com.magnolia.cione.controller.secure.AlbaranEndpoint</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="FacturaEndpoint">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>mgnl:contentNode</sv:value>
+    </sv:property>
+    <sv:property sv:name="class" sv:type="String">
+      <sv:value>info.magnolia.rest.EndpointDefinition</sv:value>
+    </sv:property>
+    <sv:property sv:name="implementationClass" sv:type="String">
+      <sv:value>com.magnolia.cione.controller.secure.FacturaEndpoint</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="ImpersonateUserEndpoint">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>mgnl:contentNode</sv:value>
+    </sv:property>
+    <sv:property sv:name="class" sv:type="String">
+      <sv:value>info.magnolia.rest.EndpointDefinition</sv:value>
+    </sv:property>
+    <sv:property sv:name="implementationClass" sv:type="String">
+      <sv:value>com.magnolia.cione.controller.secure.ImpersonateUserEndPoint</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="RadioBusquedaEndpoint">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>mgnl:contentNode</sv:value>
+    </sv:property>
+    <sv:property sv:name="class" sv:type="String">
+      <sv:value>info.magnolia.rest.EndpointDefinition</sv:value>
+    </sv:property>
+    <sv:property sv:name="implementationClass" sv:type="String">
+      <sv:value>com.magnolia.cione.controller.secure.RadioBusquedaEndPoint</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="BuzonSugerenciasEndpoint">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>mgnl:contentNode</sv:value>
+    </sv:property>
+    <sv:property sv:name="class" sv:type="String">
+      <sv:value>info.magnolia.rest.EndpointDefinition</sv:value>
+    </sv:property>
+    <sv:property sv:name="implementationClass" sv:type="String">
+      <sv:value>com.magnolia.cione.controller.secure.BuzonSugerenciasEndPoint</sv:value>
+    </sv:property>
+  </sv:node>
+</sv:node>
+

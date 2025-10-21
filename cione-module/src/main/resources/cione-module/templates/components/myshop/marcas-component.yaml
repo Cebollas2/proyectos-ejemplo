@@ -1,0 +1,5 @@
+title: Componente marcas
+renderType: freemarker
+templateScript: /cione-module/templates/components/myshop/marcas-component.ftl
+dialog: cione-module:components/myshop/marcas-component-properties
+modelClass: com.magnolia.cione.model.CategoriesModel

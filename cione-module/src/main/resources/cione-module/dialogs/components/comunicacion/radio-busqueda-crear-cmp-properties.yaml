@@ -1,0 +1,17 @@
+form:
+  label: Componente Radio Búsqueda (Crear)
+  tabs:
+    - name: tabMain
+      label: Propiedades      
+      fields:
+        - name: destinatarios
+          label: Destinatarios avisados de nuevo anuncio
+          description: Por ejemplo,user1@cione.es;user2@cione.es
+          required: true
+          i18n: true
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition            
+actions:
+  commit:
+    class: info.magnolia.ui.admincentral.dialog.action.SaveDialogActionDefinition
+  cancel:
+    class: info.magnolia.ui.admincentral.dialog.action.CancelDialogActionDefinition

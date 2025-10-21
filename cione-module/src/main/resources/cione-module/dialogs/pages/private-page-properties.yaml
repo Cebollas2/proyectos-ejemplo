@@ -1,0 +1,130 @@
+form:
+  label: Plantilla Página privada 
+  properties:
+    title:
+      label: Título página
+      $type: textField
+      i18n: true
+    navigationTitle:
+      label: Título en navegación
+      $type: textField
+      i18n: true
+    windowTitle:
+      label: Título ventana
+      $type: textField
+      i18n: true
+    hideInNav:
+      label: Navegacion          
+      buttonLabel: No mostrar la página en elementos de navegación
+      $type: checkBoxField
+      defaultValue: false
+    hideMenu:
+      label: Ocultar Menu Cabecera          
+      buttonLabel: No mostrar el menu de la cabecera
+      $type: checkBoxField
+      defaultValue: false
+    iconMenu:
+      $type: linkField
+      label: Icono para el menú
+      chooser:
+        workbenchChooser:
+          appName: assets
+    iconMenuMovil:
+      $type: linkField
+      label: Icono para el menú móvil
+      chooser:
+        workbenchChooser:
+          appName: assets
+    externalLink:
+      label: Enlace externo
+      $type: textField
+    subPageLink:
+      $type: linkField
+      label: Enlace a subPágina
+      description: Cuando se tiene una subpágina que está y queremos que esta se muestre como activa
+      chooser:
+        workbenchChooser:
+          appName: pages
+    especialLink:
+      $type: switchableField
+      label: Selector de opciones especiales
+      field:
+        $type: comboBoxField
+        label: opciones
+        datasource:
+          $type: optionListDatasource
+          options:
+            - name: enlaceAudio
+              value: enlaceAudio
+              label: Opcion Enlace MyOM
+            - name: enlaceUniversity
+              value: enlaceUniversity
+              label: Opcion Cione University
+            - name: enlaceForo
+              value: enlaceForo
+              label: Opcion Enlace Comunidad Cione
+            - name: enlaceServicios
+              value: enlaceServicios
+              label: Opcion Enlace Pagina Servicios
+      itemProvider:
+        $type: jcrChildNodeProvider
+      forms:
+        - name: enlaceAudio
+          properties:
+            linkName:
+              label: Enlace web audiologia
+              $type: textField
+            key:
+              label: Key web audiologia
+              $type: textField
+        - name: enlaceUniversity
+          properties:
+            linkName:
+              label: Enlace web Cione University
+              $type: textField
+        - name: enlaceForo
+          properties:
+            linkName:
+              label: Enlace a la Comunidad Cione
+              $type: textField
+        - name: enlaceServicios
+    colorbackground:
+      label: Color de fondo del menu lateral
+      $type: textField
+    colorfont:
+      label: Color de la fuente
+      $type: textField
+      i18n: true
+    keywords:
+      label: keywords
+      $type: textField
+      i18n: true
+      rows: 3
+    description:
+      label: descripción
+      $type: textField
+      i18n: true
+      rows: 5
+  layout:
+    $type: tabbedLayout
+    tabs:
+      tabMain:
+        label: cione-module.templates.pages.home-page.tabMain.label
+        fields:
+          - name: title
+          - name: navigationTitle
+          - name: windowTitle
+          - name: hideInNav
+          - name: hideMenu
+          - name: iconMenu
+          - name: iconMenuMovil
+          - name: externalLink
+          - name: subPageLink
+          - name: especialLink
+          - name: colorbackground
+          - name: colorfont
+      tabMeta:
+        label: cione-module.templates.pages.home-page.tabMeta.label
+        fields:
+          - name: keywords
+          - name: description

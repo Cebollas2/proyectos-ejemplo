@@ -1,0 +1,5 @@
+title: Home Monturas - Componente marcas
+renderType: freemarker
+templateScript: /cione-module/templates/components/myshop/marcas-home-component.ftl
+dialog: cione-module:components/myshop/marcas-component-properties
+modelClass: com.magnolia.cione.model.CategoriesModel

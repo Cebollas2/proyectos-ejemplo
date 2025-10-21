@@ -1,0 +1,13 @@
+title: Componente Menú HOME
+templateScript: /cione-module/templates/components/menu-home-component.ftl
+dialog: cione-module:components/menu-home-component-properties
+renderType: freemarker
+visible: true
+modelClass: com.magnolia.cione.model.HomeModel
+
+areas:
+  main:
+    renderType: freemarker
+    availableComponents:
+      menu-component:
+        id: cione-module:components/banner-info-component

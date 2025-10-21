@@ -1,0 +1,5 @@
+title: Componente Banner Info Home
+templateScript: /cione-module/templates/components/banner-info-component.ftl
+dialog: cione-module:components/banner-info-component-properties
+renderType: freemarker
+modelClass: com.magnolia.cione.model.ControlPermisosModel

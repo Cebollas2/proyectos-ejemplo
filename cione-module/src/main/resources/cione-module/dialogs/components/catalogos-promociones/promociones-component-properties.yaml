@@ -1,0 +1,34 @@
+form:
+  tabs:
+    - name: tabCarouselPromociones
+      label: Carousel promociones
+      fields:
+        - name: title
+          label: Título página
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          i18n: true
+        - name: colorTitle
+          label: Color del titulo hexadecimal
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+        - name: carpetaCarrusel
+          label: Carpeta Carrusel
+          class: info.magnolia.ui.form.field.definition.LinkFieldDefinition                      
+          description: Seleccione una carpeta
+          required: true
+          appName: promociones
+          targetWorkspace: promociones
+          identifierToPathConverter:
+            class: info.magnolia.ui.form.field.converter.BaseIdentifierToPathConverter  
+        - name: carpetaListado
+          label: Carpeta Listado
+          class: info.magnolia.ui.form.field.definition.LinkFieldDefinition                      
+          description: Seleccione una carpeta
+          appName: promociones
+          targetWorkspace: promociones
+          identifierToPathConverter:
+            class: info.magnolia.ui.form.field.converter.BaseIdentifierToPathConverter                                                 
+actions:
+  commit:
+    class: info.magnolia.ui.admincentral.dialog.action.SaveDialogActionDefinition
+  cancel:
+    class: info.magnolia.ui.admincentral.dialog.action.CancelDialogActionDefinition

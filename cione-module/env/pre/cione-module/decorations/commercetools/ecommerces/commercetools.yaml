@@ -1,0 +1,23 @@
+class: info.magnolia.ecommerce.common.EcommerceDefinition
+type: commercetools
+enabled: true
+implementation:
+  products:
+    all: info.magnolia.ecommerce.commercetools.products.All
+    byId: info.magnolia.ecommerce.commercetools.products.ById
+    byCategoryId: info.magnolia.ecommerce.commercetools.products.ByCategoryId
+    searchByText: info.magnolia.ecommerce.commercetools.products.SearchByText
+  categories:
+    all: info.magnolia.ecommerce.commercetools.categories.All
+    byId: info.magnolia.ecommerce.commercetools.categories.ById
+    byParentCategoryId: info.magnolia.ecommerce.commercetools.categories.ByParentCategoryId
+    byProductId: info.magnolia.ecommerce.commercetools.categories.ByProductId
+connections:
+  connectionName:
+    enabled: true
+    authUrl: https://auth.europe-west1.gcp.commercetools.com
+    parameters:
+      clientId: TgyKh_WsOhCDcYa67BlT7mIc
+      clientSecret: ptWNRer4MC2ELM4BcmHBJAWY57sJ9M7p
+      apiUrl: https://api.europe-west1.gcp.commercetools.com
+      projectKey: mycione-b2b-uat-02

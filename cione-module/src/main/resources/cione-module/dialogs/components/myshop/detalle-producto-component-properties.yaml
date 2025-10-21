@@ -1,0 +1,62 @@
+form:
+  properties:
+    internalLink:
+      i18n: true
+      $type: linkField
+      chooser:
+        workbenchChooser:
+          appName: pages-app
+    categoriaRepuestos:
+      $type: categoryChooserField
+    tipoProducto:
+      $type: comboBoxField
+      datasource:
+        $type: optionListDatasource
+        options:
+          - name: monturas
+            label: Monturas
+            value: Monturas
+          - name: contactologia
+            label: Lentes de Contacto
+            value: Lentes de Contacto
+          - name: liquidos
+            label: Soluciones de Mantenimiento
+            value: Soluciones de Mantenimiento
+          - name: accesorios
+            label: Accesorios
+            value: Accesorios
+          - name: suministros
+            label: Suministros
+            value: Suministros
+          - name: epis
+            label: Epis
+            value: Epis
+          - name: maquinaria
+            label: Maquinaria
+            value: Maquinaria
+          - name: marketing
+            label: Marketing
+            value: Marketing
+    infoconfig:
+      $type: textField
+      rows: 5
+      i18n: true
+    internalLinkPacks:
+      i18n: true
+      label: enlace pagina de detalle packs antiguos (contactologia)
+      $type: linkField
+      chooser:
+        workbenchChooser:
+          appName: pages-app
+    internalLinkPacksDetail:
+      i18n: true
+      label: enlace pagina de detalle packs genericos
+      $type: linkField
+      chooser:
+        workbenchChooser:
+          appName: pages-app
+footerLayout:
+  $type: defaultEditorActionLayout
+  primaryActions:
+    commit: commit
+    cancel: cancel

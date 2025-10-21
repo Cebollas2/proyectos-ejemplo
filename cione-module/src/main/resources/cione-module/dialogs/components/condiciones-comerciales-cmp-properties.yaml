@@ -1,0 +1,118 @@
+form:
+  label: componente condiciones comerciales
+  properties:
+    listcomponent:
+      i18n: true
+      label: Bloque Condiciones
+      $type: jcrMultiField
+      itemProvider:
+        $type: jcrChildNodeProvider
+      field:
+        $type: compositeField
+        properties:
+          texto:
+            $type: textField
+            label: Texto
+            required: true
+          logo:
+            $type: linkField
+            i18n: true
+            label: Logo
+            chooser:
+              workbenchChooser:
+                appName: assets
+          mail:
+            $type: textField
+            label: mail
+            i18n: true
+          summarytext:
+            $type: textField
+            label: texto resumen
+            i18n: true
+          termsList:
+            $type: jcrMultiField
+            label: Listado de bloque de Condiciones
+            description: Introduzca los campos de cada bloque de condiciones y terminos de uso
+            itemProvider:
+              $type: jcrChildNodeProvider
+            field:
+              $type: compositeField
+              properties:
+                document:
+                  $type: linkField
+                  i18n: true
+                  label: Documento
+                  chooser:
+                    workbenchChooser:
+                      appName: assets
+                mandatoryDocument:
+                  $type: checkBoxField
+                  label: ¿es obligatorio descargar el documento?
+                  buttonLabel: Marcar si es obligatorio descargar el documento
+                  defaultValue: true
+                titleFile:
+                  $type: textField
+                  label: Titulo Fichero Condiciones Comerciales
+                  i18n: true
+                textConditions:
+                  $type: textField
+                  label: Texto Condiciones Comerciales
+                  i18n: true
+          permisos:
+            $type: switchableField
+            required: true
+            label: permisos
+            field:
+              $type: radioButtonGroupField
+              layout: horizontal
+              datasource:
+                $type: optionListDatasource
+                options:
+                  - name: roles
+                    value: roles
+                    label: roles
+                  - name: campaing
+                    value: campaing
+                    label: campana
+            itemProvider:
+              $type: jcrChildNodeProvider
+            forms:
+              - name: roles
+                properties:
+                  roles:
+                    $type: jcrMultiField
+                    label: Seleccione el rol que tendra acceso
+                    itemProvider:
+                      $type: jcrChildNodeProvider
+                    field:
+                      $type: compositeField
+                      properties:
+                        rol:
+                          $type: linkField
+                          label: Seleccione el rol que tendra acceso al banner
+                          chooser:
+                            workbenchChooser:
+                              appName: security
+              - name: campaing
+                properties:
+                  campaing:
+                    $type: comboBoxField
+                    label: Seleccione la campaña que tendra acceso
+                    datasource:
+                      $type: optionListDatasource
+                      options:
+                        - name: es
+                          label: España
+                          value: es 
+                        - name: pt
+                          label: Portugal
+                          value: pt
+                        - name: all
+                          label: Todos
+                          value: all
+                        - name: optofive
+                          label: Optofive (OPTCAN, OPTMAD, Cliente Monturas)
+                          value: optofive
+                        - name: opticapro
+                          label: opticapro (OPTICAPRO)
+                          value: opticapro

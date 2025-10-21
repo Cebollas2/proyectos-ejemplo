@@ -1,0 +1,5 @@
+title: cione-module.components.footer.dialog.title   
+renderType: freemarker    
+templateScript: /cione-module/templates/components/footer-component.ftl    
+dialog: cione-module:components/footer-component-properties
+modelClass: com.magnolia.cione.model.ControlPermisosModel

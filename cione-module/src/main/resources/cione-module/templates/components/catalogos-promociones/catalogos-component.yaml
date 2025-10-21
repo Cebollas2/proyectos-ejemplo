@@ -1,0 +1,4 @@
+title: Componente Catálogos
+templateScript: /cione-module/templates/components/catalogos-promociones/catalogos-component.ftl
+modelClass: com.magnolia.cione.model.ControlPermisosModel
+renderType: freemarker

@@ -1,0 +1,75 @@
+form:
+  properties:
+    title:
+      label: title
+      $type: textField
+      i18n: true
+    categoryName:
+      label: category name
+      $type: textField
+      i18n: true
+    categoryRelated:
+      label: category related
+      $type: categoryChooserField
+    todasMarcasLink:
+      label: Link a página de marcas
+      $type: linkField
+      chooser:
+        workbenchChooser:
+          appName: pages
+    listadoLink:
+      label: Link a listado de productos
+      $type: linkField
+      chooser:
+        workbenchChooser:
+          appName: pages
+    showNameTooltip:
+      buttonLabel: Activa para mostrar el nombre
+      label: Mostrar nombre
+      description: Mostrar nombre de la marca al pasar el ratón por encima
+      $type: checkBoxField
+      defaultValue: false
+    maxListCategories:
+      $type: textField
+      type: java.lang.Integer
+      converterClass: com.vaadin.data.converter.StringToIntegerConverter
+      conversionErrorMessage: cione-module.components.myshop.filtro-productos-component-properties.conversionErrorMessage
+      required: true
+      requiredErrorMessage: cione-module.components.myshop.filtro-productos-component-properties.requiredErrorMessage
+    showReplacementNotFound:
+      $type: switchableField
+      label: Activar para mostrar enlace a repuestos
+      field:
+        $type: radioButtonGroupField
+        layout: horizontal
+        emptySelectionAllowed: true
+        datasource:
+          $type: optionListDatasource
+          options:
+            - name: inactivo
+              value: inactivo
+            - name: activo
+              value: activo
+      itemProvider:
+        $type: jcrChildNodeProvider
+      forms:
+        - name: activo
+          properties:
+            activo:
+              $type: linkField
+              label: seleccionar pagina de repuesto
+              chooser:
+                workbenchChooser:
+                  appName: pages-app
+
+    attribute:
+      $type: jcrMultiValueField
+      description: Atributo para el filtrar las marcas (variants.attributes.attribute.es=ATTRIBUTE)
+      field:
+        $type: textField
+
+footerLayout:
+  $type: defaultEditorActionLayout
+  primaryActions:
+    commit: commit
+    cancel: cancel

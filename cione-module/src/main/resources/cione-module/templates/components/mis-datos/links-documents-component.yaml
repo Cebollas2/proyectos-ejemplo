@@ -1,0 +1,5 @@
+title: Componente de links tipo mail
+dialog: cione-module:components/mis-datos/links-documents-component-properties
+templateScript: /cione-module/templates/components/mis-datos/links-documents-component.ftl
+modelClass: com.magnolia.cione.model.ControlPermisosModel
+renderType: freemarker

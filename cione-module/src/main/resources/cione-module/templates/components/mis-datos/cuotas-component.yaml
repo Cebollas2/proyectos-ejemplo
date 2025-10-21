@@ -1,0 +1,5 @@
+title: Componente Cuotas
+dialog: cione-module:components/mis-datos/cuotas-component-properties
+templateScript: /cione-module/templates/components/mis-datos/cuotas-component.ftl
+renderType: freemarker
+modelClass: com.magnolia.cione.model.MisDatosModel

@@ -1,0 +1,5 @@
+title: Componente Contactos 
+templateScript: /cione-module/templates/components/rsc/contactos-cmp.ftl
+dialog: cione-module:components/rsc/contactos-cmp-properties
+modelClass: com.magnolia.cione.model.ControlPermisosModel
+renderType: freemarker

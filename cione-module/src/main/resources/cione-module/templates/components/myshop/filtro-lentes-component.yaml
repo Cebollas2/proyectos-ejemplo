@@ -1,0 +1,5 @@
+title: Componente Filtro Lentes
+templateScript: /cione-module/templates/components/myshop/filtro-lentes-component.ftl
+#dialog: cione-module:components/myshop/filtro-lentes-component-properties
+modelClass: com.magnolia.cione.model.FiltroLentesModel
+renderType: freemarker

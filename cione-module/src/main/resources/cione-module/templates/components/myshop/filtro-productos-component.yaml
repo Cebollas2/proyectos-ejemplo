@@ -1,0 +1,5 @@
+title: Componente Filtro Productos
+templateScript: /cione-module/templates/components/myshop/filtro-productos-component.ftl
+dialog: cione-module:components/myshop/filtro-productos-component-properties
+modelClass: com.magnolia.cione.model.FiltroProductosModel
+renderType: freemarker

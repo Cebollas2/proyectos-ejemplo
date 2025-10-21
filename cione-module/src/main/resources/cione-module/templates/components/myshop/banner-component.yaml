@@ -1,0 +1,5 @@
+title: Componente Banner Home
+templateScript: /cione-module/templates/components/myshop/banner-component.ftl
+dialog: cione-module:components/myshop/banner-component-properties
+renderType: freemarker
+modelClass: com.magnolia.cione.model.ControlPermisosModel

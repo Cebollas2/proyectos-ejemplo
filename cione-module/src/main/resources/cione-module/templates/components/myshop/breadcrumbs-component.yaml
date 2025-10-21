@@ -1,0 +1,4 @@
+title: Migas de pan
+renderType: freemarker
+templateScript: /cione-module/templates/components/myshop/breadcrumbs-component.ftl
+dialog: cione-module:components/myshop/breadcrumbs-component-properties

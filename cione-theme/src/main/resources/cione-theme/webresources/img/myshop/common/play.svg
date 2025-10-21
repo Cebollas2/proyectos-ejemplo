@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Shape</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="el:play-circle" fill="#D6D6D6" fill-rule="nonzero">
+            <path d="M100,0 C44.775,0 0,44.775 0,100 C0,155.225 44.775,200 100,200 C155.225,200 200,155.225 200,100 C200,44.775 155.225,0 100,0 Z M100,23.1933333 C142.4165,23.1933333 176.806667,57.5835 176.806667,100 C176.806667,142.4165 142.4165,176.806667 100,176.806667 C57.5835,176.806667 23.1933333,142.4165 23.1933333,100 C23.1933333,57.5835 57.5835,23.1933333 100,23.1933333 Z M75,50.0731667 L75,149.926667 L150,100 L75,50.0731667 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>

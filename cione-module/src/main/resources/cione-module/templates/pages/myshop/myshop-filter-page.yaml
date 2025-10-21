@@ -1,0 +1,72 @@
+title: Pagina Listado de Producto de Myshop
+templateScript: /cione-module/templates/pages/myshop/myshop-filter-page.ftl
+renderType: freemarker
+modelClass: com.magnolia.cione.model.ListadoProductosPageModel
+visible: true
+dialog: cione-module:pages/myshop/myshop-filter-page-properties
+areas:
+  headerScripts:
+    createAreaNode: false
+    modelClass: info.magnolia.marketingtags.model.ScriptsAreaModel
+    templateScript: /cione-module/templates/pages/areas/scriptsArea.ftl
+    type: noComponent
+  bodyBeginScripts:
+    createAreaNode: false
+    modelClass: info.magnolia.marketingtags.model.ScriptsAreaModel
+    templateScript: /cione-module/templates/pages/areas/scriptsArea.ftl
+    type: noComponent
+  header:
+    availableComponents:      
+      header-component:
+        id: cione-module:components/myshop/header-component     
+      menu-flotante-component:
+        id: cione-module:components/myshop/menu-flotante-comunicacion-cmp  
+    inheritance:
+      enabled: true
+      components: filtered   
+ 
+  main:
+    renderType: freemarker
+    availableComponents:
+      category-link-component:
+        id: cione-module:components/myshop/category-links-component
+      listado-productos-home-component:
+        id: cione-module:components/myshop/listado-productos-home-component  
+    autoGeneration:
+      content:
+        breadcrumbs-component:
+          nodeType: mgnl:component
+          templateId: cione-module:components/myshop/breadcrumbs-component
+      generatorClass: info.magnolia.rendering.generator.CopyGenerator  
+
+  submain-left:
+    renderType: freemarker
+    availableComponents:
+      filtro-productos-component:
+        id: cione-module:components/myshop/filtro-productos-component
+      filtro-lentes-component:
+        id: cione-module:components/myshop/filtro-lentes-component
+   
+  submain-right:
+    renderType: freemarker
+    availableComponents:
+      menu-component:
+        id: cione-module:components/myshop/banner-component
+      listado-productos-filter-component:
+        id: cione-module:components/myshop/listado-productos-filter-component
+      marcas-home-component:
+        id: cione-module:components/myshop/marcas-home-component
+      colecciones-destacadas-component:
+        id: cione-module:components/myshop/colecciones-destacadas-component    
+      listado-productos-home-component:
+        id: cione-module:components/myshop/listado-productos-home-component    
+      configurador-lentes-component:
+        id: cione-module:components/myshop/configurador-lentes-component  
+  footer:
+    type: single
+    availableComponents:      
+      footer-component:
+        id: cione-module:components/myshop/footer-component
+    inheritance:
+      enabled: true
+      components: filtered            

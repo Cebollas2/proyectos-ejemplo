@@ -1,0 +1,5 @@
+title: Componente Menú flotante MyCione
+templateScript: /cione-module/templates/components/comunicacion/menu-flotante-comunicacion-cmp.ftl
+dialog: cione-module:components/comunicacion/menu-flotante-comunicacion-cmp-properties
+modelClass: com.magnolia.cione.model.ControlPermisosModel
+renderType: freemarker

@@ -1,0 +1,44 @@
+form:
+  properties:
+    category:
+      label: cione-module.components.myshop.filtro-productos-component-properties.category
+      description: cione-module.components.myshop.filtro-productos-component-properties.category.description
+      $type: categoryChooserField
+      selectProduct: false
+    internalLink:
+      $type: linkField
+      description: cione-module.components.myshop.filtro-productos-component-properties.internalLink.description
+      chooser:
+        workbenchChooser:
+          appName: pages-app
+    maxprice:
+      label: cione-module.components.myshop.filtro-productos-component-properties.max
+      $type: textField
+      type: java.lang.Integer
+      converterClass: com.vaadin.data.converter.StringToIntegerConverter
+      conversionErrorMessage: cione-module.components.myshop.filtro-productos-component-properties.conversionErrorMessage
+      required: true
+      requiredErrorMessage: cione-module.components.myshop.filtro-productos-component-properties.requiredErrorMessage
+    filterSelect:
+      label: Opciones de Filtros
+      $type: comboBoxField
+      defaultValue: monturas
+      datasource:
+        $type: optionListDatasource
+        options:
+          - name: monturas
+            label: Monturas
+            value: monturas
+          - name: soluciones
+            label: Soluciones
+            value: soluciones
+          - name: accesorios
+            label: Accesorios
+            value: accesorios
+          - name: marketing
+            label: Marketing
+            value: marketing
+          - name: contactologia
+            label: Lentes de contacto
+            value: contactologia
+

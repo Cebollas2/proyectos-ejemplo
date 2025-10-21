@@ -1,0 +1,26 @@
+dialog: mte:pages/pageProperties
+class: info.magnolia.module.site.templates.PrototypeTemplateDefinition
+templateScript:  /cione-module/templates/pages/prototype.ftl
+renderType: freemarker
+type: feature
+
+areas:
+  headerScripts:
+    createAreaNode: false
+    modelClass: info.magnolia.marketingtags.model.ScriptsAreaModel
+    templateScript: /cione-module/templates/pages/areas/scriptsArea.ftl
+    type: noComponent
+  bodyBeginScripts:
+    createAreaNode: false
+    modelClass: info.magnolia.marketingtags.model.ScriptsAreaModel
+    templateScript: /cione-module/templates/pages/areas/scriptsArea.ftl
+    type: noComponent
+  header:
+    renderType: freemarker
+    type: list
+  main:
+    renderType: freemarker
+    type: list
+  footer:
+    renderType: freemarker
+    type: single

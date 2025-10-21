@@ -1,0 +1,3 @@
+title: Componente Simular usuario
+templateScript: /cione-module/templates/components/simulate-component.ftl
+renderType: freemarker

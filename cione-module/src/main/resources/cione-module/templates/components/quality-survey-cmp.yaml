@@ -1,0 +1,5 @@
+title: Componente Encuesta Satisfacción
+#dialog: cione-module:components/quality-survey-cmp-properties
+templateScript: /cione-module/templates/components/quality-survey-cmp.ftl
+modelClass: com.magnolia.cione.model.QualitySurveyModel
+renderType: freemarker

@@ -1,0 +1,5 @@
+title: Componente Encuestas (Administración) 
+#dialog: cione-module:components/quality-survey-cmp-properties
+templateScript: /cione-module/templates/components/quality-survey-admin-cmp.ftl
+renderType: freemarker
+modelClass: com.magnolia.cione.model.QualitySurveyModel

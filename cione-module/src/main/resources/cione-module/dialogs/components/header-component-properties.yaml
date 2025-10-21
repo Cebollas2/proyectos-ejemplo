@@ -1,0 +1,155 @@
+form:
+  properties:
+    imagesList:
+      $type: jcrMultiField
+      label: Configuracion Cabecera
+      itemProvider:
+        $type: currentItemProvider
+      field:
+        $type: compositeField
+        label: Bloque configuracion cabecera por Roles
+        properties:
+          permisos:
+            $type: switchableField
+            required: true
+            label: permisos
+            field:
+              $type: radioButtonGroupField
+              layout: horizontal
+              datasource:
+                $type: optionListDatasource
+                options:
+                  - name: roles
+                    value: roles
+                    label: roles
+                  - name: campaing
+                    value: campaing
+                    label: campana
+            itemProvider:
+              $type: jcrChildNodeProvider
+            forms:
+              - name: roles
+                properties:
+                  roles:
+                    $type: jcrMultiField
+                    itemProvider:
+                      $type: jcrChildNodeProvider
+                    field:
+                      $type: compositeField
+                      properties:
+                        rol:
+                          $type: linkField
+                          label: Seleccione el rol que tendra acceso al banner
+                          chooser:
+                            workbenchChooser:
+                              appName: security
+              - name: campaing
+                properties:
+                  campaing:
+                    $type: comboBoxField
+                    label: .
+                    datasource:
+                      $type: optionListDatasource
+                      options:
+                        - name: es
+                          label: España
+                          value: es 
+                        - name: pt
+                          label: Portugal
+                          value: pt
+                        - name: all
+                          label: Todos
+                          value: all
+                        - name: optofive
+                          label: Optofive (OPTCAN, OPTMAD, Cliente Monturas)
+                          value: optofive
+                        - name: opticapro
+                          label: opticapro (OPTICAPRO)
+                          value: opticapro
+          logo:
+            $type: linkField
+            i18n: true
+            label: Logo
+            chooser:
+              workbenchChooser:
+                appName: assets
+          logoAlt:
+            label: Texto alternativo logo
+            i18n: true
+            $type: textField
+          targetNode:
+            label: Pagina padre
+            $type: linkField
+            required: true
+            chooser:
+              workbenchChooser:
+                appName: pages-app
+          logoLink:
+            label: Pagina home
+            $type: linkField
+            required: true
+            chooser:
+              workbenchChooser:
+                appName: pages-app
+          patrocinioList:
+            $type: jcrMultiField
+            label: Imagenes Patrocinio
+            itemProvider:
+              $type: jcrChildNodeProvider
+            field:
+              $type: compositeField
+              label: Bloque configuracion imagenes patrocinio
+              properties:
+                image:
+                  $type: linkField
+                  i18n: true
+                  label: Patrocinio imagen (250x45)
+                  chooser:
+                    workbenchChooser:
+                      appName: assets
+                linkPatrocinio:
+                  $type: switchableField
+                  required: true
+                  label: Link patrocinio
+                  field:
+                    $type: radioButtonGroupField
+                    layout: horizontal
+                    datasource:
+                      $type: optionListDatasource
+                      options:
+                        - name: linkPdf
+                          value: linkPdf
+                          label: Link PDF
+                        - name: linkUrl
+                          value: linkUrl
+                          label: Link URL
+                        - name: linkInternal
+                          value: linkInternal
+                          label: Link interno
+                  itemProvider:
+                    $type: jcrChildNodeProvider
+                  forms:
+                    - name: linkPdf
+                      properties:
+                        linkPdf:
+                          $type: linkField
+                          i18n: true
+                          label: PDF
+                          chooser:
+                            workbenchChooser:
+                              appName: assets
+                    - name: linkUrl
+                      properties:
+                        linkUrl:
+                          $type: textField
+                          label: url
+                          i18n: true
+                    - name: linkInternal
+                      properties:
+                        linkPdf:
+                          $type: linkField
+                          i18n: true
+                          label: link interno
+                          chooser:
+                             workbenchChooser:
+                               appName: pages-app

@@ -1,0 +1,285 @@
+form:
+  properties:
+    imagesList:
+      $type: jcrMultiField
+      label: Imagen Background Home
+      itemProvider:
+        $type: currentItemProvider
+      field:
+        $type: compositeField
+        label: Configurador
+        properties:
+          image:
+            $type: linkField
+            i18n: true
+            label: imagen de fondo
+            chooser:
+              workbenchChooser:
+                appName: assets
+          permisos:
+            $type: switchableField
+            label: Configuracion de permisos
+            field:
+              $type: radioButtonGroupField
+              layout: horizontal
+              label: seleccion de tipo de permisos
+              datasource:
+                $type: optionListDatasource
+                label: opciones
+                options:
+                  - name: roles
+                    value: roles
+                    label: roles
+                  - name: campaing
+                    value: campaing
+                    label: campañas
+            itemProvider:
+              $type: jcrChildNodeProvider
+            forms:
+              - name: roles
+                label: Seleccionar para configuracion por Roles
+                properties:
+                  roles:
+                    $type: jcrMultiField
+                    label: Roles
+                    itemProvider:
+                      $type: jcrChildNodeProvider
+                    field:
+                      $type: compositeField
+                      label: Configuracion por Roles
+                      properties:
+                        rol:
+                          $type: linkField
+                          label: Seleccione el rol al que se mostrara la imagen de fondo
+                          chooser:
+                            workbenchChooser:
+                              appName: security
+              - name: campaing
+                label: Seleccionar para configuracion por Campañas
+                properties:
+                  campaing:
+                    $type: comboBoxField
+                    label: Campaña                    
+                    datasource:
+                      $type: optionListDatasource
+                      label: Seleccione la campaña a la que se mostrara la imagen de fondo
+                      options:
+                        - name: es
+                          label: España
+                          value: es 
+                        - name: pt
+                          label: Portugal
+                          value: pt
+                        - name: all
+                          label: Todos
+                          value: all
+                        - name: optofive
+                          label: Optofive (OPTCAN, OPTMAD, Cliente Monturas)
+                          value: optofive
+                        - name: opticapro
+                          label: opticapro (OPTICAPRO)
+                          value: opticapro
+    menu:
+      $type: jcrMultiField
+      label: Menú
+      itemProvider:
+        $type: jcrChildNodeProvider
+      field:
+        $type: compositeField
+        label: Configuracion opcion de menu
+        properties:
+          position:
+            $type: comboBoxField
+            label: posicion
+            layout: vertical
+            datasource:
+              $type: optionListDatasource
+              options:
+                - name: "00"
+                  value: "00"
+                  label: 0
+                  selected: true
+                - name: "01"
+                  value: "01"
+                  label: 1
+                - name: "02"
+                  value: "02"
+                  label: 2
+                - name: "03"
+                  value: "03"
+                  label: 3
+                - name: "04"
+                  value: "04"
+                  label: 4
+                - name: "05"
+                  value: "05"
+                  label: 5
+                - name: "06"
+                  value: "06"
+                  label: 6
+                - name: "07"
+                  value: "07"
+                  label: 7
+                - name: "08"
+                  value: "08"
+                  label: 8
+                - name: "09"
+                  value: "09"
+                  label: 9
+                - name: "10"
+                  value: "10"
+                  label: 10
+          title:
+            $type: richTextField
+            label: Título
+            i18n: true
+            required: true
+          tooltip:
+            $type: textField
+            label: Tooltip
+            i18n: true
+          logo:
+            $type: linkField
+            label: Logo
+            chooser:
+              workbenchChooser:
+                appName: assets
+          logosvg:
+            $type: textField
+            label: logo en svg
+          logoMo:
+            $type: linkField
+            label: Logo Movil
+            chooser:
+              workbenchChooser:
+                appName: assets
+          logoMosvg:
+            $type: textField
+            label: logo movil en svg
+          internalLink:
+            $type: linkField
+            label: Enlace interno
+            chooser:
+              workbenchChooser:
+                appName: pages
+          externalLink:
+            label: Enlace externo
+            $type: textField
+          especialLink:
+            $type: switchableField
+            label: Selector de opciones especiales
+            field:
+              $type: comboBoxField
+              layout: horizontal
+              label: opciones
+              datasource:
+                $type: optionListDatasource
+                options:
+                  - name: enlaceAudio
+                    value: enlaceAudio
+                    label: Opcion Enlace MyOM
+                  - name: enlaceUniversity
+                    value: enlaceUniversity
+                    label: Opcion Cione University
+                  - name: enlaceForo
+                    value: enlaceForo
+                    label: Opcion Enlace Comunidad Cione
+                  - name: enlaceServicios
+                    value: enlaceServicios
+                    label: Opcion Enlace Pagina Servicios
+            itemProvider:
+              $type: jcrChildNodeProvider
+            forms:
+              - name: enlaceAudio
+                properties:
+                  linkName:
+                    label: Enlace web audiologia
+                    $type: textField
+                  key:
+                    label: Key web audiologia
+                    $type: textField
+              - name: enlaceUniversity
+                properties:
+                  linkName:
+                    label: Enlace web Cione University
+                    $type: textField
+              - name: enlaceForo
+                properties:
+                  linkName:
+                    label: Enlace a la Comunidad Cione
+                    $type: textField
+              - name: enlaceServicios
+          permisos:
+            $type: switchableField
+            label: Configuracion de permisos
+            field:
+              $type: radioButtonGroupField
+              layout: horizontal
+              label: seleccion de tipo de permisos
+              datasource:
+                $type: optionListDatasource
+                label: opciones
+                options:
+                  - name: roles
+                    value: roles
+                    label: roles
+                  - name: campaing
+                    value: campaing
+                    label: campañas
+            itemProvider:
+              $type: jcrChildNodeProvider
+            forms:
+              - name: roles
+                label: Seleccionar para configuracion por Roles
+                properties:
+                  roles:
+                    $type: jcrMultiField
+                    label: Roles
+                    itemProvider:
+                      $type: jcrChildNodeProvider
+                    field:
+                      $type: compositeField
+                      label: Configuracion por Roles
+                      properties:
+                        rol:
+                          $type: linkField
+                          label: Seleccione el rol al que se mostrara la imagen de fondo
+                          chooser:
+                            workbenchChooser:
+                              appName: security
+              - name: campaing
+                label: Seleccionar para configuracion por Campañas
+                properties:
+                  campaing:
+                    $type: comboBoxField
+                    label: Campaña                    
+                    datasource:
+                      $type: optionListDatasource
+                      label: Seleccione la campaña a la que se mostrara la imagen de fondo
+                      options:
+                        - name: es
+                          label: España
+                          value: es 
+                        - name: pt
+                          label: Portugal
+                          value: pt
+                        - name: all
+                          label: Todos
+                          value: all
+                        - name: optofive
+                          label: Optofive (OPTCAN, OPTMAD, Cliente Monturas)
+                          value: optofive
+                        - name: opticapro
+                          label: opticapro (OPTICAPRO)
+                          value: opticapro
+  layout:
+    $type: tabbedLayout
+    tabs:
+      tabMain:
+        label: Main
+        fields:
+          - name: imagesList
+      tabLinks:
+        label: Menú
+        fields:
+          - name: menu

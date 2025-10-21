@@ -1,0 +1,128 @@
+form:
+  properties:
+    title:
+      label: title
+      $type: textField
+      i18n: true
+    textnofound:
+      label: Not found text
+      $type: textField
+      i18n: true
+    filterSelect:
+      label: Category root
+      required: true
+      $type: categoryChooserField
+    categoriesRelated:
+      $type: jcrMultiValueField
+      description: Categorias relacionadas
+      field:
+        $type: categoryChooserField
+
+    categoriesException:
+      $type: jcrMultiField
+      label: cione-module.components.myshop.colecciones-destacadas-component-properties.categoriesException.label
+      description: cione-module.components.myshop.colecciones-destacadas-component-properties.categoriesException.description
+      itemProvider:
+        $type: jcrChildNodeProvider
+      field:
+        $type: compositeField
+        properties:
+          categoriaException:
+            label: cione-module.components.myshop.colecciones-destacadas-component-properties.categoriesException.composite.categoriaException
+            $type: categoryChooserField
+          attributeException:
+            $type: jcrMultiValueField
+            label: Attribute Filter
+            description: Atributo para el filtrar por atributo de producto (variants.attributes.attribute.es=ATTRIBUTE)
+            field:
+              $type: textField
+          linkException:
+            label: cione-module.components.myshop.colecciones-destacadas-component-properties.categoriesException.composite.linkException
+            $type: linkField
+            chooser:
+              workbenchChooser:
+                appName: pages
+          isMainPage:
+            label: Es pagina principal (no es una pagina listado)       
+            buttonLabel: Seleccionar si NO queremos generar la url con las categorias y filtros
+            $type: checkBoxField
+            defaultValue: false
+
+    listadoLink:
+      label: Link a listado de productos
+      $type: linkField
+      chooser:
+        workbenchChooser:
+          appName: pages
+    limit:
+      label: limit
+      $type: textField
+      type: java.lang.Integer
+      converterClass: com.vaadin.data.converter.StringToIntegerConverter
+      conversionErrorMessage: cione-module.components.myshop.filtro-productos-component-properties.conversionErrorMessage
+      required: true
+      requiredErrorMessage: cione-module.components.myshop.filtro-productos-component-properties.requiredErrorMessage
+    attribute:
+      $type: jcrMultiValueField
+      description: Atributo para el filtrar las marcas (variants.attributes.attribute.es=ATTRIBUTE)
+      field:
+        $type: textField     
+    permisos:
+      $type: switchableField
+      field:
+        $type: radioButtonGroupField
+        layout: horizontal
+        datasource:
+          $type: optionListDatasource
+          options:
+            - name: roles
+              value: roles
+            - name: campaing
+              value: campaing
+      itemProvider:
+        $type: jcrChildNodeProvider
+      forms:
+        - name: roles
+          properties:
+            roles:
+              $type: jcrMultiField
+              label: .
+              itemProvider:
+                $type: jcrChildNodeProvider
+              field:
+                $type: compositeField
+                properties:
+                  rol:
+                    $type: linkField
+                    label: Seleccione el rol
+                    chooser:
+                      workbenchChooser:
+                        appName: security
+        - name: campaing
+          properties:
+            campaing:
+              $type: comboBoxField
+              datasource:
+                $type: optionListDatasource
+                options:
+                  - name: es
+                    label: España
+                    value: es 
+                  - name: pt
+                    label: Portugal
+                    value: pt
+                  - name: all
+                    label: Todos
+                    value: all
+                  - name: optofive
+                    label: optofive
+                    value: optofive
+                  - name: opticapro
+                    label: opticapro
+                    value: opticapro
+                          
+footerLayout:
+  $type: defaultEditorActionLayout
+  primaryActions:
+    commit: commit
+    cancel: cancel

@@ -1,0 +1,6 @@
+title: Componente cabecera
+renderType: freemarker
+templateScript: /cione-module/templates/components/myshop/header-component.ftl    
+dialog: cione-module:components/myshop/header-component-properties
+modelClass: com.magnolia.cione.model.CarritoModel
+

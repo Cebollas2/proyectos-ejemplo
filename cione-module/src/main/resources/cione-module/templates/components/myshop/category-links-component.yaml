@@ -1,0 +1,5 @@
+title: Componente Category links
+templateScript: /cione-module/templates/components/myshop/category-links-component.ftl
+dialog: cione-module:components/myshop/category-links-component-properties
+renderType: freemarker
+modelClass: com.magnolia.cione.model.ControlPermisosModel

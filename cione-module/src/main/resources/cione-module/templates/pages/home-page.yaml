@@ -1,0 +1,31 @@
+title: Página Home
+templateScript: /cione-module/templates/pages/home-page.ftl
+renderType: freemarker
+dialog: cione-module:pages/home-page-properties
+visible: true
+areas:
+  header:
+    availableComponents:      
+      header-component:
+        id: cione-module:components/header-component
+      menu-flotante-component:
+        id: cione-module:components/myshop/menu-flotante-comunicacion-cmp 
+      cookies-component:
+        id: cione-module:components/cookies-cmp  
+      quality-survey-component:
+        id: cione-module:components/quality-survey-cmp
+      popup-campaign-component:
+        id: cione-module:components/popup-campaign-component
+  main:
+    templateScript: /cione-module/templates/pages/home-page.ftl
+    maxComponents: 1
+    availableComponents:
+      menu-component:
+        id: cione-module:components/menu-home-component
+  footer:
+    renderType: freemarker
+    maxComponents: 0
+    type: noComponent
+    availableComponents:
+      footer-component:
+        id: cione-module:components/footer-component

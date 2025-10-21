@@ -1,0 +1,74 @@
+form:
+  label: Plantilla página detalle myshop 
+  properties:
+    title:
+      label: Título página
+      $type: textField
+      i18n: true
+    navigationTitle:
+      label: Título en navegación
+      $type: textField
+      i18n: true
+    windowTitle:
+      label: Título ventana
+      $type: textField
+      i18n: true
+    hideInNav:
+      label: Navegacion          
+      buttonLabel: No mostrar la página en elementos de navegación
+      $type: checkBoxField
+      defaultValue: false
+    iconMenu:
+      $type: linkField
+      label: Icono para el menú
+      chooser:
+        workbenchChooser:
+          appName: assets
+    iconMenuMovil:
+      $type: linkField
+      label: Icono para el menú móvil
+      chooser:
+        workbenchChooser:
+          appName: assets   
+    externalLink:
+      label: Enlace externo
+      $type: textField
+    subPageLink:
+      $type: linkField
+      label: Enlace a subPágina
+      chooser:
+        workbenchChooser:
+          appName: pages               
+    keywords:
+      label: keywords
+      $type: textField
+      i18n: true
+      rows: 3
+    description:
+      label: descripción
+      $type: textField
+      i18n: true
+      rows: 5
+
+  layout:
+    $type: tabbedLayout
+    tabs:
+      mainTab:
+        label: cione-module.templates.pages.home-page.tabMain.label
+        fields:
+          - name: title
+          - name: navigationTitle
+          - name: windowTitle
+          - name: hideInNav
+          - name: iconMenu
+          - name: iconMenuMovil
+          - name: externalLink
+          - name: subPageLink
+          
+      metaTab:
+        label: cione-module.templates.pages.home-page.tabMeta.label
+        fields:
+          - name: keywords
+          - name: description         
+
+    

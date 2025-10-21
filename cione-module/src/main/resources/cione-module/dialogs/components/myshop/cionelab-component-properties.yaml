@@ -1,0 +1,15 @@
+form:
+  properties:
+    urlcionelab:
+      label: url a iframe de cionelab
+      $type: textField
+    urlsocketio:
+      label: url al servidor de socketio
+      $type: textField
+    internalLinkPacksDetail:
+      i18n: true
+      label: enlace pagina de detalle packs genericos
+      $type: linkField
+      chooser:
+        workbenchChooser:
+          appName: pages-app

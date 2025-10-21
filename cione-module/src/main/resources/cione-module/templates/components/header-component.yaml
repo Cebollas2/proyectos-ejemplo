@@ -1,0 +1,6 @@
+title: Componente cabecera
+renderType: freemarker
+templateScript: /cione-module/templates/components/header-component.ftl    
+dialog: cione-module:components/header-component-properties
+modelClass: com.magnolia.cione.model.ControlPermisosModel
+#modelClass: com.magnolia.cione.model.DatosIdentificativosModel

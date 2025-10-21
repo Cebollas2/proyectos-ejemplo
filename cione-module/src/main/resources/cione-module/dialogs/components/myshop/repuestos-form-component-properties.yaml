@@ -1,0 +1,10 @@
+form:
+  properties:
+    destinatarios:
+      $type: jcrMultiField
+      label: cione-module.components.myshop.repuestos-form-component-properties.destinatarios
+      itemProvider:
+        $type: currentItemProvider
+      field:
+        name: destinatario
+        $type: textField

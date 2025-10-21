@@ -1,0 +1,3 @@
+title: Video de producto
+renderType: freemarker
+templateScript: /cione-module/templates/components/myshop/video-component.ftl

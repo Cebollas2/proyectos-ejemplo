@@ -1,0 +1,4 @@
+title: Componente Abonos
+templateScript: /cione-module/templates/components/pedidos-facturacion/abonos-component.ftl
+renderType: freemarker
+#modelClass: com.magnolia.cione.model.DatosIdentificativosModel

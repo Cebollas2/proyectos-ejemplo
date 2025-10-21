@@ -1,0 +1,27 @@
+title: Componente €cione
+templateScript: /cione-module/templates/components/mis-datos/euro-cione-component.ftl
+modelClass: com.magnolia.cione.model.MisDatosModel
+renderType: freemarker
+
+areas:
+  documents:    
+    renderType: freemarker
+    availableComponents:
+      download-documents-component:
+        id: cione-module:components/mis-datos/download-documents-component
+      links-documents-component:
+        id: cione-module:components/mis-datos/links-documents-component
+  documents2:    
+    renderType: freemarker
+    availableComponents:
+      download-documents-component:
+        id: cione-module:components/mis-datos/download-documents-component
+      links-documents-component:
+        id: cione-module:components/mis-datos/links-documents-component
+  documents3:    
+    renderType: freemarker
+    availableComponents:
+      download-documents-component:
+        id: cione-module:components/mis-datos/download-documents-component
+      links-documents-component:
+        id: cione-module:components/mis-datos/links-documents-component

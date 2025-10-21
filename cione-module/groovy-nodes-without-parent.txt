@@ -1,0 +1,113 @@
+checkVersions("Here the path to your node");
+ 
+def checkVersions(node) {
+ 
+    versionMan = info.magnolia.objectfactory.Components.getComponent(info.magnolia.cms.core.version.VersionManager.class);
+    sessionWebsite = ctx.getJCRSession("website");
+    node = sessionWebsite.getNode(node);
+    verIt = versionMan.getAllVersions(node);
+    baseVersion = versionMan.getBaseVersion(node).getIdentifier();
+    println "Base version " + baseVersion;
+      
+    verIt.each({version ->
+      VersionInfo versionInfo = new VersionInfo();
+      println "\n";
+      println("[VERSION NAME]: " + version.getName() + " [VERSION ID]: " + version.getIdentifier());
+      predecessors = version.getPredecessors();
+      versionInfo.setCurrentNode(version.getIdentifier());
+      if (predecessors.length == 0) {
+          if (version.getName().equals("jcr:rootVersion")) {
+              println "jcr:rootVersion node, no predecessors can exists";
+              versionInfo.setPredecessor("ROOT VERSION");
+          } else {
+              println "Error, no root version node is missing predecessor";
+              precessorUuid = checkForPrecessor(versionInfo.getCurrentNode());
+              if (precessorUuid != null) {
+                 System.out.println("Found " + uuid + "'s precessor:  " + precessorUuid);
+              } else {
+                println "Fatal error: " + version.getIdentifier + " is not pressent as succesor anywhere, cant track it";
+              }
+          }
+      } else {
+          predecessors.each(pred -> {
+              println "Predecessor ID: " + pred.getIdentifier();
+              versionInfo.setPredecessor(pred.getIdentifier());
+          });
+      }
+       
+      sucessors = version.getSuccessors();
+       
+      if (sucessors.length == 0) {
+          if (version.getIdentifier().equals(baseVersion)) {
+              println "Base version node, no succesors exists as far as this is the last one";
+              versionInfo.setSuccessor("BASE VERSION");
+          } else {
+              println "Error, no base version node is missing succesor";
+              succesorUuid = checkForSuccesor(versionInfo.getCurrentNode());
+              if (succesorUuid != null) {
+                 System.out.println("Found " + uuid + "'s succesor:  " + succesorUuid);
+              } else {
+                println "Fatal error: " + version.getIdentifier + " is not pressent as succesor anywhere, cant track it";
+              }
+          }
+      } else {
+          sucessors.each(suc -> {
+              println "Succesor ID: " + suc.getIdentifier();
+              versionInfo.setSuccessor(suc.getIdentifier());
+          });
+      }
+       
+    });
+ 
+    //sessionWebsite.save();
+}
+ 
+ 
+def checkForPrecessor(String uuid) {
+    println("Looking for " + uuid + "'s precessor");
+    try {
+        VersionInfo predecessor = versionStore.stream().filter(versionInfo -> versionInfo.getSuccessor().equals(uuid)).findFirst().get();       
+        return predecessor.getCurrentNode();
+    } catch (java.util.NoSuchElementException nse) {
+        // the uuid doesn't exists as succesor of any version
+        return null;
+    }
+     
+}
+ 
+def checkForSuccesor(String uuid) {
+    println("Looking for " + uuid + "'s sucessor");
+    try {
+        VersionInfo succesor = versionStore.stream().filter(versionInfo -> versionInfo.getProcessor().equals(uuid)).findFirst().get();      
+        return succesor.getCurrentNode();
+    } catch (java.util.NoSuchElementException nse) {
+        // the uuid doesn't exists as proccesor of any version
+        return null;
+    }
+     
+}
+ 
+class VersionInfo {
+    String predecessor;
+    String currentNode;
+    String successor;
+    
+    String getPredecessor() {
+        return predecessor;
+    }
+    void setPredecessor(String predecessor) {
+        this.predecessor = predecessor;
+    }
+    String getCurrentNode() {
+        return currentNode;
+    }
+    void setCurrentNode(String currentNode) {
+        this.currentNode = currentNode;
+    }
+    String getSuccessor() {
+        return successor;
+    }
+    void setSuccessor(String successor) {
+        this.successor = successor;
+    }
+}

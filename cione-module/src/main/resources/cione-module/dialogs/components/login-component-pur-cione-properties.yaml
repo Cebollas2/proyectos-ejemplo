@@ -1,0 +1,88 @@
+form:
+  properties:
+    imagesList:
+      $type: textField
+    logo:
+      $type: linkField
+      chooser:
+        workbenchChooser:
+          appName: assets
+    text:
+      $type: textField
+      description: dialog.login.text.description
+    targetPage:
+      $type: linkField
+      chooser:
+        workbenchChooser:
+          appName: pages
+    registrationPage:
+      $type: linkField
+      chooser:
+        workbenchChooser:
+          appName: pages
+    forgottenPasswordPage:
+      $type: linkField
+      chooser:
+        workbenchChooser:
+          appName: pages
+    realmName:
+      $type: textField
+      description: dialog.login.realmName.description
+    targetPageExternal:
+      $type: textField
+      description: dialog.login.targetPageExternal.description
+    accessText:
+      $type: textField
+      description: dialog.login.accessText.description
+    multiidioma:
+      $type: checkBoxField
+      defaultValue: false
+    endLinkProperties:
+      $type: staticField
+      value: ---------------------------------------------------------------------------------- 
+    row1:
+      $type: textField
+    row2:
+      $type: textField
+    row3:
+      $type: textField
+    endLinkProperties2:
+      $type: staticField
+      value: ---------------------------------------------------------------------------------- 
+    row21:
+      $type: textField
+    row22:
+      $type: textField
+    row31:
+      $type: textField
+    row32:
+      $type: textField
+      
+  layout:
+    $type: tabbedLayout
+    tabs:
+      tabLogin:
+        label: Login
+        fields:
+          - name: imagesList
+          - name: logo
+          - name: text
+          - name: targetPage
+          - name: registrationPage
+          - name: forgottenPasswordPage
+          - name: realmName
+          - name: targetPageExternal
+          - name: accessText
+      tabInfo:
+        label: Info
+        fields:
+          - name: multiidioma
+          - name: endLinkProperties
+          - name: row1
+          - name: row2
+          - name: row3
+          - name: endLinkProperties2
+          - name: row21
+          - name: row22
+          - name: row31
+          - name: row32

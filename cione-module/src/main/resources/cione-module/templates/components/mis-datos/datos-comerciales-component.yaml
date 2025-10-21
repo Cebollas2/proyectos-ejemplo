@@ -1,0 +1,11 @@
+title: Componente Datos comerciales
+templateScript: /cione-module/templates/components/mis-datos/datos-comerciales-component.ftl
+modelClass: com.magnolia.cione.model.MisDatosModel
+renderType: freemarker
+
+areas:
+  documents:    
+    renderType: freemarker
+    availableComponents:
+      download-documents-component:
+        id: cione-module:components/mis-datos/download-documents-component

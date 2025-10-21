@@ -1,0 +1,44 @@
+title: Página Home Migrada
+templateScript: /cione-module/templates/pages/home-page-migrate.ftl
+renderType: site
+dialog: cione-module:pages/home-page-migrate-properties
+visible: true
+areas:
+  headerScripts:
+    createAreaNode: false
+    modelClass: info.magnolia.marketingtags.model.ScriptsAreaModel
+    templateScript: /cione-module/templates/pages/areas/scriptsArea.ftl
+    type: noComponent
+  bodyBeginScripts:
+    createAreaNode: false
+    modelClass: info.magnolia.marketingtags.model.ScriptsAreaModel
+    templateScript: /cione-module/templates/pages/areas/scriptsArea.ftl
+    type: noComponent
+  header:
+    availableComponents:      
+      header-component:
+        id: cione-module:components/header-component
+      menu-flotante-component:
+        id: cione-module:components/myshop/menu-flotante-comunicacion-cmp 
+      cookies-component:
+        id: cione-module:components/cookies-cmp  
+      quality-survey-component:
+        id: cione-module:components/quality-survey-cmp
+      condiciones-comerciales-component:
+        id: cione-module:components/condiciones-comerciales-cmp
+      popup-campaign-component:
+        id: cione-module:components/popup-campaign-component
+  main:
+    maxComponents: 1
+    availableComponents:
+      menu-component:
+        id: cione-module:components/menu-home-component
+      dashboard-component:
+        id: cione-module:components/dashboard/dashboard-component
+  footer:
+    renderType: freemarker
+    maxComponents: 0
+    type: noComponent
+    availableComponents:
+      footer-component:
+        id: cione-module:components/footer-component

@@ -1,0 +1,58 @@
+form:
+  label: Componente Cuotas
+  properties:
+    ano:
+      $type: textField
+      label: año
+      i18n: true          
+      required: true
+    tabla:
+      $type: jcrMultiField
+      label: Configuracion tabla con bonificaciones 
+      itemProvider:
+        $type: jcrChildNodeProvider
+      field:
+        $type: compositeField
+        label: Configuracion tabla
+        properties:
+          title:
+            label: Titulo para la columna
+            i18n: true
+            $type: textField
+            required: true
+    filas:
+      $type: jcrMultiField
+      label: Configuracion con cada fila (1 por cada tabla)
+      itemProvider:
+        $type: jcrChildNodeProvider
+      field:
+        $type: compositeField
+        label: Configuracion tabla
+        properties:
+          title:
+            label: Titulo para la columna
+            i18n: true
+            $type: textField
+            required: true        
+          column:
+            $type: jcrMultiField
+            label: Valores de la columna
+            itemProvider:
+              $type: jcrChildNodeProvider
+            field:
+              $type: compositeField
+              label: Configuracion tabla
+              properties:
+                linea1:
+                  label: texto primera linea
+                  i18n: true
+                  $type: textField
+                  required: true
+                linea2:
+                  $type: textField
+                  i18n: true
+                  label: texto segunda linea
+                destacado:
+                  $type: textField
+                  i18n: true
+                  label: texto destacado

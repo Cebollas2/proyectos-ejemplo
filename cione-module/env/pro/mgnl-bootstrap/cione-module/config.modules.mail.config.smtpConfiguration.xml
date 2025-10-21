@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" sv:name="smtpConfiguration">
+  <sv:property sv:name="jcr:primaryType" sv:type="Name">
+    <sv:value>mgnl:contentNode</sv:value>
+  </sv:property>
+  <sv:property sv:name="port" sv:type="String">
+    <sv:value>465</sv:value>
+  </sv:property>
+  <sv:property sv:name="security" sv:type="String">
+    <sv:value>none</sv:value>
+  </sv:property>
+  <sv:property sv:name="server" sv:type="String">
+    <sv:value>relay.cione.es</sv:value>
+  </sv:property>
+  <sv:node sv:name="authentication">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>mgnl:contentNode</sv:value>
+    </sv:property>
+    <sv:property sv:name="class" sv:type="String">
+      <sv:value>info.magnolia.module.mail.smtp.authentication.NullSmtpAuthentication</sv:value>
+    </sv:property>
+  </sv:node>
+</sv:node>

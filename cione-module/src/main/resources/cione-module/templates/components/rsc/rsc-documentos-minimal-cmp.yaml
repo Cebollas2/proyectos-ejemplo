@@ -1,0 +1,5 @@
+title: Componente Descarga Documentos 
+templateScript: /cione-module/templates/components/rsc/rsc-documentos-minimal-cmp.ftl
+dialog: cione-module:components/rsc/rsc-documentos-cmp-properties
+modelClass: com.magnolia.cione.model.ComunicacionModel
+renderType: freemarker

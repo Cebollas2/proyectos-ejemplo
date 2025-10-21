@@ -1,0 +1,5 @@
+title: Componente Magazines
+templateScript: /cione-module/templates/components/comunicacion/magazines-cmp.ftl
+dialog: cione-module:components/comunicacion/magazines-cmp-properties
+#modelClass: com.magnolia.cione.model.ControlPermisosModel
+renderType: freemarker

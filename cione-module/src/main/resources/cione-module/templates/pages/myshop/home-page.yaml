@@ -1,0 +1,42 @@
+title: Página Home Myshop
+templateScript: /cione-module/templates/pages/myshop/myshop-page.ftl
+renderType: freemarker
+dialog: cione-module:pages/myshop/myshop-page-properties
+visible: true
+areas:
+  headerScripts:
+    createAreaNode: false
+    modelClass: info.magnolia.marketingtags.model.ScriptsAreaModel
+    templateScript: /cione-module/templates/pages/areas/scriptsArea.ftl
+    type: noComponent
+  bodyBeginScripts:
+    createAreaNode: false
+    modelClass: info.magnolia.marketingtags.model.ScriptsAreaModel
+    templateScript: /cione-module/templates/pages/areas/scriptsArea.ftl
+    type: noComponent
+  header:
+    availableComponents:      
+      header-component:
+        id: cione-module:components/myshop/header-component
+      menu-flotante-component:
+        id: cione-module:components/myshop/menu-flotante-comunicacion-cmp  
+    inheritance:
+      enabled: false
+      components: all
+  main:
+    availableComponents:
+      menu-component:
+        id: cione-module:components/myshop/banner-component    
+      listado-productos-home-component:
+        id: cione-module:components/myshop/listado-productos-home-component 
+      category-link-component:
+        id: cione-module:components/myshop/category-links-component
+
+  footer:
+    type: single
+    availableComponents:      
+      footer-component:
+        id: cione-module:components/myshop/footer-component
+    inheritance:
+      enabled: false
+      components: all  

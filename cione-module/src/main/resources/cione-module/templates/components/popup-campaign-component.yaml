@@ -1,0 +1,5 @@
+title: Componente popup campaign
+dialog: cione-module:components/popup-campaign-component-properties
+templateScript: /cione-module/templates/components/popup-campaign-component.ftl
+renderType: freemarker
+modelClass: com.magnolia.cione.model.PopupCampaignsModel

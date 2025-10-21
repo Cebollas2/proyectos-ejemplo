@@ -1,0 +1,60 @@
+form:
+  properties:  
+    
+    #titulo
+    title:
+      label: Titulo
+      i18n: true
+      $type: textField
+
+    #texto
+    text:
+      $type: textField
+      label: Texto
+      rows: 5
+      i18n: true
+    
+    #link
+    altlink:
+      label: Link
+      $type: switchableField
+      field:
+        $type: radioButtonGroupField
+        layout: horizontal
+        datasource:
+          $type: optionListDatasource
+          options:
+            - name: external
+              label: Externo
+              value: external
+            - name: internal
+              label: Interno
+              value: internal
+      itemProvider:
+        $type: jcrChildNodeProvider
+      forms:
+        - name: external
+          properties:
+            external:
+              $type: textField 
+        - name: internal
+          properties:
+            internal:
+              $type: linkField
+              label: Interno
+              chooser:
+                workbenchChooser:
+                  appName: pages
+    #icono
+    image:
+      $type: linkField
+      label: Icono
+      chooser:
+        workbenchChooser:
+          appName: assets
+
+footerLayout:
+  $type: defaultEditorActionLayout
+  primaryActions:
+    commit: commit
+    cancel: cancel

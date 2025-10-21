@@ -1,0 +1,134 @@
+form:
+  label: cione-module.components.banner-info-component-properties.label
+  properties:
+    applymain:
+      $type: checkBoxField
+      label: No Ocupar todo el ancho de la página
+      buttonLabel: Aplicar si no quiere ocupar todo el ancho de la página
+      defaultValue: false
+    imagesList:
+      $type: jcrMultiField
+      label: image.images.label
+      itemProvider:
+        $type: currentItemProvider
+      field:
+        $type: compositeField
+        properties:
+          video:
+            label: video URL
+            i18n: true
+            $type: textField
+          image:
+            $type: linkField
+            i18n: true
+            label: images.image.label
+            chooser:
+              workbenchChooser:
+                appName: assets
+          permisos:
+            $type: switchableField
+            field:
+              $type: radioButtonGroupField
+              layout: horizontal
+              datasource:
+                $type: optionListDatasource
+                options:
+                  - name: roles
+                    value: roles
+                  - name: campaing
+                    value: campaing
+            itemProvider:
+              $type: jcrChildNodeProvider
+            forms:
+              - name: roles
+                properties:
+                  roles:
+                    $type: jcrMultiField
+                    label: .
+                    itemProvider:
+                      $type: jcrChildNodeProvider
+                    field:
+                      $type: compositeField
+                      properties:
+                        rol:
+                          $type: linkField
+                          label: Seleccione el rol que tendra acceso al banner
+                          chooser:
+                            workbenchChooser:
+                              appName: security
+              - name: campaing
+                properties:
+                  campaing:
+                    $type: comboBoxField
+                    datasource:
+                      $type: optionListDatasource
+                      options:
+                        - name: es
+                          label: España
+                          value: es 
+                        - name: pt
+                          label: Portugal
+                          value: pt
+                        - name: all
+                          label: Todos
+                          value: all
+                        - name: optofive
+                          label: Optofive (OPTCAN, OPTMAD, Cliente Monturas)
+                          value: optofive
+                        - name: opticapro
+                          label: opticapro (OPTICAPRO)
+                          value: opticapro
+                    
+          alternativeText:
+            label: image.textoAlternativo.label
+            i18n: true
+            $type: textField
+
+          fechaInicio:
+            label: image.fechaInicio.label
+            $type: dateField
+            type: java.util.Date
+            time: true
+
+          fechaFin:
+            label: image.fechaFin.label
+            $type: dateField
+            type: java.util.Date
+            time: true
+
+          document:
+            $type: switchableField
+            label: image.document.label
+            i18n: true
+            field:
+              $type: radioButtonGroupField
+              layout: horizontal
+              datasource:
+                $type: optionListDatasource
+                options:
+                  - name: magnolia
+                    value: magnolia
+                    label: Magnolia Asset
+                  - name: external
+                    value: external
+                    label: External Asset
+            itemProvider:
+              $type: jcrChildNodeProvider
+            forms:
+              - name: magnolia
+                properties:
+                  magnolia:
+                    $type: linkField
+                    i18n: true
+                    label: image.document.label
+                    chooser:
+                      workbenchChooser:
+                        appName: assets
+              - name: external
+                properties:
+                  external:
+                    $type: textField
+                    i18n: true
+                    label: image.document.label
+                    
+    

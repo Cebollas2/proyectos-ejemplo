@@ -1,0 +1,5 @@
+title: Componente Detalle de Producto Packs
+templateScript: /cione-module/templates/components/myshop/detalle-producto-pack-component.ftl
+dialog: cione-module:components/myshop/detalle-producto-pack-component-properties
+modelClass: com.magnolia.cione.model.MyShopDetailModel
+renderType: freemarker

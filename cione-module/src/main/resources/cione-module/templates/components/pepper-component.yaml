@@ -1,0 +1,4 @@
+title: Componente Pepper Chop
+templateScript: /cione-module/templates/components/pepper-component.ftl
+renderType: freemarker
+modelClass: com.magnolia.cione.model.PepperModel

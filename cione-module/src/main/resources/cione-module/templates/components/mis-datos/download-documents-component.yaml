@@ -1,0 +1,5 @@
+title: Componente descarga de documentos
+dialog: cione-module:components/mis-datos/download-documents-component-properties
+templateScript: /cione-module/templates/components/mis-datos/download-documents-component.ftl
+modelClass: com.magnolia.cione.model.ControlPermisosModel
+renderType: freemarker

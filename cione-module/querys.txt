@@ -1,0 +1,4 @@
+select * from [mgnl:asset] where [jcr:uuid]="ac1eb3b8-afe8-4c55-a0df-884f0f0bf918"
+
+select * from [mgnl:asset] order by [jcr:path]
+where [jcr:path] = '/cione/rsc/contactos/organigrama/1.jpg'

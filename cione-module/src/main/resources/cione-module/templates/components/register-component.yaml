@@ -1,0 +1,4 @@
+title: Componente registro usuario
+dialog: cione-module:components/register-component-properties
+renderType: freemarker
+templateScript: /cione-module/templates/components/register-component.ftl

@@ -1,0 +1,29 @@
+title: Página pública
+templateScript: /cione-module/templates/pages/public-page.ftl
+renderType: freemarker
+visible: true
+dialog: cione-module:pages/public-page-properties
+areas:
+  headerScripts:
+    createAreaNode: false
+    modelClass: info.magnolia.marketingtags.model.ScriptsAreaModel
+    templateScript: /cione-module/templates/pages/areas/scriptsArea.ftl
+    type: noComponent
+  bodyBeginScripts:
+    createAreaNode: false
+    modelClass: info.magnolia.marketingtags.model.ScriptsAreaModel
+    templateScript: /cione-module/templates/pages/areas/scriptsArea.ftl
+    type: noComponent
+  main:
+    renderType: freemarker
+    availableComponents:
+      dummy-component:
+        id: cione-module:components/dummy-component
+      register-component:
+        id: cione-module:components/register-component
+      recovery-pwd-component:
+        id: cione-module:components/recovery-pwd-component         
+      #pur-login:
+       # id: public-user-registration:components/login
+      pur-login:
+        id: cione-module:components/login-component-pur-cione  

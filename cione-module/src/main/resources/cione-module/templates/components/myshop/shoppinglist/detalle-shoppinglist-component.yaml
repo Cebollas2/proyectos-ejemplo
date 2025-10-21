@@ -1,0 +1,5 @@
+title: Shopping List - Detalle
+renderType: freemarker
+templateScript: /cione-module/templates/components/myshop/shoppinglist/detalle-shoppinglist-component.ftl
+modelClass: com.magnolia.cione.model.DetalleShoppingListModel
+dialog: cione-module:components/myshop/shoppinglist/detalle-shoppinglist-component-properties

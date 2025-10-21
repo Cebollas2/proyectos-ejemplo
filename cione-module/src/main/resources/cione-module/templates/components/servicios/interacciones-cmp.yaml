@@ -1,0 +1,5 @@
+title: Componente Interacciones
+templateScript: /cione-module/templates/components/servicios/interacciones-cmp.ftl
+#dialog: cione-module:components/comunicacion/interacciones-cmp-properties
+#modelClass: com.magnolia.cione.model.ComunicacionModel
+renderType: freemarker

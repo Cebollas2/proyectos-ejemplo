@@ -1,0 +1,5 @@
+title: Componente Listado Enlaces tipo boton
+templateScript: /cione-module/templates/components/myshop/listado-enlaces-boton-component.ftl
+dialog: cione-module:components/myshop/listado-enlaces-boton-component-properties
+renderType: freemarker
+modelClass: com.magnolia.cione.model.ControlPermisosModel

@@ -1,0 +1,4 @@
+title: Componente recuperación contraseña
+dialog: cione-module:components/register-recovery-pwd-properties
+templateScript: /cione-module/templates/components/recovery-pwd-component.ftl
+renderType: freemarker

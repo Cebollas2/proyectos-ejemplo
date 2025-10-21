@@ -1,0 +1,4 @@
+title: Componente Mis consumos
+templateScript: /cione-module/templates/components/pedidos-facturacion/mis-consumos.ftl
+renderType: freemarker
+modelClass: com.magnolia.cione.model.MisConsumosModel

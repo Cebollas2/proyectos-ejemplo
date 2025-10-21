@@ -1,0 +1,3 @@
+title: Componente Informe abonos
+templateScript: /cione-module/templates/components/pedidos-facturacion/informe-abonos.ftl
+renderType: freemarker

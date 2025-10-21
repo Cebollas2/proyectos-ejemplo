@@ -1,0 +1,94 @@
+form:
+  properties:
+    linksList:
+      i18n: true
+      $type: jcrMultiField
+      itemProvider:
+        $type: jcrChildNodeProvider
+      field:
+        $type: compositeField
+        properties:
+          linkText:
+            $type: textField
+            required: true
+          externalLink:
+            $type: textField
+          internalLink:
+            $type: linkField
+            chooser:
+              workbenchChooser:
+                appName: pages-app
+          image:
+            $type: linkField
+            required: true
+            chooser:
+              workbenchChooser:
+                appName: assets
+          permisos:
+            $type: switchableField
+            label: Configuracion de permisos
+            field:
+              $type: radioButtonGroupField
+              layout: horizontal
+              label: seleccion de tipo de permisos
+              datasource:
+                $type: optionListDatasource
+                label: opciones
+                options:
+                  - name: roles
+                    value: roles
+                    label: roles
+                  - name: campaing
+                    value: campaing
+                    label: campañas
+            itemProvider:
+              $type: jcrChildNodeProvider
+            forms:
+              - name: roles
+                label: Seleccionar para configuracion por Roles
+                properties:
+                  roles:
+                    $type: jcrMultiField
+                    label: Roles
+                    itemProvider:
+                      $type: jcrChildNodeProvider
+                    field:
+                      $type: compositeField
+                      label: Configuracion por Roles
+                      properties:
+                        rol:
+                          $type: linkField
+                          label: Seleccione el rol al que se mostrara la imagen de fondo
+                          chooser:
+                            workbenchChooser:
+                              appName: security
+              - name: campaing
+                label: Seleccionar para configuracion por Campañas
+                properties:
+                  campaing:
+                    $type: comboBoxField
+                    label: Campaña                    
+                    datasource:
+                      $type: optionListDatasource
+                      label: Seleccione la campaña a la que se mostrara la imagen de fondo
+                      options:
+                        - name: es
+                          label: España
+                          value: es 
+                        - name: pt
+                          label: Portugal
+                          value: pt
+                        - name: all
+                          label: Todos
+                          value: all
+                        - name: optofive
+                          label: Optofive (OPTCAN, OPTMAD, Cliente Monturas)
+                          value: optofive
+                        - name: opticapro
+                          label: opticapro (OPTICAPRO)
+                          value: opticapro
+footerLayout:
+  $type: defaultEditorActionLayout
+  primaryActions:
+    commit: commit
+    cancel: cancel

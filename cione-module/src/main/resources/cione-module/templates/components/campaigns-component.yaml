@@ -1,0 +1,3 @@
+title: Componente Campañas
+templateScript: /cione-module/templates/components/campaigns-component.ftl
+renderType: freemarker

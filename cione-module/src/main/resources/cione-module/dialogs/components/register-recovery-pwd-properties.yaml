@@ -1,0 +1,20 @@
+form:
+  label: Componente recuperación contraseña
+  tabs:
+    - name: tabMain
+      label: Propiedades      
+      fields:
+       - name:  returnPageLink
+         class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+         label: Página volver
+         description: Escoge la página de vuelta.
+         required: true
+         appName: pages
+         targetWorkspace: website
+         identifierToPathConverter:
+          class: info.magnolia.ui.form.field.converter.BaseIdentifierToPathConverter     
+actions:
+  commit:
+    class: info.magnolia.ui.admincentral.dialog.action.SaveDialogActionDefinition
+  cancel:
+    class: info.magnolia.ui.admincentral.dialog.action.CancelDialogActionDefinition

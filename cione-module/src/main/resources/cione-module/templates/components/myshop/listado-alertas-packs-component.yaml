@@ -1,0 +1,5 @@
+title: Componente Listado de Alertas de Packs
+renderType: freemarker
+templateScript: /cione-module/templates/components/myshop/listado-alertas-packs-component.ftl
+modelClass: com.magnolia.cione.model.CarritoModel
+dialog: cione-module:components/myshop/listado-alertas-packs-component-properties

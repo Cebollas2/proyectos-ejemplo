@@ -1,0 +1,3 @@
+title: Componente Informe blister
+templateScript: /cione-module/templates/components/pedidos-facturacion/informe-blister.ftl
+renderType: freemarker

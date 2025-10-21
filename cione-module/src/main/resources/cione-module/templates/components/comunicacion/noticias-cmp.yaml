@@ -1,0 +1,5 @@
+title: Componente Bloque noticias (Detalle)
+templateScript: /cione-module/templates/components/comunicacion/noticias-cmp.ftl
+#dialog: cione-module:components/comunicacion/bloque-noticias-cmp-properties
+modelClass: com.magnolia.cione.model.ControlPermisosModel
+renderType: freemarker

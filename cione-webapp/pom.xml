@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.magnolia.cione</groupId>
+		<artifactId>cione</artifactId>
+		<version>1.0-SNAPSHOT</version>
+		<relativePath>../pom.xml</relativePath>
+	</parent>
+	<artifactId>cione-webapp</artifactId>
+	<name>cione: webapp</name>
+	<packaging>war</packaging>
+	<dependencies>
+		<!-- Add your project specific dependencies here: A custom webapp typically 
+			is based on a magnolia webapp. The most simple and reduced bundle to start 
+			with is the "magnolia-empty-webapp" (see "option i" below). To see a complete 
+			list of preconfigured Magnolia webapps, have a look at https://documentation.magnolia-cms.com/display/DOCS/Bundles+and+webapps 
+			=> Please just use one of the four below listed options! Make sure to use 
+			the appropriate option (A or B) in the parent pom -->
+
+		<!-- option i - magnolia-empty-webapp -->
+		<!-- Dependencies versions are already imported by parent pom. Requires 
+			"Option A" in the parent pom. <dependency> <groupId>info.magnolia</groupId> 
+			<artifactId>magnolia-empty-webapp</artifactId> <type>war</type> </dependency> 
+			<dependency> <groupId>info.magnolia</groupId> <artifactId>magnolia-empty-webapp</artifactId> 
+			<type>pom</type> </dependency> -->
+
+
+		<!-- option ii - magnolia-community-webapp -->
+		<!-- Dependencies versions are already imported by parent pom. Requires 
+			"Option A" in the parent pom. -->
+		<!-- <dependency> <groupId>info.magnolia.bundle</groupId> <artifactId>magnolia-community-webapp</artifactId> 
+			<type>war</type> </dependency> <dependency> <groupId>info.magnolia.bundle</groupId> 
+			<artifactId>magnolia-community-webapp</artifactId> <type>pom</type> </dependency> -->
+
+
+		<!-- option iii - magnolia-enterprise-standard-webapp -->
+		<!-- Dependencies versions are already imported by parent pom. Requires 
+			"Option B" in the parent pom. -->
+		<!-- <dependency> <groupId>info.magnolia.eebundle</groupId> <artifactId>magnolia-enterprise-standard-webapp</artifactId> 
+			<type>war</type> </dependency> <dependency> <groupId>info.magnolia.eebundle</groupId> 
+			<artifactId>magnolia-enterprise-standard-webapp</artifactId> <type>pom</type> 
+			</dependency> -->
+
+
+		<!-- option iv - magnolia-enterprise-pro-webapp -->
+		<!-- Dependencies versions are already imported by parent pom. Requires 
+			"Option B" in the parent pom. -->
+		<!-- -->
+		<dependency>
+			<groupId>info.magnolia.dx</groupId>
+			<artifactId>magnolia-dx-core-webapp</artifactId>
+			<type>war</type>
+			<exclusions>
+			  <exclusion>
+			    <groupId>info.magnolia.periscope</groupId>
+			    <artifactId>magnolia-periscope-result-ranker</artifactId>
+			  </exclusion>
+			  <exclusion>
+		        <groupId>info.magnolia.javascript-models</groupId>
+		        <artifactId>magnolia-module-javascript-models</artifactId>
+		      </exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>info.magnolia.dx</groupId>
+			<artifactId>magnolia-dx-core-webapp</artifactId>
+			<type>pom</type>
+			<exclusions>
+			  <exclusion>
+			    <groupId>info.magnolia.periscope</groupId>
+			    <artifactId>magnolia-periscope-result-ranker</artifactId>
+			  </exclusion>
+			  <exclusion>
+	            <groupId>info.magnolia.javascript-models</groupId>
+	            <artifactId>magnolia-module-javascript-models</artifactId>
+	          </exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>io.swagger.core.v3</groupId>
+			<artifactId>swagger-core</artifactId>
+		</dependency>
+		
+		<!-- Migrate 6.2 version PUR-->
+		<dependency>
+			<groupId>info.magnolia.pur</groupId>
+			<artifactId>magnolia-module-public-user-registration</artifactId>
+			<version>2.7.5</version>
+		</dependency>
+		<!-- Migrate 6.2 version story-app -->
+		<dependency>
+			<groupId>info.magnolia.editor</groupId>
+			<artifactId>stories-app</artifactId>
+<!-- 			<version>1.1.5</version> -->
+		</dependency>
+<!-- 	    <dependency> -->
+<!-- 	      <groupId>info.magnolia.editor</groupId> -->
+<!-- 	      <artifactId>magnolia-content-editor-widgetset</artifactId> -->
+<!-- 	      <version>1.1.5</version> -->
+<!-- 	    </dependency> -->
+<!-- 	    <dependency> -->
+<!-- 	      <groupId>info.magnolia.editor</groupId> -->
+<!-- 	      <artifactId>magnolia-content-editor</artifactId> -->
+<!--  	      <version>1.1.5</version> -->
+<!-- 	    </dependency> -->
+	    <dependency>
+	      <groupId>info.magnolia</groupId>
+	      <artifactId>magnolia-link-unfurl</artifactId>
+<!-- 	      <version>1.1.5</version> -->
+	    </dependency>
+		<!-- Magnolia boms -->
+		<dependency>
+		    <groupId>info.magnolia.boms</groupId>
+		    <artifactId>magnolia-external-dependencies</artifactId>
+		    <version>6.2</version>
+		    <type>pom</type>
+		    <scope>import</scope>
+		</dependency>
+		<!-- modulo observation -->
+		<dependency>		
+			<groupId>info.magnolia</groupId>
+			<artifactId>magnolia-module-observation</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.magnolia.cione</groupId>
+			<artifactId>cione-module</artifactId>
+			<version>1.65</version>
+		</dependency>
+		<dependency>
+			<groupId>com.magnolia.cione</groupId>
+			<artifactId>product-detail-module</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.magnolia.cione</groupId>
+			<artifactId>cione-app</artifactId>
+			<version>1.1</version>
+		</dependency>
+		<dependency> 
+			<groupId>com.magnolia.cione</groupId> 
+			<artifactId>cione-theme</artifactId> 
+			<version>1.1</version>
+		</dependency>
+<!-- 		<dependency> -->
+<!-- 			<groupId>com.magnolia.cione</groupId> -->
+<!-- 			<artifactId>cione-module-test</artifactId> -->
+<!-- 			<version>1.0-SNAPSHOT</version> -->
+<!-- 		</dependency> -->
+
+		<dependency>
+		  <groupId>info.magnolia.devdect</groupId>
+		  <artifactId>magnolia-module-device-detection</artifactId>
+		  <version>1.1</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>com.microsoft.sqlserver</groupId>
+		    <artifactId>mssql-jdbc</artifactId>
+		    <version>9.2.1.jre8</version>
+		</dependency>
+		
+<!--		<dependency>-->
+<!--			<groupId>org.apache.commons</groupId>-->
+<!--			<artifactId>commons-dbcp2</artifactId>-->
+<!--			<version>2.7.0</version>-->
+<!--		</dependency>-->
+		
+		<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-slf4j-impl -->
+		<dependency>
+		    <groupId>org.apache.logging.log4j</groupId>
+		    <artifactId>log4j-slf4j-impl</artifactId>
+		</dependency>
+				
+		<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
+		<dependency>
+		    <groupId>org.apache.logging.log4j</groupId>
+		    <artifactId>log4j-core</artifactId>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api -->
+		<dependency>
+		    <groupId>org.apache.logging.log4j</groupId>
+		    <artifactId>log4j-api</artifactId>
+		</dependency>
+		
+		<dependency>
+		    <groupId>com.squareup.okhttp3</groupId>
+		    <artifactId>okhttp</artifactId>
+		    <version>4.9.3</version>
+		</dependency>
+		
+		<!-- libnd4j binary was built with AVX/AVX2 support, but current CPU doesn't have this instruction set. Exiting now... 
+		<dependency>
+	      <groupId>org.nd4j</groupId>
+	      <artifactId>nd4j-native</artifactId>
+	    </dependency>
+		<dependency>
+		  <groupId>org.nd4j</groupId>
+		  <artifactId>nd4j-native</artifactId>
+		  <version>1.0.0-beta6</version>
+		  <classifier>linux-x86_64</classifier>
+		</dependency>
+		<dependency>
+		  <groupId>org.nd4j</groupId>
+		  <artifactId>nd4j-native</artifactId>
+		  <version>1.0.0-beta6</version>
+		  <classifier>macosx-x86_64</classifier>
+		</dependency>
+		<dependency>
+		  <groupId>org.nd4j</groupId>
+		  <artifactId>nd4j-native</artifactId>
+		  <version>1.0.0-beta6</version>
+		  <classifier>windows-x86_64</classifier>
+		</dependency>
+		
+		<dependency>
+			<groupId>info.magnolia.periscope</groupId>
+		  	<artifactId>magnolia-periscope-result-ranker</artifactId>
+		  	<scope>compile</scope>
+      		<exclusions>
+	       		<exclusion>  
+		          <groupId>org.nd4j</groupId>
+		          <artifactId>nd4j-native</artifactId>
+		        </exclusion>
+		    </exclusions> 
+		</dependency>-->
+
+	</dependencies>
+
+	<build>
+		<finalName>magnoliaAuthor</finalName>
+		<plugins>
+			<plugin>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>3.1.0</version>
+				<configuration>
+					<!-- exclude jars copied "physically" from the webapp overlay - so we 
+						only get those resolved by Maven's dependency management -->
+					<dependentWarExcludes>WEB-INF/lib/*.jar</dependentWarExcludes>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	
+	<profiles>
+		<profile>
+			<id>local</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-war-plugin</artifactId>
+						<configuration>
+							<!-- exclude jars copied "physically" from the webapp overlay - so 
+								we only get those resolved by Maven's dependency management -->
+							<dependentWarExcludes>WEB-INF/lib/*.jar</dependentWarExcludes>
+							<classifier>local</classifier>
+							<webResources>
+								<resource>
+									<directory>env/local</directory>
+									<includes>
+										<include>**/*</include>
+									</includes>
+								</resource>
+							</webResources>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
+			<id>dev</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-war-plugin</artifactId>
+						<configuration>
+							<!-- exclude jars copied "physically" from the webapp overlay - so 
+								we only get those resolved by Maven's dependency management -->
+							<dependentWarExcludes>WEB-INF/lib/*.jar</dependentWarExcludes>
+							<packagingExcludes>cache/**,logs/**,repositories/**,tmp/**</packagingExcludes>
+							<webResources>
+								<resource>
+									<directory>env/dev</directory>
+									<includes>
+										<include>**/*</include>
+									</includes>
+								</resource>
+							</webResources>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
+			<id>pre</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-war-plugin</artifactId>
+						<configuration>
+							<!-- exclude jars copied "physically" from the webapp overlay - so 
+								we only get those resolved by Maven's dependency management -->
+							<dependentWarExcludes>WEB-INF/lib/*.jar</dependentWarExcludes>
+							<packagingExcludes>cache/**,logs/**,repositories/**,tmp/**</packagingExcludes>
+							<webResources>
+								<resource>
+									<directory>env/pre</directory>
+									<includes>
+										<include>**/*</include>
+									</includes>
+								</resource>
+							</webResources>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
+			<id>pro</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-war-plugin</artifactId>
+						<configuration>
+							<!-- exclude jars copied "physically" from the webapp overlay - so 
+								we only get those resolved by Maven's dependency management -->
+							<dependentWarExcludes>WEB-INF/lib/*.jar</dependentWarExcludes>
+							<packagingExcludes>cache/**,logs/**,repositories/**,tmp/**</packagingExcludes>
+							<webResources>
+								<resource>
+									<directory>env/pro</directory>
+									<includes>
+										<include>**/*</include>
+									</includes>
+								</resource>
+							</webResources>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+	
+</project>

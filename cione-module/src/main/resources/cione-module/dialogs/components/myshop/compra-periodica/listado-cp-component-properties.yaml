@@ -1,0 +1,10 @@
+form:
+  properties:
+    internalLink:
+      $type: linkField
+      required: true
+      label: Link to List CP
+      description: cione-module.components.myshop.listado-shoppinglist-component-properties.internalLink.description
+      chooser:
+        workbenchChooser:
+          appName: pages-app

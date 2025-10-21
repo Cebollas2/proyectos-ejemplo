@@ -1,0 +1,4 @@
+title: Componente banner sección
+templateScript: /cione-module/templates/components/banner-section-component.ftl
+dialog: cione-module:components/banner-section-component-properties
+renderType: freemarker

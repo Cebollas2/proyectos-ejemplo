@@ -1,0 +1,4 @@
+title: Página error
+templateScript: /cione-module/templates/pages/error-page.ftl
+renderType: freemarker
+dialog: cione-module:pages/error-page-properties  

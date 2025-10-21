@@ -1,0 +1,3 @@
+# Disallow indexation to non production environments
+User-agent: *
+Allow: /

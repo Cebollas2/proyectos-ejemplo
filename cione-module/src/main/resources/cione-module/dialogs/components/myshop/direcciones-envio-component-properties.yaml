@@ -1,0 +1,46 @@
+form:
+  properties:
+    volverCarritoLink:
+      label: Link para volver al carrito
+      $type: linkField
+      required: true
+      chooser:
+        workbenchChooser:
+          appName: pages
+    confirmacionPedidoLink:
+      label: Link confirmación del pedido
+      $type: linkField
+      required: true
+      chooser:
+        workbenchChooser:
+          appName: pages
+    listadoEnlaceFiltrosCompraMinima:
+      $type: jcrMultiField
+      label: Configuracion Enlaces Compra Minima
+      itemProvider:
+        $type: currentItemProvider
+      field:
+        $type: compositeField
+        label: Filtro
+        properties:
+          tipo:
+            $type: comboBoxField
+            label: Familia a la que pertenece el producto
+            datasource:
+              $type: optionListDatasource
+              options:
+                - name: MONT
+                  label: MONT
+                  value: MONT
+                - name: AUDIO
+                  label: AUDIO
+                  value: AUDIO
+                - name: LIQUIDOS
+                  label: LIQUIDOS
+                  value: LIQUIDOS
+          enlace:
+            $type: linkField
+            label: Enlace la pagina filtrado por Codigo Marca/Proveedor para productos con compra minima
+            chooser:
+              workbenchChooser:
+                appName: pages

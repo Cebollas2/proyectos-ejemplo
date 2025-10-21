@@ -1,0 +1,11 @@
+title: Componente Ruta de la luz
+templateScript: /cione-module/templates/components/mis-datos/ruta-luz-component.ftl
+modelClass: com.magnolia.cione.model.MisDatosModel
+renderType: freemarker
+
+areas:
+  documents:    
+    renderType: freemarker
+    availableComponents:
+      download-documents-component:
+        id: cione-module:components/mis-datos/download-documents-component

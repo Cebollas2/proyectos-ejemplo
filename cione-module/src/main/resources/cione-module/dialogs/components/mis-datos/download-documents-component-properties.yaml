@@ -1,0 +1,79 @@
+form:
+  tabs:    
+    - name: docs
+      label: Listado de formularios
+      fields:                   
+        - name: formularios
+          label: Formularios
+          class: info.magnolia.ui.form.field.definition.MultiValueFieldDefinition
+          transformerClass: info.magnolia.ui.form.field.transformer.multi.DelegatingMultiValueSubnodeTransformer          
+          field:
+            name: linkProperties
+            class: info.magnolia.ui.form.field.definition.CompositeFieldDefinition
+            transformerClass: info.magnolia.ui.form.field.transformer.composite.DelegatingCompositeFieldTransformer
+            layout: vertical
+            fields:                              
+              - name: title
+                label: Título formulario
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                i18n: true
+                required: false
+              - name: documentos
+                label: Documentos
+                class: info.magnolia.ui.form.field.definition.MultiValueFieldDefinition
+                transformerClass: info.magnolia.ui.form.field.transformer.multi.DelegatingMultiValueSubnodeTransformer          
+                field:
+                  name: linkProperties
+                  class: info.magnolia.ui.form.field.definition.CompositeFieldDefinition
+                  transformerClass: info.magnolia.ui.form.field.transformer.composite.DelegatingCompositeFieldTransformer
+                  layout: vertical
+                  fields:      
+                    - name: campana
+                      label: Campaña
+                      class: info.magnolia.ui.form.field.definition.SelectFieldDefinition
+                      sortOptions: false
+                      options:
+                        - name: es
+                          label: España
+                          value: es                    
+                          selected: true
+                        - name: pt
+                          label: Portugal
+                          value: pt
+                        - name: all
+                          label: Todos
+                          value: all
+                        - name: optofive
+                          label: Optofive (OPTCAN, OPTMAD, Cliente Monturas)
+                          value: optofive
+                        - name: opticapro
+                          label: opticapro (OPTICAPRO)
+                          value: opticapro  
+                    - name: title
+                      label: Título documento
+                      class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                      i18n: true
+                      required: true                            
+                    - name: targetNode
+                      class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+                      label: Documento
+                      description:  Escoge un documento
+                      required: true
+                      appName: assets
+                      targetWorkspace: dam
+                      identifierToPathConverter:
+                        class: info.magnolia.ui.form.field.converter.BaseIdentifierToPathConverter
+                    - name: endLinkProperties
+                      label: <Fin documento>
+                      class: info.magnolia.ui.form.field.definition.StaticFieldDefinition
+                      value: ---------------------------                                                                      
+              - name: endLinkProperties
+                label: <Fin formulario>
+                class: info.magnolia.ui.form.field.definition.StaticFieldDefinition
+                value: ---------------------------
+            
+actions:
+  commit:
+    class: info.magnolia.ui.admincentral.dialog.action.SaveDialogActionDefinition
+  cancel:
+    class: info.magnolia.ui.admincentral.dialog.action.CancelDialogActionDefinition

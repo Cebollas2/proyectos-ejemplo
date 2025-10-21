@@ -1,0 +1,61 @@
+form:
+  properties:
+    title:
+      $type: textField
+    category:
+      $type: categoryChooserField
+      selectProduct: false
+      required: false
+    recomendados:
+      $type: checkBoxField
+      defaultValue: false
+    vertodoscomposite:
+      $type: compositeField
+      label: configura ver todos
+      itemProvider:
+        $type: jcrChildNodeProvider
+      properties:
+        vertodos:
+          buttonLabel: check para mostrar enlace ver todos
+          $type: checkBoxField
+        todosLink:
+          $type: linkField
+          label: Link a página de Listado
+          chooser:
+            workbenchChooser:
+              appName: pages
+    extraCategory:
+      $type: jcrMultiValueField
+      field:
+        $type: categoryChooserField
+        selectProduct: false
+    internalLink:
+      $type: linkField
+      label: cione-module.components.myshop.listado-productos-home-component-properties.internalLink.label
+      description: cione-module.components.myshop.listado-productos-home-component-properties.internalLink.description
+      chooser:
+        workbenchChooser:
+          appName: pages-app
+    internalLinkPacksDetail:
+      $type: linkField
+      label: Pagina detalle del pack tras seleccionar el producto 
+      description: Pagina detalle del pack al que volveremos tras seleccionar el producto o a la que navegaremos en el caso de que un producto sea de tipo Pack
+      required: false
+      chooser:
+        workbenchChooser:
+          appName: pages-app
+    first:
+      $type: checkBoxField
+      defaultValue: false
+    takeSpace:
+      $type: checkBoxField
+      defaultValue: false
+    loop:
+      $type: checkBoxField
+      defaultValue: true
+    gray:
+      $type: checkBoxField
+      defaultValue: false
+    smalltitle:
+      $type: checkBoxField
+      defaultValue: false

@@ -1,0 +1,26 @@
+'default': 
+  'realmName': 'public'
+  'defaultRoles': 
+    'anonymous': 'anonymous'
+    'pur': 'public-user-registration-base'
+  'defaultGroups': 
+  'registrationStrategy': 
+    'class': 'info.magnolia.module.publicuserregistration.strategy.Always'
+    'emailTemplate': '/public-user-registration/templates/mail/user-confirmation-email.ftl'
+    'fromEmail': 'test@test.com'
+    'fromName': 'mail.registration.from'
+    'i18nBasename': 'info.magnolia.module.publicuserregistration.messages'
+    'pagePath': '/path_to_the_page_that_email_link_directs'
+    'subject': 'mail.registration.subject'
+  'passwordRetrievalStrategy': 
+    'class': 'info.magnolia.module.publicuserregistration.password.MailChangePasswordLinkStrategy'
+    'emailTemplate': 'publicuserregistration/components/password-reset-email.ftl'
+    'fromEmail': 'test@test.com'
+    'fromName': 'mail.passwordreminder.from'
+    'i18nBasename': 'info.magnolia.module.publicuserregistration.messages'
+    'subject': 'mail.passwordreminder.subject'
+    'targetPagePath': '/path_to_the_page_that_email_link_directs'
+  'userProfileConfiguration': 
+    'userProfileClass': 'info.magnolia.module.publicuserregistration.UserProfile'
+
+

@@ -1,0 +1,5 @@
+title: Carrito - Direcciones de envío
+renderType: freemarker
+templateScript: /cione-module/templates/components/myshop/direcciones-envio-component.ftl
+modelClass: com.magnolia.cione.model.CarritoModel
+dialog: cione-module:components/myshop/direcciones-envio-component-properties

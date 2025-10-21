@@ -1,0 +1,69 @@
+form:
+  label: Componente Actualidad
+  tabs:
+    - name: tabMain
+      label: Propiedades      
+      fields:
+        - name: titulo
+          label: Título          
+          required: true
+          i18n: true
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+        - name:  carpetadestacada
+          label: Noticias destacadas
+          class: info.magnolia.ui.form.field.definition.LinkFieldDefinition                      
+          description: Seleccione una carpeta
+          required: false
+          appName: current-news
+          targetWorkspace: current-news
+          identifierToPathConverter:
+            class: info.magnolia.ui.form.field.converter.BaseIdentifierToPathConverter
+        - name:  carpetasecundaria
+          label: Noticias secundarias
+          class: info.magnolia.ui.form.field.definition.LinkFieldDefinition                      
+          description: Seleccione una carpeta
+          required: false
+          appName: current-news
+          targetWorkspace: current-news
+          identifierToPathConverter:
+            class: info.magnolia.ui.form.field.converter.BaseIdentifierToPathConverter
+        - name:  carpetaotras
+          label: Otras Noticias
+          class: info.magnolia.ui.form.field.definition.LinkFieldDefinition                      
+          description: Seleccione una carpeta
+          required: false
+          appName: current-news
+          targetWorkspace: current-news
+          identifierToPathConverter:
+            class: info.magnolia.ui.form.field.converter.BaseIdentifierToPathConverter
+        - name: rrss
+          label: Redes Sociales
+          class: info.magnolia.ui.form.field.definition.MultiValueFieldDefinition
+          transformerClass: info.magnolia.ui.form.field.transformer.multi.DelegatingMultiValueSubnodeTransformer
+          field:
+            name: linkProperties
+            class: info.magnolia.ui.form.field.definition.CompositeFieldDefinition
+            transformerClass: info.magnolia.ui.form.field.transformer.composite.DelegatingCompositeFieldTransformer
+            layout: vertical
+            fields:
+              - name: logo
+                label: Logo
+                class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+                targetWorkspace: dam
+                appName: assets
+                identifierToPathConverter:
+                  class: info.magnolia.dam.app.assets.field.translator.AssetCompositeIdKeyTranslator
+                contentPreviewDefinition:
+                  contentPreviewClass: info.magnolia.dam.app.ui.field.DamFilePreviewComponent
+              - name: externalLink
+                label: Enlace externo
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+              - name: endLinkProperties
+                label: >
+                class: info.magnolia.ui.form.field.definition.StaticFieldDefinition
+                value: ----------------------------------------------------------------------------------                    
+actions:
+  commit:
+    class: info.magnolia.ui.admincentral.dialog.action.SaveDialogActionDefinition
+  cancel:
+    class: info.magnolia.ui.admincentral.dialog.action.CancelDialogActionDefinition

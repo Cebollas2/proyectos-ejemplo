@@ -1,0 +1,895 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" sv:name="jcr:root">
+  <sv:property sv:name="jcr:primaryType" sv:type="Name">
+    <sv:value>rep:root</sv:value>
+  </sv:property>
+  <sv:node sv:name="politicas-empresa">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>mgnl:folder</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+      <sv:value>mgnl:hasVersion</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>56bdc814-0ae0-45d3-9742-32d1b575e11b</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:activationStatus" sv:type="Boolean">
+      <sv:value>true</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:created" sv:type="Date">
+      <sv:value>2019-08-14T12:33:44.641+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:createdBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
+      <sv:value>2019-09-11T15:13:09.375+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastActivatedBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastActivatedVersion" sv:type="String">
+      <sv:value>1.0</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastActivatedVersionCreated" sv:type="Date">
+      <sv:value>2019-09-11T15:13:05.760+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+      <sv:value>2019-08-14T12:35:47.946+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:node sv:name="sgi">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>mgnl:folder</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:value>mgnl:hasVersion</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>28f114a5-0bea-4513-a7c0-503e5114c8c6</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:activationStatus" sv:type="Boolean">
+        <sv:value>true</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:created" sv:type="Date">
+        <sv:value>2019-08-14T12:34:45.035+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:createdBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
+        <sv:value>2019-09-11T15:13:10.196+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedVersion" sv:type="String">
+        <sv:value>1.0</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedVersionCreated" sv:type="Date">
+        <sv:value>2019-09-11T15:13:06.026+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+        <sv:value>2019-08-14T14:36:00.510+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:node sv:name="politicas-gestion-integral">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>rsc-documento</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+          <sv:value>mgnl:hasVersion</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>c59c3c44-8fff-457f-8eaa-bd5056ed0c10</sv:value>
+        </sv:property>
+        <sv:property sv:name="documento" sv:type="String">
+          <sv:value>e060861e-92af-4a47-861e-0eb6dee114e1</sv:value>
+        </sv:property>
+        <sv:property sv:name="imagen" sv:type="String">
+          <sv:value>jcr:f69a641f-ade6-472f-95d4-deca8edf7196</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:activationStatus" sv:type="Boolean">
+          <sv:value>true</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:created" sv:type="Date">
+          <sv:value>2019-08-14T14:36:00.525+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:createdBy" sv:type="String">
+          <sv:value>superuser</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
+          <sv:value>2019-09-11T15:13:11.472+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:lastActivatedBy" sv:type="String">
+          <sv:value>superuser</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:lastActivatedVersion" sv:type="String">
+          <sv:value>1.0</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:lastActivatedVersionCreated" sv:type="Date">
+          <sv:value>2019-09-11T15:13:06.283+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+          <sv:value>2019-09-11T12:54:09.022+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+          <sv:value>superuser</sv:value>
+        </sv:property>
+        <sv:property sv:name="texto" sv:type="String">
+          <sv:value>El Grupo de Ópticas CIONE, define su Política de Gestión Integral en su relación con los socios, los empleados, los proveedores, entidades financieras y demás partes interesadas, centrando su comportamiento en el respeto
+a las personas, al entorno ambiental y al entorno social y basando sus actividades en la fiabilidad del servicio, en la calidad de los productos, en la mejora continua de la gestión y en la contribución a la salud visual de los cliente</sv:value>
+        </sv:property>
+        <sv:property sv:name="texto_pt" sv:type="String">
+          <sv:value>O Grupo de Óticas CIONE segue a sua Política de Gestão Integral da sua relação com sócios, empregados, fornecedores, entidades financeiras e restantes partes interessadas, centrando as suas atuações no respeito pelas pessoas, pelo meio ambiente e pela sociedade em geral, e baseando as suas atividades na fiabilidade do serviço, na qualidade dos produtos, na melhoria contínua da gestão e na contribuição para a saúde visual dos clientes.</sv:value>
+        </sv:property>
+        <sv:property sv:name="titulo" sv:type="String">
+          <sv:value>Políticas de Gestión Integral</sv:value>
+        </sv:property>
+        <sv:property sv:name="titulo_pt" sv:type="String">
+          <sv:value>Políticas de Gestão Integral</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="codigo-etico">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>rsc-documento</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+          <sv:value>mgnl:hasVersion</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>39a3d917-a850-459c-8a45-a9d107344a39</sv:value>
+        </sv:property>
+        <sv:property sv:name="documento" sv:type="String">
+          <sv:value>a46cf368-f87a-444b-97ae-c03a0fa2e854</sv:value>
+        </sv:property>
+        <sv:property sv:name="imagen" sv:type="String">
+          <sv:value>jcr:eb355ccf-7fd6-4a41-8d19-08a33593f25f</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:activationStatus" sv:type="Boolean">
+          <sv:value>true</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:created" sv:type="Date">
+          <sv:value>2019-08-14T14:42:22.388+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:createdBy" sv:type="String">
+          <sv:value>superuser</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
+          <sv:value>2019-09-11T15:13:11.265+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:lastActivatedBy" sv:type="String">
+          <sv:value>superuser</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:lastActivatedVersion" sv:type="String">
+          <sv:value>1.0</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:lastActivatedVersionCreated" sv:type="Date">
+          <sv:value>2019-09-11T15:13:06.573+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+          <sv:value>2019-09-11T12:54:43.572+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+          <sv:value>superuser</sv:value>
+        </sv:property>
+        <sv:property sv:name="texto" sv:type="String">
+          <sv:value>Descripción del modelo de comportamiento ético de los Socios y Propietarios en relación a sus derechos de propiedad y Administradores y Directivos en relación a sus funciones de administración y gestión.</sv:value>
+        </sv:property>
+        <sv:property sv:name="texto_pt" sv:type="String">
+          <sv:value>Descrição do modelo de comportamento ético dos sócios e proprietários no exercício dos seus direitos de propriedade, e dos administradores e gerentes no exercício das suas funções de administração e gestão.</sv:value>
+        </sv:property>
+        <sv:property sv:name="titulo" sv:type="String">
+          <sv:value>Código Ético</sv:value>
+        </sv:property>
+        <sv:property sv:name="titulo_pt" sv:type="String">
+          <sv:value>Código de Ética</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="politica-anticorrupcion">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>rsc-documento</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+          <sv:value>mgnl:hasVersion</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>5c3dcfd1-b8e1-4977-8bf9-b2a00f80b9f6</sv:value>
+        </sv:property>
+        <sv:property sv:name="documento" sv:type="String">
+          <sv:value>1c95b6b5-56ce-42e3-8b8a-77088c0e2468</sv:value>
+        </sv:property>
+        <sv:property sv:name="imagen" sv:type="String">
+          <sv:value>jcr:1c95b6b5-56ce-42e3-8b8a-77088c0e2468</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:activationStatus" sv:type="Boolean">
+          <sv:value>true</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:created" sv:type="Date">
+          <sv:value>2019-08-14T14:44:22.052+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:createdBy" sv:type="String">
+          <sv:value>superuser</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
+          <sv:value>2019-09-11T15:13:11.057+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:lastActivatedBy" sv:type="String">
+          <sv:value>superuser</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:lastActivatedVersion" sv:type="String">
+          <sv:value>1.0</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:lastActivatedVersionCreated" sv:type="Date">
+          <sv:value>2019-09-11T15:13:06.831+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+          <sv:value>2019-09-11T12:55:11.292+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+          <sv:value>superuser</sv:value>
+        </sv:property>
+        <sv:property sv:name="texto" sv:type="String">
+          <sv:value>Grupo Cione complementa el Código Ético detallando los
+principios de comportamiento de administradores y
+empleados del Grupo Cione en determinadas circunstancias
+en sus relaciones con los diferentes grupos de interés
+identificados en el Código Ético.</sv:value>
+        </sv:property>
+        <sv:property sv:name="texto_pt" sv:type="String">
+          <sv:value>O Grupo Cione complementa o seu Código de Ética estabelecendo uma série de princípios de comportamento que regulam a atuação dos seus administradores e empregados em determinadas circunstâncias das suas relações com os diversos grupos de interesse identificados no Código de Ética.</sv:value>
+        </sv:property>
+        <sv:property sv:name="titulo" sv:type="String">
+          <sv:value>Política Anticorrupción</sv:value>
+        </sv:property>
+        <sv:property sv:name="titulo_pt" sv:type="String">
+          <sv:value>Política Anticorrupção</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="compra-responsable">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>rsc-documento</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+          <sv:value>mgnl:hasVersion</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>5d0c8440-bb1c-4a5b-acf9-cd8c7a898092</sv:value>
+        </sv:property>
+        <sv:property sv:name="documento" sv:type="String">
+          <sv:value>b2310605-6a9d-48e7-a9e1-5c6483520512</sv:value>
+        </sv:property>
+        <sv:property sv:name="imagen" sv:type="String">
+          <sv:value>jcr:855f2401-fb72-433e-86dd-e2c7c932ce8d</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:activationStatus" sv:type="Boolean">
+          <sv:value>true</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:created" sv:type="Date">
+          <sv:value>2019-08-14T14:45:17.953+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:createdBy" sv:type="String">
+          <sv:value>superuser</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
+          <sv:value>2019-09-11T15:13:10.790+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:lastActivatedBy" sv:type="String">
+          <sv:value>superuser</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:lastActivatedVersion" sv:type="String">
+          <sv:value>1.0</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:lastActivatedVersionCreated" sv:type="Date">
+          <sv:value>2019-09-11T15:13:07.095+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+          <sv:value>2019-09-11T12:55:48.721+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+          <sv:value>superuser</sv:value>
+        </sv:property>
+        <sv:property sv:name="texto" sv:type="String">
+          <sv:value>El objetivo de esta Política de Compras Responsables es
+conseguir las mejores condiciones de suministro de bienes
+y servicios, y de guardar un alto código ético en la relación
+con nuestros proveedores.</sv:value>
+        </sv:property>
+        <sv:property sv:name="texto_pt" sv:type="String">
+          <sv:value>O objetivo da Política de Compras Responsáveis consiste em conseguir as melhores condições de fornecimento de bens e serviços, e em manter um alto padrão ético na relação com os nossos fornecedores.</sv:value>
+        </sv:property>
+        <sv:property sv:name="titulo" sv:type="String">
+          <sv:value>Política de Compras Responsable</sv:value>
+        </sv:property>
+        <sv:property sv:name="titulo_pt" sv:type="String">
+          <sv:value>Política de Compras Responsáveis</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="codigo-conducta-publicitaria">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>rsc-documento</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+          <sv:value>mgnl:hasVersion</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>88a74502-9fd6-46e8-9de0-b972a4cfcb23</sv:value>
+        </sv:property>
+        <sv:property sv:name="documento" sv:type="String">
+          <sv:value>63f99886-1530-4fe5-ac25-0ec1243dc746</sv:value>
+        </sv:property>
+        <sv:property sv:name="imagen" sv:type="String">
+          <sv:value>jcr:2d7a149c-28c3-4521-8e76-2571ce06d872</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:activationStatus" sv:type="Boolean">
+          <sv:value>true</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:created" sv:type="Date">
+          <sv:value>2019-08-14T14:46:12.123+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:createdBy" sv:type="String">
+          <sv:value>superuser</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
+          <sv:value>2019-09-11T15:13:10.593+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:lastActivatedBy" sv:type="String">
+          <sv:value>superuser</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:lastActivatedVersion" sv:type="String">
+          <sv:value>1.0</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:lastActivatedVersionCreated" sv:type="Date">
+          <sv:value>2019-09-11T15:13:07.353+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+          <sv:value>2019-09-11T12:56:16.984+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+          <sv:value>superuser</sv:value>
+        </sv:property>
+        <sv:property sv:name="texto" sv:type="String">
+          <sv:value>Nuestro código autoregulativo de conducta publicitaria es una expresión del reconocimiento de las obligacioens sociales de cione que atenderá a la legalidad (establecido por la Ley General de la Publicidad) velando por el respeto a la ética publicitaria y por los derechos de los destinatarios
+de la publicidad.</sv:value>
+        </sv:property>
+        <sv:property sv:name="texto_pt" sv:type="String">
+          <sv:value>O código de autorregulação da conduta publicitária da Cione é uma expressão do reconhecimento das suas obrigações sociais, da sua observância da legalidade (mais concretamente dos preceitos da Lei Geral da Publicidade) e do seu respeito pela ética publicitária e pelos direitos dos destinatários da publicidade.</sv:value>
+        </sv:property>
+        <sv:property sv:name="titulo" sv:type="String">
+          <sv:value>Código de Conducta Publicitaria</sv:value>
+        </sv:property>
+        <sv:property sv:name="titulo_pt" sv:type="String">
+          <sv:value>Código de Conduta Publicitária</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="prevencio-delitos-penales">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>rsc-documento</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+          <sv:value>mgnl:hasVersion</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>019ce395-a27f-448d-a013-760b0a26bbc7</sv:value>
+        </sv:property>
+        <sv:property sv:name="documento" sv:type="String">
+          <sv:value>8ad406b1-8770-481e-8a0b-7b7c341a7d66</sv:value>
+        </sv:property>
+        <sv:property sv:name="imagen" sv:type="String">
+          <sv:value>jcr:d3321352-4f44-4f2f-9f4e-314328cbea3a</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:activationStatus" sv:type="Boolean">
+          <sv:value>true</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:created" sv:type="Date">
+          <sv:value>2019-08-14T14:47:55.799+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:createdBy" sv:type="String">
+          <sv:value>superuser</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
+          <sv:value>2019-09-11T15:13:10.391+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:lastActivatedBy" sv:type="String">
+          <sv:value>superuser</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:lastActivatedVersion" sv:type="String">
+          <sv:value>1.0</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:lastActivatedVersionCreated" sv:type="Date">
+          <sv:value>2019-09-11T15:13:07.653+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+          <sv:value>2019-09-11T12:56:55.540+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+          <sv:value>superuser</sv:value>
+        </sv:property>
+        <sv:property sv:name="texto" sv:type="String">
+          <sv:value>El objetivo de esta Política es el análisis de los riesgos penales que pudieran producirse en las distintas áreas de negocio y empresas que integran el Grupo Cione, tratando de abarcar todos los riesgos de incumplimiento normativo
+que pudieran darse.</sv:value>
+        </sv:property>
+        <sv:property sv:name="texto_pt" sv:type="String">
+          <sv:value>O objetivo desta política consiste na análise e no estabelecimento de medidas de prevenção dos riscos penais que possam surgir nas diversas áreas de negócio e empresas que integram o Grupo Cione, procurando abranger todos os riscos de incumprimento regulamentar que possa ter de enfrentar.</sv:value>
+        </sv:property>
+        <sv:property sv:name="titulo" sv:type="String">
+          <sv:value>Prevención de Delitos Penales</sv:value>
+        </sv:property>
+        <sv:property sv:name="titulo_pt" sv:type="String">
+          <sv:value>Prevenção de Delitos</sv:value>
+        </sv:property>
+      </sv:node>
+    </sv:node>
+    <sv:node sv:name="rse">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>mgnl:folder</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:value>mgnl:hasVersion</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>f107fb82-b81f-45c3-951a-a515f7354471</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:activationStatus" sv:type="Boolean">
+        <sv:value>true</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:created" sv:type="Date">
+        <sv:value>2019-08-14T12:35:33.205+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:createdBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
+        <sv:value>2019-09-11T15:13:09.836+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedVersion" sv:type="String">
+        <sv:value>1.0</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedVersionCreated" sv:type="Date">
+        <sv:value>2019-09-11T15:13:07.915+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+        <sv:value>2019-08-14T14:52:37.526+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:node sv:name="memoria-rse">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>rsc-documento</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+          <sv:value>mgnl:hasVersion</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>e2c5dffb-344c-404a-b08f-d58666539d3a</sv:value>
+        </sv:property>
+        <sv:property sv:name="documento" sv:type="String">
+          <sv:value>4f985d8c-d8ab-4dc0-a049-9b52ac42e26e</sv:value>
+        </sv:property>
+        <sv:property sv:name="imagen" sv:type="String">
+          <sv:value>jcr:7cc5cb89-7ea5-4ebd-b7cb-a4dd2290ce60</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:activationStatus" sv:type="Boolean">
+          <sv:value>true</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:created" sv:type="Date">
+          <sv:value>2019-08-14T14:52:37.527+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:createdBy" sv:type="String">
+          <sv:value>superuser</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
+          <sv:value>2019-09-11T15:13:11.665+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:lastActivatedBy" sv:type="String">
+          <sv:value>superuser</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:lastActivatedVersion" sv:type="String">
+          <sv:value>1.0</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:lastActivatedVersionCreated" sv:type="Date">
+          <sv:value>2019-09-11T15:13:08.172+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+          <sv:value>2019-09-11T12:59:27.603+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+          <sv:value>superuser</sv:value>
+        </sv:property>
+        <sv:property sv:name="texto" sv:type="String">
+          <sv:value>La Memoria de Responsabilidad Social Empresarial constituye un instrumento de comunicación y un ejercicio de transparencia informativa, donde se recogen los
+compromisos, los métodos y los resultados de la gestión económica, la ambiental y la social, en lo que se conoce como el informe del triple balance para asegurar la
+sostenibilidad del Grupo Cione.</sv:value>
+        </sv:property>
+        <sv:property sv:name="texto_pt" sv:type="String">
+          <sv:value>A Memória de Responsabilidade Social Empresarial constitui um instrumento de comunicação e um exercício de transparência informativa, que recolhe os compromissos, os métodos e os resultados da gestão económica, ambiental e social, no que se conhece como o relatório do triplo balanço, para demonstrar a sustentabilidade do Grupo Cione.</sv:value>
+        </sv:property>
+        <sv:property sv:name="titulo" sv:type="String">
+          <sv:value>Memoria RSE</sv:value>
+        </sv:property>
+        <sv:property sv:name="titulo_pt" sv:type="String">
+          <sv:value>Memória RSE</sv:value>
+        </sv:property>
+      </sv:node>
+    </sv:node>
+    <sv:node sv:name="grupos-interes">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>mgnl:folder</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:value>mgnl:hasVersion</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>d4a474ed-b639-4411-a71f-ddc64871be6b</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:activationStatus" sv:type="Boolean">
+        <sv:value>true</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:created" sv:type="Date">
+        <sv:value>2019-08-14T12:35:47.946+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:createdBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
+        <sv:value>2019-09-11T15:13:09.618+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedVersion" sv:type="String">
+        <sv:value>1.0</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedVersionCreated" sv:type="Date">
+        <sv:value>2019-09-11T15:13:08.442+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+        <sv:value>2019-08-14T14:55:17.665+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:node sv:name="buenas-practicas">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>rsc-documento</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+          <sv:value>mgnl:hasVersion</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>112afee1-476d-41d5-9f0b-11bb5be51684</sv:value>
+        </sv:property>
+        <sv:property sv:name="documento" sv:type="String">
+          <sv:value>a70208a5-8c2a-4e4d-aa4d-bda0ba1b22c3</sv:value>
+        </sv:property>
+        <sv:property sv:name="imagen" sv:type="String">
+          <sv:value>jcr:5df718a2-92d2-4530-aa11-561dcf9f92ec</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:activationStatus" sv:type="Boolean">
+          <sv:value>true</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:created" sv:type="Date">
+          <sv:value>2019-08-14T14:55:17.666+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:createdBy" sv:type="String">
+          <sv:value>superuser</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
+          <sv:value>2019-09-11T15:13:12.052+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:lastActivatedBy" sv:type="String">
+          <sv:value>superuser</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:lastActivatedVersion" sv:type="String">
+          <sv:value>1.0</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:lastActivatedVersionCreated" sv:type="Date">
+          <sv:value>2019-09-11T15:13:08.693+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+          <sv:value>2019-09-11T13:02:00.850+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+          <sv:value>superuser</sv:value>
+        </sv:property>
+        <sv:property sv:name="texto" sv:type="String">
+          <sv:value>Esta guía tiene como objetivo informar de una manera sencilla, sobre pautas de ahorro energético, para fomentar el consumo responsable y sostenible de energía que contribuya a una disminución de la intensidad energética, a un menor impacto sobre el medio ambiente.</sv:value>
+        </sv:property>
+        <sv:property sv:name="texto_pt" sv:type="String">
+          <sv:value>Este guia tem como objetivo informar de forma simples sobre as medidas de poupança energética, para fomentar um consumo responsável e sustentável da energia, que contribua para a diminuição da intensidade energética e para a redução do nosso impacto ambiental.</sv:value>
+        </sv:property>
+        <sv:property sv:name="titulo" sv:type="String">
+          <sv:value>Buenas Prácticas</sv:value>
+        </sv:property>
+        <sv:property sv:name="titulo_pt" sv:type="String">
+          <sv:value>Boas Práticas</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="comunicacion-grupos-interes">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>rsc-documento</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+          <sv:value>mgnl:hasVersion</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>4b3f53f0-862f-4457-819e-c4f60a5e11e9</sv:value>
+        </sv:property>
+        <sv:property sv:name="documento" sv:type="String">
+          <sv:value>55dffaa1-fbf0-4409-9874-12156178b1dc</sv:value>
+        </sv:property>
+        <sv:property sv:name="imagen" sv:type="String">
+          <sv:value>jcr:65fa9b46-2438-4c38-b14c-e1981df0c078</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:activationStatus" sv:type="Boolean">
+          <sv:value>true</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:created" sv:type="Date">
+          <sv:value>2019-08-14T14:55:29.338+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:createdBy" sv:type="String">
+          <sv:value>superuser</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
+          <sv:value>2019-09-11T15:13:11.859+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:lastActivatedBy" sv:type="String">
+          <sv:value>superuser</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:lastActivatedVersion" sv:type="String">
+          <sv:value>1.0</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:lastActivatedVersionCreated" sv:type="Date">
+          <sv:value>2019-09-11T15:13:08.981+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+          <sv:value>2019-09-11T13:03:28.656+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+          <sv:value>superuser</sv:value>
+        </sv:property>
+        <sv:property sv:name="texto" sv:type="String">
+          <sv:value>Los grupos de interés son organizaciones o individuos que tienen intereses o son afectadas por cualquier decisión o actividad de una empresa. La relación de Cione con sus grupos de interés se desarrolla dentro de un contexto de transparencia, veracidad y profesionalidad.</sv:value>
+        </sv:property>
+        <sv:property sv:name="texto_pt" sv:type="String">
+          <sv:value>Os grupos de interesse são organizações ou indivíduos que têm interesses ou são afetados por qualquer decisão ou atividade de uma empresa. A relação da Cione com os seus grupos de interesse é realizada num ambiente de transparência, veracidade e profissionalismo.</sv:value>
+        </sv:property>
+        <sv:property sv:name="titulo" sv:type="String">
+          <sv:value>Plan de Comunicación con los Grupos de Interés</sv:value>
+        </sv:property>
+        <sv:property sv:name="titulo_pt" sv:type="String">
+          <sv:value>Plano de Comunicação com os Grupos de Interesse</sv:value>
+        </sv:property>
+      </sv:node>
+    </sv:node>
+  </sv:node>
+  <sv:node sv:name="informacion">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>mgnl:folder</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+      <sv:value>mgnl:hasVersion</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>7e8ae125-d637-4898-bc11-c4ba38e5fb2c</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:activationStatus" sv:type="Boolean">
+      <sv:value>true</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:created" sv:type="Date">
+      <sv:value>2019-08-14T12:34:08.469+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:createdBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
+      <sv:value>2019-09-11T15:13:44.477+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastActivatedBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastActivatedVersion" sv:type="String">
+      <sv:value>1.0</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastActivatedVersionCreated" sv:type="Date">
+      <sv:value>2019-09-11T15:13:43.218+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+      <sv:value>2019-08-14T14:26:05.165+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:node sv:name="estatutos">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>rsc-documento</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:value>mgnl:hasVersion</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>9369b800-f54b-41ff-b872-6bbb8e3a90ea</sv:value>
+      </sv:property>
+      <sv:property sv:name="documento" sv:type="String">
+        <sv:value>490363f9-a8e1-4516-b2d9-23c1db964723</sv:value>
+      </sv:property>
+      <sv:property sv:name="imagen" sv:type="String">
+        <sv:value>jcr:a95d9d1d-94c9-4af3-a6ee-4d5ed2edf053</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:activationStatus" sv:type="Boolean">
+        <sv:value>true</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:created" sv:type="Date">
+        <sv:value>2019-08-14T14:26:05.165+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:createdBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
+        <sv:value>2019-09-11T15:13:45.078+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedVersion" sv:type="String">
+        <sv:value>1.0</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedVersionCreated" sv:type="Date">
+        <sv:value>2019-09-11T15:13:43.481+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+        <sv:value>2019-09-11T12:31:05.647+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="texto" sv:type="String">
+        <sv:value>Estatutos adaptados a la Ley 27/1999, de 16 de Julio de
+Cooperativas, conforme a lo dispuesto en la Disposición
+Transitoria Segunda de la misma.&lt;br/&gt;&lt;br/&gt;
+
+Aprobado por el Registro de Sociedades Cooperativas en
+fechas 24 de julio de 2002 y 18 de enero de 2008.</sv:value>
+      </sv:property>
+      <sv:property sv:name="texto_pt" sv:type="String">
+        <sv:value>Estatutos adaptados à Lei 27/1999, de 16 de julho, de Cooperativas, conforme a sua Disposição Transitória Segunda.
+
+Aprovados pelo Registo de Sociedades Cooperativas a 24 de julho de 2002 e 18 de janeiro de 2008.
+</sv:value>
+      </sv:property>
+      <sv:property sv:name="titulo" sv:type="String">
+        <sv:value>Estatutos</sv:value>
+      </sv:property>
+      <sv:property sv:name="titulo_pt" sv:type="String">
+        <sv:value>Estatutos</sv:value>
+      </sv:property>
+    </sv:node>
+    <sv:node sv:name="condiciones-adhesion">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>rsc-documento</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:value>mgnl:hasVersion</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>76d14945-8a12-4013-9eb0-50ec10fc7e9c</sv:value>
+      </sv:property>
+      <sv:property sv:name="documento" sv:type="String">
+        <sv:value>4524ed71-c2f5-42a8-89b9-66a840766bc1</sv:value>
+      </sv:property>
+      <sv:property sv:name="imagen" sv:type="String">
+        <sv:value>jcr:8fb137ec-7910-4015-8b75-e100031ef9e2</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:activationStatus" sv:type="Boolean">
+        <sv:value>true</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:created" sv:type="Date">
+        <sv:value>2019-08-14T14:30:50.744+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:createdBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
+        <sv:value>2019-09-11T15:13:44.883+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedVersion" sv:type="String">
+        <sv:value>1.0</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedVersionCreated" sv:type="Date">
+        <sv:value>2019-09-11T15:13:43.780+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+        <sv:value>2019-09-11T12:36:21.159+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="texto" sv:type="String">
+        <sv:value>Condiciones Generales de Adhesión y Pertenencia
+a la Cooperativa Industrial de Óptica “S. Coop. Cione”y
+Condiciones Generales de Compra a Coordinadora Integral
+Óptica de Servicos Agrupados S.L.</sv:value>
+      </sv:property>
+      <sv:property sv:name="texto_pt" sv:type="String">
+        <sv:value>Condições Gerais de Adesão e Pertença à Cooperativa Industrial de Óptica Sdad. Coop. (Cione), e Condições Gerais de Compra à Coordinadora Integral Óptica de Servicios Agrupados, S.L.</sv:value>
+      </sv:property>
+      <sv:property sv:name="titulo" sv:type="String">
+        <sv:value>Condiciones de Adhesión</sv:value>
+      </sv:property>
+      <sv:property sv:name="titulo_pt" sv:type="String">
+        <sv:value>Condições de Adesão</sv:value>
+      </sv:property>
+    </sv:node>
+    <sv:node sv:name="condiciones-economicas">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>rsc-documento</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:value>mgnl:hasVersion</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>f38c4221-b1a7-48ad-9956-236a93fa60af</sv:value>
+      </sv:property>
+      <sv:property sv:name="documento" sv:type="String">
+        <sv:value>eb53d513-e79c-4726-abc6-cd3580fb5c23</sv:value>
+      </sv:property>
+      <sv:property sv:name="imagen" sv:type="String">
+        <sv:value>jcr:1e910801-0371-4555-9c16-8824e03cf8c4</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:activationStatus" sv:type="Boolean">
+        <sv:value>true</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:created" sv:type="Date">
+        <sv:value>2019-08-14T14:32:21.260+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:createdBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivated" sv:type="Date">
+        <sv:value>2019-09-12T18:41:05.556+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedVersion" sv:type="String">
+        <sv:value>1.1</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastActivatedVersionCreated" sv:type="Date">
+        <sv:value>2019-09-12T18:41:05.182+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+        <sv:value>2019-09-12T18:40:59.982+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+        <sv:value>superuser</sv:value>
+      </sv:property>
+      <sv:property sv:name="texto" sv:type="String">
+        <sv:value>Condiciones Generales de Adhesión y Pertenencia
+a la Cooperativa Industrial de Óptica “S. Coop. Cione”y
+Condiciones Generales de Compra a Coordinadora Integral
+Óptica de Servicos Agrupados S.L.</sv:value>
+      </sv:property>
+      <sv:property sv:name="texto_pt" sv:type="String">
+        <sv:value>Neste documento são estabelecidas as condições económicas, comerciais e de serviço do Grupo de Óticas CIONE, aprovadas pelos respetivos órgãos de administração, mais concretamente pela sua Assembleia de Sócios e pelo seu Conselho Reitor.</sv:value>
+      </sv:property>
+      <sv:property sv:name="titulo" sv:type="String">
+        <sv:value>Condiciones Económicas, Comerciales y de Servicio</sv:value>
+      </sv:property>
+      <sv:property sv:name="titulo_pt" sv:type="String">
+        <sv:value>Condições Económicas, Comerciais e de Serviço</sv:value>
+      </sv:property>
+    </sv:node>
+  </sv:node>
+</sv:node>
+

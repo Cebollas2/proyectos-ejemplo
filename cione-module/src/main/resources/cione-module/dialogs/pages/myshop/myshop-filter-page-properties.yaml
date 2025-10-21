@@ -1,0 +1,181 @@
+form:
+  label: Plantilla página detalle myshop 
+  properties:
+    title:
+      label: Título página
+      $type: textField
+      i18n: true
+    navigationTitle:
+      label: Título en navegación
+      $type: textField
+      i18n: true
+    windowTitle:
+      label: Título ventana
+      $type: textField
+      i18n: true
+    hideInNav:
+      label: Navegacion          
+      buttonLabel: No mostrar la página en elementos de navegación
+      $type: checkBoxField
+      defaultValue: false
+    iconMenu:
+      $type: linkField
+      label: Icono para el menú
+      chooser:
+        workbenchChooser:
+          appName: assets
+    iconMenuMovil:
+      $type: linkField
+      label: Icono para el menú móvil
+      chooser:
+        workbenchChooser:
+          appName: assets   
+    externalLink:
+      label: Enlace externo
+      $type: textField
+    subPageLink:
+      $type: linkField
+      label: Enlace a subPágina
+      chooser:
+        workbenchChooser:
+          appName: pages               
+    keywords:
+      label: keywords
+      $type: textField
+      i18n: true
+      rows: 3
+    description:
+      label: descripción
+      $type: textField
+      i18n: true
+      rows: 5
+    category:
+      $type: categoryChooserField
+      selectProduct: false
+      required: false
+    attribute:
+      $type: jcrMultiValueField
+      description: Incluir el atributo para el filtro con el patrón variants.attributes.attribute.es=ATTRIBUTE
+      field:
+        $type: textField
+        
+    imagesList:
+      $type: jcrMultiField
+      label: image.images.label
+      itemProvider:
+        $type: currentItemProvider
+      field:
+        $type: compositeField
+        properties:
+          imagedocument:
+            $type: linkField
+            i18n: true
+            label: images.image.label
+            chooser:
+              workbenchChooser:
+                appName: assets
+          document:
+            $type: linkField
+            i18n: true
+            label: documento enlazado
+            chooser:
+              workbenchChooser:
+                appName: assets
+          permisos:
+            $type: switchableField
+            field:
+              $type: radioButtonGroupField
+              layout: horizontal
+              datasource:
+                $type: optionListDatasource
+                options:
+                  - name: roles
+                    value: roles
+                  - name: campaing
+                    value: campaing
+            itemProvider:
+              $type: jcrChildNodeProvider
+            forms:
+              - name: roles
+                properties:
+                  roles:
+                    $type: jcrMultiField
+                    label: .
+                    itemProvider:
+                      $type: jcrChildNodeProvider
+                    field:
+                      $type: compositeField
+                      properties:
+                        rol:
+                          $type: linkField
+                          label: Seleccione el rol que tendra acceso al banner
+                          chooser:
+                            workbenchChooser:
+                              appName: security
+              - name: campaing
+                properties:
+                  campaing:
+                    $type: comboBoxField
+                    datasource:
+                      $type: optionListDatasource
+                      options:
+                        - name: es
+                          label: España
+                          value: es 
+                        - name: pt
+                          label: Portugal
+                          value: pt
+                        - name: all
+                          label: Todos
+                          value: all
+                        - name: optofive
+                          label: Optofive (OPTCAN, OPTMAD, Cliente Monturas)
+                          value: optofive
+                        - name: opticapro
+                          label: opticapro (OPTICAPRO)
+                          value: opticapro
+        
+        
+    document:
+      $type: linkField
+      label: documento de descarga
+      chooser:
+        workbenchChooser:
+          appName: assets 
+    imagedocument:
+      $type: linkField
+      label: Imagen de descarga
+      chooser:
+        workbenchChooser:
+          appName: assets    
+
+  layout:
+    $type: tabbedLayout
+    tabs:
+      mainTab:
+        label: cione-module.templates.pages.home-page.tabMain.label
+        fields:
+          - name: title
+          - name: navigationTitle
+          - name: windowTitle
+          - name: hideInNav
+          - name: iconMenu
+          - name: iconMenuMovil
+          - name: externalLink
+          - name: subPageLink
+          
+      metaTab:
+        label: cione-module.templates.pages.home-page.tabMeta.label
+        fields:
+          - name: keywords
+          - name: description
+      categoryTab:
+        label: cione-module.templates.pages.home-page.category.label
+        fields:
+          - name: category
+          - name: attribute
+          - name: imagesList
+          - name: document 
+          - name: imagedocument 
+
+    

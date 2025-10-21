@@ -1,0 +1,137 @@
+form:
+  properties:
+    titulo:
+      $type: textField
+      label: Título
+      i18n: true
+    enlaces:
+      $type: jcrMultiField
+      label: Enlaces
+      itemProvider:
+        $type: jcrChildNodeProvider
+      field:
+        $type: compositeField
+        label: Configuracion opcion de menu
+        properties:
+          texto:
+            $type: textField
+            label: Texto
+            i18n: true
+          enlace:
+            $type: textField
+            label: Enlace
+            i18n: true
+          especialLink:
+            $type: switchableField
+            label: Selector de opciones especiales
+            field:
+              $type: comboBoxField
+              layout: horizontal
+              label: opciones
+              datasource:
+                $type: optionListDatasource
+                options:
+                  - name: enlaceAudio
+                    value: enlaceAudio
+                    label: Opcion Enlace MyOM
+                  - name: enlaceUniversity
+                    value: enlaceUniversity
+                    label: Opcion Cione University
+                  - name: enlaceForo
+                    value: enlaceForo
+                    label: Opcion Enlace Comunidad Cione
+            itemProvider:
+              $type: jcrChildNodeProvider
+            forms:
+              - name: enlaceAudio
+                properties:
+                  linkName:
+                    label: Enlace web audiologia
+                    $type: textField
+                  key:
+                    label: Key web audiologia
+                    $type: textField
+              - name: enlaceUniversity
+                properties:
+                  linkName:
+                    label: Enlace web Cione University
+                    $type: textField
+              - name: enlaceForo
+                properties:
+                  linkName:
+                    label: Enlace a la Comunidad Cione
+                    $type: textField
+          javascript:
+            $type: textField
+            label: javascript
+            i18n: true
+          icono:
+            $type: linkField
+            label: Logo
+            targetTreeRootPath: /cione/comunicacion
+            chooser:
+              workbenchChooser:
+                appName: assets
+          permisos:
+            $type: switchableField
+            required: true
+            label: permisos
+            field:
+              $type: radioButtonGroupField
+              layout: horizontal
+              datasource:
+                $type: optionListDatasource
+                options:
+                  - name: roles
+                    value: roles
+                    label: roles
+                  - name: campaing
+                    value: campaing
+                    label: campana
+            itemProvider:
+              $type: jcrChildNodeProvider
+            forms:
+              - name: roles
+                properties:
+                  roles:
+                    $type: jcrMultiField
+                    label: .
+                    itemProvider:
+                      $type: jcrChildNodeProvider
+                    field:
+                      $type: compositeField
+                      properties:
+                        rol:
+                          $type: linkField
+                          label: Seleccione el rol que tendra acceso al banner
+                          chooser:
+                            workbenchChooser:
+                              appName: security
+              - name: campaing
+                properties:
+                  campaing:
+                    $type: comboBoxField
+                    label: .
+                    datasource:
+                      $type: optionListDatasource
+                      options:
+                        - name: es
+                          label: España
+                          value: es 
+                        - name: pt
+                          label: Portugal
+                          value: pt
+                        - name: all
+                          label: Todos
+                          value: all
+                        - name: optofive
+                          label: Optofive (OPTCAN, OPTMAD, Cliente Monturas)
+                          value: optofive
+                        - name: opticapro
+                          label: opticapro (OPTICAPRO)
+                          value: opticapro
+    inheritable:
+      $type: checkBoxField
+      label: Heredar en Myshop
+      buttonLabel: Mostrar en páginas de Myshop
+      defaultValue: false

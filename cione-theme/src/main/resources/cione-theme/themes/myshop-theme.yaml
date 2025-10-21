@@ -1,0 +1,60 @@
+name: myshop-theme
+cssFiles:
+  owlCarousel:
+    addFingerPrint: true
+    link: /.resources/cione-theme/webresources/js/myshop/owl-carousel-2.3.4/owl.carousel.min.css
+    media: all
+  owlTheme:
+    addFingerPrint: true
+    link: /.resources/cione-theme/webresources/js/myshop/owl-carousel-2.3.4/owl.theme.default.min.css
+    media: all
+  jquery:
+    addFingerPrint: true
+    link: /.resources/cione-theme/webresources/js/myshop/jquery-ui-1.12.1/jquery-ui.css
+    media: all
+  jquerymodal:
+    addFingerPrint: true
+    link: /.resources/cione-theme/webresources/js/myshop/jquerymodal/jquerymodal.css
+    media: all
+  bootstrap: 
+    addFingerPrint: true
+    link: /.resources/cione-theme/webresources/css/myshop/bootstrap-4.1.3/bootstrap.css
+    media: all
+  fontawesome:
+    addFingerPrint: true
+    link: /.resources/cione-theme/webresources/css/myshop/fontawesome-5.9.0/fontawesome.all.min.css
+    media: all
+  theme:
+    addFingerPrint: true
+    link: /.resources/cione-theme/webresources/css/myshop/themes/theme.css
+    media: all
+  stylesPC:
+    addFingerPrint: true
+    link: /.resources/cione-theme/webresources/css/myshop/stylesPC.css
+    media: all
+
+jsFiles:
+  jquery:
+    addFingerPrint: true
+    link: /.resources/cione-theme/webresources/js/myshop/jquery-ui-1.12.1/jquery.js
+  popper:
+    addFingerPrint: true
+    link: /.resources/cione-theme/webresources/js/myshop/jquery-ui-1.12.1/jquery-ui.js
+  bootstrap:
+    addFingerPrint: true
+    link: /.resources/cione-theme/webresources/js/myshop/jquerymodal/jquerymodal.js
+  owlCarousel:
+    addFingerPrint: true
+    link: /.resources/cione-theme/webresources/js/myshop/owl-carousel-2.3.4/owl.carousel.min.js
+  scriptPC:
+    addFingerPrint: true
+    link: /.resources/cione-theme/webresources/js/myshop/scriptPC.js
+  fitmix:
+    addFingerPrint: true
+    link: /.resources/cione-theme/webresources/js/myshop/fitmix_v2.js
+  validator:
+    addFingerPrint: true
+    link: /.resources/cione-theme/webresources/js/myshop/validator.min.js
+  auditoria:
+    addFingerPrint: true
+    link: /.resources/cione-theme/webresources/js/auditoria.js

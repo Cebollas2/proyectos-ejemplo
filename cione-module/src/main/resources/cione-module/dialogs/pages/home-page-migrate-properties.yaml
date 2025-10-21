@@ -1,0 +1,49 @@
+form:  
+  label: Página Home Migrada
+  tabs:  
+    - name: tabMain        
+      fields:  
+        - name: title  
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition  
+          i18n: true  
+          label: Título página
+          required: true
+        - name: navigationTitle  
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition  
+          i18n: true  
+          label: Título ventana
+        - name: windowTitle  
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition  
+          i18n: true  
+          label: cione-module.templates.pages.home-page.tabMain.windowTitle.label
+        - name: hideInNav
+          label: Navegacion          
+          buttonLabel: No mostrar la página en elementos de navegación
+          class: info.magnolia.ui.form.field.definition.CheckboxFieldDefinition
+          defaultValue: false
+          i18n: false
+          type: Boolean
+        - name: hideMenu
+          label: Ocultar Menu Cabecera
+          buttonLabel: No mostrar el menu de la cabecera
+          class: info.magnolia.ui.form.field.definition.CheckboxFieldDefinition
+          defaultValue: false
+          i18n: false
+          type: Boolean
+    - name: tabMeta        
+      fields:  
+        - name: keywords  
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition  
+          i18n: true  
+          label: keywords
+          rows: 3  
+        - name: description  
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition  
+          i18n: true  
+          label: descripción
+          rows: 5  
+actions:  
+  commit:  
+    class: info.magnolia.ui.admincentral.dialog.action.SaveDialogActionDefinition  
+  cancel:  
+    class: info.magnolia.ui.admincentral.dialog.action.CancelDialogActionDefinition

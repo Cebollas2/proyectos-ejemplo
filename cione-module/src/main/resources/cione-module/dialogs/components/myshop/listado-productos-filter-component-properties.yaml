@@ -1,0 +1,66 @@
+form:
+  properties:
+    internalLink:
+      $type: linkField
+      required: true
+      chooser:
+        workbenchChooser:
+          appName: pages-app
+    internalLinkResult:
+      $type: linkField
+      required: false
+      chooser:
+        workbenchChooser:
+          appName: pages-app
+    internalLinkResultPacks:
+      $type: linkField
+      required: false
+      chooser:
+        workbenchChooser:
+          appName: pages-app
+    internalLinkPacksDetail:
+      $type: linkField
+      label: Pagina detalle del pack tras seleccionar el producto 
+      description: Pagina detalle del pack al que volveremos tras seleccionar el producto o a la que navegaremos en el caso de que un producto sea de tipo Pack
+      required: false
+      chooser:
+        workbenchChooser:
+          appName: pages-app
+    spare:
+      $type: checkBoxField
+      defaultValue: false
+    orderconf:
+      label: Seleccione el formato de ordenacion por defecto
+      $type: comboBoxField
+      defaultValue: altaEkon
+      datasource:
+        $type: optionListDatasource
+        options:
+          - name: altaEkon
+            label: Alta en Ekon
+            value: altaEkon
+          - name: fechacreacion
+            label: Fecha creacion en Commercetools
+            value: fechacreacion
+          - name: alfabetico
+            label: Alfabetico
+            value: alfabetico
+    hideFilter:
+      label: Filtro oculto
+      $type: textField
+    numProduct:
+      label: Número de productos en lista
+      $type: comboBoxField
+      defaultValue: 12
+      datasource:
+        $type: optionListDatasource
+        options:
+          - name: 12
+            label: 12
+            value: 12
+          - name: 50
+            label: 50
+            value: 50
+          - name: 100
+            label: 100
+            value: 100

@@ -1,0 +1,6 @@
+title: Componente menú vertical
+templateScript: /cione-module/templates/components/submenu-component.ftl
+dialog: cione-module:components/submenu-component-properties
+renderType: freemarker
+modelClass: com.magnolia.cione.model.SubmenuModel
+visible: true
